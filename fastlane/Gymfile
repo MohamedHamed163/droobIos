@@ -1,0 +1,6 @@
+scheme("DroobStudent")
+configuration("Release")
+export_method("app-store")
+output_directory("./build")
+output_name("DroobStudent")
+clean(true)

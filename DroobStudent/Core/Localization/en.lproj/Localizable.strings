@@ -1,0 +1,1658 @@
+/* Auth */
+"auth.login" = "Login";
+"auth.register" = "Register";
+"auth.logout" = "Logout";
+"auth.email" = "Email";
+"auth.password" = "Password";
+"auth.display_name" = "Full Name";
+"auth.login_button" = "Log In";
+"auth.register_button" = "Create Account";
+"auth.no_account" = "Don't have an account?";
+"auth.have_account" = "Already have an account?";
+"auth.welcome_back" = "Welcome back";
+"auth.create_account" = "Create your account";
+"auth.kicker" = "Secure access";
+"auth.sign_in_title" = "Sign in to Droob";
+"auth.sign_in_subtitle" = "Access your courses, sessions, payments, and protected lessons.";
+"auth.sign_up_title" = "Create your account";
+"auth.sign_up_subtitle" = "Access your courses, sessions, payments, and protected lessons.";
+"auth.email_placeholder" = "Email address";
+"auth.password_placeholder" = "Password";
+"auth.full_name_placeholder" = "Full name";
+"auth.continue_apple" = "Continue with Apple";
+"auth.continue_google" = "Continue with Google";
+"auth.forgot_password" = "Forgot password?";
+"auth.sign_in_link" = "Already have access? Sign in";
+"auth.sign_up_link" = "Don't have an account? Register";
+"auth.theme_dark" = "Dark";
+"auth.theme_light" = "Light";
+"auth.lang_arabic" = "العربية";
+"auth.lang_english" = "English";
+
+/* Catalog */
+"catalog.title" = "Catalog";
+"catalog.courses" = "Courses";
+"catalog.load_more" = "Load More";
+"catalog.enrolled" = "Enrolled";
+"catalog.enroll" = "Enroll";
+"catalog.price" = "Price";
+"catalog.free" = "Free";
+
+/* Course Detail */
+"course.detail" = "Course Detail";
+"course.sections" = "Sections";
+"course.lessons" = "Lessons";
+"course.instructor" = "Instructor";
+"course.subscribe_now" = "Subscribe Now";
+"course.already_enrolled" = "Already Enrolled";
+"course.confirm_subscribe" = "Subscribe to Course";
+"course.confirm_subscribe_message" = "Would you like to subscribe to this course?";
+"course.subscribe_success" = "Successfully subscribed!";
+
+/* My Courses */
+"my_courses.title" = "My Courses";
+"my_courses.no_enrollments" = "No enrolled courses yet";
+"my_courses.browse_catalog" = "Browse Catalog";
+"my_courses.title_my" = "My";
+"my_courses.title_courses" = "Courses";
+"my_courses.enrolled_word" = "enrolled";
+"my_courses.completed_word" = "completed";
+"my_courses.filter_all" = "All";
+"my_courses.filter_in_progress" = "In Progress";
+"my_courses.filter_completed" = "Completed";
+"my_courses.filter_empty" = "No courses match this filter";
+"my_courses.empty_subtitle" = "Start learning by browsing our catalog";
+"my_courses.continue_learning" = "Continue Learning";
+"my_courses.completed_cert_earned" = "Completed · Certificate earned";
+"my_courses.badge_in_progress" = "IN PROGRESS";
+"my_courses.badge_not_started" = "NOT STARTED";
+"my_courses.badge_done" = "DONE";
+"my_courses.completed_filter" = "Completed";
+"my_courses.offline_footer" = "Downloaded lessons available offline. Tap to continue.";
+"my_courses.complete_label" = "Complete";
+"my_courses.subtitle_fmt" = "%1$d enrolled · %2$d completed";
+"course.lessons_lower" = "lessons";
+
+/* Course Detail v2 */
+"course.bestseller" = "BESTSELLER";
+"course.category_ux_ui" = "UX/UI";
+"course.your_progress" = "Your Progress";
+"course.progress_of" = "of";
+"course.progress_next" = "Next";
+"course.instructor_subtitle" = "Senior Instructor";
+"course.module" = "Module";
+"course.in_progress_lower" = "In progress";
+"course.not_started_lower" = "Not started";
+
+/* Lesson */
+"lesson.title" = "Lesson";
+"lesson.video" = "Video";
+"lesson.document" = "Document";
+"lesson.text" = "Text";
+"lesson.no_documents" = "No documents for this lesson";
+"lesson.documents" = "Documents";
+
+"lesson_player.retry" = "Retry";
+"lesson_player.protected" = "Protected";
+"lesson_player.add_note" = "Add note";
+"lesson_player.view_notes" = "View notes";
+"lesson_player.previous_lesson" = "Previous";
+"lesson_player.next_lesson" = "Next";
+"lesson_player.notes" = "Notes";
+"lesson_player.new_note" = "New note";
+"lesson_player.mark_finished" = "Mark as finished";
+"lesson_player.note_saved_title" = "Note saved to My Notes";
+"lesson_player.note_saved_pinned_fmt" = "Pinned to %@";
+"lesson_player.note_saved_dismiss" = "Dismiss";
+"lesson_player.mark_done" = "Mark done";
+"lesson_player.completed" = "Completed";
+"lesson_player.up_next" = "UP NEXT";
+"lesson_player.attendees_fmt" = "%d attendees";
+"lesson_player.your_note" = "your note";
+"lesson_player.notes_count_fmt" = "%d NOTES ON THIS LESSON";
+"lesson_player.eyebrow_lesson" = "LESSON";
+
+/* Lesson player — video unavailable (still processing vs genuine error) */
+"lesson_player.processing_title" = "This video is still processing";
+"lesson_player.processing_message" = "The preview will be available once encoding finishes. This usually takes a few minutes.";
+"lesson_player.processing_check_again" = "Check again";
+"lesson_player.error_processing_failed" = "This video could not be processed. Please try again later or contact support.";
+"lesson_player.error_invalid_url" = "Invalid video URL.";
+"lesson_player.error_not_enrolled" = "You are not enrolled in this course.";
+"lesson_player.error_unknown" = "Unknown error";
+"lesson_player.error_playback_failed_fmt" = "Playback failed: %@";
+"lesson_player.error_playback_stopped_fmt" = "Playback stopped: %@";
+
+/* Viewer presence guard (anti-sharing / anti-recording) */
+"presence_guard.continue" = "Tap to continue";
+"presence_guard.no_face_title" = "Are you still there?";
+"presence_guard.no_face_message" = "We paused because no one appears to be watching. This lesson is protected against off-screen recording.";
+"presence_guard.multiple_title" = "Multiple viewers detected";
+"presence_guard.multiple_message" = "This lesson is for your account only. Please make sure you're watching alone to continue.";
+"presence_guard.wrong_person_title" = "Please verify it's you";
+"presence_guard.wrong_person_message" = "We couldn't confirm the enrolled account owner is watching. Face the camera and tap to continue.";
+"presence_guard.low_light_title" = "Too dark to see";
+"presence_guard.low_light_message" = "Please improve the lighting so we can confirm you're watching, then tap to continue.";
+"presence_guard.recording_title" = "Recording device detected";
+"presence_guard.recording_message" = "A phone or screen pointed at the video was detected. Remove it to continue watching.";
+"presence_guard.hud_recording" = "REC?";
+"presence_guard.alert_multiple_fmt" = "%d people in view";
+"presence_guard.alert_phone" = "Possible recording device detected";
+
+/* Camera consent screen */
+"presence_consent.title" = "Protected viewing";
+"presence_consent.subtitle" = "To protect course content, Droob uses your front camera while protected lessons play. Here's exactly what that means.";
+"presence_consent.bullet1_title" = "Front camera, during playback only";
+"presence_consent.bullet1_body" = "The camera runs only while a protected video is playing, and stops the moment you pause or leave.";
+"presence_consent.bullet2_title" = "Lightweight, on your device";
+"presence_consent.bullet2_body" = "Checks run a few times per second on-device and never slow down or interrupt the video.";
+"presence_consent.bullet3_title" = "Nothing is saved or uploaded";
+"presence_consent.bullet3_body" = "No photos or video are stored. Only a private on-device face signature is kept, and you can delete it anytime.";
+"presence_consent.bullet4_title" = "You're in control";
+"presence_consent.bullet4_body" = "You can decline and still watch — the moving watermark stays on either way.";
+"presence_consent.accept" = "Allow protected viewing";
+"presence_consent.decline" = "Not now";
+"presence_camera_required.title" = "Camera access required";
+"presence_camera_required.message" = "This lesson is protected. Enable camera access so we can confirm a single, enrolled viewer is watching.";
+"presence_camera_required.button" = "Enable camera access";
+"presence_guard.tilt_hint" = "Hold the phone straight to keep the video private";
+
+/* Content protection (screen recording / capture) */
+"capture.blocked_title" = "Screen capture is not allowed";
+"capture.blocked_message" = "Disable screen recording, AirPlay, or iPhone Mirroring to continue.";
+"capture.blocked_external_message" = "Disconnect the external display, cable, or mirroring to continue.";
+"capture.screen_off_title" = "Turn your screen on to continue";
+"capture.screen_off_message" = "Content is hidden while your iPhone's screen is off — including when it's mirrored or controlled from a Mac. Turn the screen on to keep watching.";
+"security.content_protection_section" = "Content protection";
+"security.screen_record_row" = "Block screen recording & screenshots";
+"security.screen_record_on" = "Screenshots and screen recording are blocked across the app";
+"security.screen_record_off" = "Screenshots and screen recording are currently allowed";
+"security.delete_section" = "Delete account";
+"security.delete_account" = "Delete my account";
+"security.delete_account_subtitle" = "Permanently delete your account and data";
+"security.delete_confirm_title" = "Delete your account?";
+"security.delete_confirm_message" = "This permanently deletes your account, enrollments, notes, and data. This can't be undone.";
+"integrity.blocked_title" = "Unsupported device";
+"integrity.blocked_message" = "For content protection, Droob can't run on a jailbroken device. Please use Droob on a standard, up-to-date iPhone or iPad.";
+"fullscreen.required_title" = "Full screen required";
+"fullscreen.required_message" = "Droob plays protected content in full screen only. Make the app full screen to continue.";
+
+"lesson.reading_required_eyebrow" = "REQUIRED READING";
+"lesson.reading_progress_label" = "READING PROGRESS";
+"lesson.reading_progress_fmt" = "p.%d of %d";
+"lesson.reading_start" = "Start Reading";
+"lesson.reading_continue" = "Continue Reading";
+"lesson.materials_eyebrow" = "LESSON MATERIALS";
+
+"lesson.add_note_title_add" = "Add note";
+"lesson.add_note_title_edit" = "Edit note";
+"lesson.add_note_cancel" = "Cancel";
+"lesson.add_note_save" = "Save";
+"lesson.add_note_placeholder" = "Write your note...";
+"lesson.add_note_failed" = "Couldn't save the note. Try again.";
+"lesson.add_note_selected_text_label" = "SELECTED TEXT";
+"lesson.add_note_selected_text_page_fmt" = "SELECTED TEXT · P.%d";
+"lesson.add_note_footer_page_fmt" = "Page %d · %@";
+
+"lesson.notes_list_title" = "My Notes";
+"lesson.notes_list_add" = "Add";
+"lesson.notes_list_empty" = "No notes yet — tap Add to capture your first one.";
+"lesson.notes_edit" = "Edit";
+"lesson.notes_delete" = "Delete";
+"playback_settings.back"             = "Settings";
+"playback_settings.title"            = "Playback";
+"playback_settings.speed"            = "SPEED";
+"playback_settings.speed_footer"     = "Applies to this lesson only. Saved across sessions.";
+"playback_settings.quality"          = "VIDEO QUALITY";
+"playback_settings.quality_footer"   = "Applies to streaming. Downloads use their own quality setting.";
+"playback_settings.quality_single"   = "This lesson streams at a single quality.";
+"playback_settings.quality_low"      = "480p";
+"playback_settings.quality_low_sub"  = "Low data usage";
+"playback_settings.quality_med"      = "720p HD";
+"playback_settings.quality_med_sub"  = "Recommended";
+"playback_settings.quality_high"     = "1080p Full HD";
+"playback_settings.quality_high_sub" = "High data usage";
+"playback_settings.options"          = "OPTIONS";
+"playback_settings.autoplay"         = "Autoplay next lesson";
+"playback_settings.subtitles"        = "Subtitles / Closed captions";
+"playback_settings.subtitles_unavailable" = "Subtitles are not available for this lesson yet.";
+
+"lesson.notes_filter_all"      = "All";
+"lesson.notes_filter_document" = "Document";
+"lesson.notes_filter_video"    = "Video";
+"lesson.notes_type_video"      = "VIDEO";
+"lesson.notes_type_document"   = "DOCUMENT";
+"lesson.notes_date_today"      = "Today";
+"lesson.notes_date_yesterday"  = "Yesterday";
+"lesson.notes_subtitle_fmt"    = "%1$d NOTES · %2$d SOURCES";
+"lesson.notes_page_prefix_fmt" = "p.%d";
+"lesson.notes_callout_eyebrow_fmt" = "YOUR NOTE · PAGE %d";
+"lesson.notes_callout_eyebrow" = "YOUR NOTE";
+
+"lesson_pdf.eyebrow_fmt" = "LESSON %@";
+"lesson_pdf.page_of_fmt" = "PDF · Page %d of %d";
+"lesson_pdf.pages_label" = "pages";
+"lesson_pdf.prev" = "Prev";
+"lesson_pdf.next" = "Next";
+"lesson_pdf.add_note" = "Add Note";
+"lesson_pdf.add" = "Add";
+"lesson_pdf.my_notes" = "My Notes";
+"lesson_pdf.invalid_url" = "Invalid document URL";
+"lesson_pdf.open_failed" = "Could not open document";
+"lesson_pdf.search_placeholder" = "Search in document";
+"lesson_pdf.search_no_matches" = "No matches";
+"lesson_pdf.search_match_count_fmt" = "%1$d of %2$d";
+"lesson_pdf.notes_pill" = "Notes";
+
+/* Document note flow (June 2026 redesign) */
+"lesson.doc_note_new_title" = "New note";
+"lesson.doc_note_edit_title" = "Edit note";
+"lesson.doc_note_subtitle_fmt" = "Note %1$d of %2$d · Page %3$d";
+"lesson.doc_note_content_label" = "CONTENT";
+"lesson.doc_note_your_note_label" = "YOUR NOTE";
+"lesson.doc_note_optional" = "optional";
+"lesson.doc_note_paste_hint" = "Paste source text";
+"lesson.doc_note_content_placeholder" = "Paste a passage from the page to anchor your note…";
+"lesson.doc_note_your_note_placeholder" = "Write your thoughts, questions, or summary here…";
+"lesson.doc_note_words_fmt" = "%1$d / %2$d words";
+"lesson.doc_note_helper" = "Fill either field — or both. At least one is required to save.";
+"lesson.doc_note_delete" = "Delete";
+"lesson.doc_note_delete_title" = "Delete this note?";
+"lesson.doc_note_delete_message_fmt" = "This permanently deletes the note on page %d. This cannot be undone.";
+"lesson.doc_note_delete_keep" = "Keep editing";
+"lesson.doc_note_delete_discard" = "Discard";
+"lesson.notes_on_page_title" = "Notes on this page";
+"lesson.notes_on_page_subtitle_fmt" = "Page %1$d · %2$@";
+"lesson.notes_on_page_empty" = "No notes on this page yet";
+"lesson.notes_on_page_add" = "Add note";
+"lesson.notes_all_link" = "All notes";
+"lesson.notes_see_all" = "See All";
+"lesson.note_saved_to_my_notes" = "Note saved to My Notes";
+"lesson.note_deleted_toast" = "Note deleted";
+"lesson.note_undo" = "Undo";
+
+/* AI Tutor */
+"ai_tutor.title" = "AI Tutor";
+"ai_tutor.ask_question" = "Ask a Question";
+"ai_tutor.placeholder" = "Type your question…";
+"ai_tutor.send" = "Send";
+"ai_tutor.streaming" = "Streaming";
+"ai_tutor.sources" = "Sources";
+"ai_tutor.page" = "Page";
+"ai_tutor.thumbs_up" = "Helpful";
+"ai_tutor.thumbs_down" = "Not Helpful";
+"ai_tutor.select_course" = "Select an enrolled course to use the AI Tutor";
+"ai_tutor.select_course_short" = "Select course";
+"ai_tutor.error_select_course" = "Please select a course first.";
+"ai_tutor.error_fmt" = "Error: %@";
+"ai_tutor.error_unknown" = "Something went wrong. Please try again.";
+"ai_tutor.error_config" = "The AI tutor isn't available right now.";
+"ai_tutor.error_encoding" = "Couldn't send your question. Please try again.";
+"ai_tutor.error_stream" = "The answer stopped partway. Please try again.";
+"ai_tutor.error_stream_inline_fmt" = "\n[Error: %@]";
+
+/* AI Tutor · multi-model ask */
+"ai_multi.title" = "Ask AI";
+"ai_multi.entry_title" = "Ask AI about this course";
+"ai_multi.entry_subtitle" = "Stuck on something? Get an explanation in seconds — or compare answers from several AI models.";
+"ai_multi.entry_lesson" = "Ask AI";
+"ai_multi.open_chat" = "Open chat";
+"ai_multi.mode_fast" = "Fast";
+"ai_multi.mode_deep" = "Deep";
+"ai_multi.mode_fast_hint" = "One model. The quickest useful answer.";
+"ai_multi.mode_deep_hint" = "Asks several models at once and marks the best answer. Can take up to 30 seconds.";
+"ai_multi.models_label" = "Models";
+"ai_multi.models_auto" = "Let Droob choose";
+"ai_multi.models_compare_all" = "Compare all";
+"ai_multi.models_compare_all_hint" = "Ask every available model and rank the answers.";
+"ai_multi.models_picker_title" = "Choose models";
+"ai_multi.models_cap_hint_fast" = "Fast mode uses one model. Pick one, or let Droob choose.";
+"ai_multi.models_cap_hint_deep" = "Pick up to 3 models, or compare them all.";
+"ai_multi.models_loading" = "Loading models…";
+"ai_multi.models_empty" = "No models are available right now.";
+"ai_multi.models_error" = "Couldn't load the model list.";
+"ai_multi.models_selected_one" = "1 selected";
+"ai_multi.models_selected_two" = "2 selected";
+"ai_multi.models_selected_fmt" = "%d selected";
+"ai_multi.models_selected_many_fmt" = "%d selected";
+"ai_multi.model_vision" = "Reads images";
+"ai_multi.model_fast_default" = "Default";
+"ai_multi.vision_filter_note" = "Showing only models that can read your photo.";
+"ai_multi.question_placeholder" = "Ask anything about this course…";
+"ai_multi.ask" = "Ask";
+"ai_multi.waiting_title_one" = "Asking 1 model…";
+"ai_multi.waiting_title_two" = "Asking 2 models…";
+"ai_multi.waiting_title_fmt" = "Asking %d models…";
+"ai_multi.waiting_title_many_fmt" = "Asking %d models…";
+"ai_multi.waiting_title_unknown" = "Asking the AI tutor…";
+"ai_multi.waiting_subtitle" = "All answers arrive together, so this can take a moment.";
+"ai_multi.waiting_cancel" = "Stop";
+"ai_multi.status_timeout" = "Timed out";
+"ai_multi.status_rate_limited" = "Rate limited";
+"ai_multi.status_error" = "Didn't answer";
+"ai_multi.status_timeout_hint" = "This model took too long to reply.";
+"ai_multi.status_rate_limited_hint" = "This free model hit its usage limit. Try again in a minute.";
+"ai_multi.status_error_hint" = "This model couldn't answer this time.";
+"ai_multi.best_badge" = "Best";
+"ai_multi.best_rationale_title" = "Why this answer won";
+"ai_multi.copy" = "Copy";
+"ai_multi.copied" = "Copied";
+"ai_multi.latency_fmt" = "%@ s";
+"ai_multi.answer_position_fmt" = "%1$d of %2$d";
+"ai_multi.answered_summary_fmt" = "%1$d of %2$d models answered";
+"ai_multi.empty_title" = "Ask anything about this course";
+"ai_multi.empty_subtitle" = "Type a question below. You can attach a photo of a diagram or a handwritten problem.";
+"ai_multi.error_all_failed" = "No model could answer right now. Please try again in a moment.";
+"ai_multi.error_generic" = "Something went wrong. Please try again.";
+"ai_multi.unknown_model" = "Unknown model";
+"ai_multi.error_empty_question" = "Type a question first.";
+"ai_multi.attach_photo" = "Attach photo";
+"ai_multi.photo_attached" = "Photo attached";
+"ai_multi.photo_remove" = "Remove";
+"ai_multi.photo_uploading" = "Uploading photo…";
+"ai_multi.photo_not_image" = "Please choose an image.";
+"ai_multi.rating_thanks" = "Thanks for the feedback";
+/* AI Tutor · hub (bottom-bar entry) */
+"ai_hub.title" = "AI Tutor";
+"ai_hub.tab_a11y" = "AI tutor";
+"ai_hub.tab_a11y_hint" = "Ask about one of your courses";
+"ai_hub.headline" = "Ask anything in your courses";
+"ai_hub.subheadline" = "Several AI models answer at once, and Droob marks the best one.";
+"ai_hub.pick_course" = "Choose a course";
+"ai_hub.pick_course_hint" = "The tutor answers from that course's lessons and materials.";
+"ai_hub.loading" = "Finding your courses…";
+"ai_hub.empty_title" = "No courses to ask about yet";
+"ai_hub.empty_body" = "The AI tutor answers questions about the courses you're enrolled in — it reads their lessons and materials. Enrol in a course and it will appear here.";
+"ai_hub.empty_cta" = "Browse courses";
+"ai_hub.close" = "Close";
+
+/* Profile */
+"profile.title" = "Profile";
+"profile.language" = "Language";
+"profile.english" = "English";
+"profile.arabic" = "Arabic";
+
+/* OTP code entry */
+"otp.back" = "Back";
+"otp.title" = "Enter the code";
+"otp.subtitle_fmt" = "We sent a 6-digit code to %@";
+"otp.verify" = "Verify";
+"otp.verifying" = "Verifying…";
+"otp.didnt_receive" = "Didn't receive it?";
+"otp.resend_code" = "Resend Code";
+"otp.resend_cooldown_fmt" = "Resend Code · %@";
+"otp.resending_banner" = "A new code has been sent.";
+"otp.totp_required_fallback" = "This account uses two-factor authentication. Please sign in with your password instead.";
+
+/* Email OTP (passwordless) */
+"email_otp.login_cta" = "Sign in with email code";
+"email_otp.register_cta" = "Sign up with email code";
+"email_otp.login_email_title" = "Sign in with email";
+"email_otp.login_email_subtitle" = "Enter your email and we'll send you a one-time code.";
+"email_otp.register_email_title" = "Create your account";
+"email_otp.register_email_subtitle" = "We'll send a code to confirm your email.";
+"email_otp.send_code" = "Send Code";
+"email_otp.sending" = "Sending…";
+"email_otp.use_password_instead" = "Use password instead";
+
+/* Display name prompt */
+"display_name.title" = "What should we call you?";
+"display_name.subtitle" = "This is the name other learners will see.";
+"display_name.label" = "Display name";
+"display_name.placeholder" = "e.g. Lina";
+"display_name.continue" = "Continue";
+"display_name.continuing" = "Finishing up…";
+
+/* Login screen */
+"login.title" = "Sign In to Droob";
+"login.subtitle" = "Continue where you left off";
+"login.email_label" = "Email";
+"login.email_placeholder" = "name@email.com";
+"login.password_label" = "Password";
+"login.password_placeholder" = "••••••••";
+"login.forgot" = "Forgot Password?";
+"login.show" = "Show";
+"login.hide" = "Hide";
+"login.keep_signed_in" = "Keep me signed in";
+"login.sign_in" = "Sign In";
+"login.signing_in" = "Signing in…";
+"login.try_again" = "Try Again";
+"login.reset_password" = "Reset Password";
+"login.or" = "or";
+"login.social_google" = "Google";
+"login.social_apple" = "Apple";
+"login.no_account_prefix" = "Don't have an account?";
+"login.sign_up_link" = "Sign Up";
+"login.err_incorrect" = "Incorrect Email or Password";
+"login.err_wrong_credentials" = "Wrong email or password. Try again, or reset your password.";
+"login.err_attempts_fmt" = "%d attempts remaining before your account is locked.";
+"login.err_missing_fields" = "Please enter your email and password.";
+"login.err_verify_email" = "Please verify your email address";
+"login.err_verify_password" = "Please verify your password";
+"login.err_captcha_dismissed" = "Extra verification is needed to sign in. Please complete it, or reset your password.";
+"login.err_device_not_authorized" = "This account is already in use on another device. Contact support to move it to this one.";
+"login.biometric_face_id" = "Sign In with Face ID";
+"login.biometric_touch_id" = "Sign In with Touch ID";
+"login.biometric_reason" = "Sign in to Droob";
+
+/* Legal screens */
+"legal.terms_title" = "Terms of Service";
+"legal.terms_updated" = "Last updated · May 2026";
+"legal.privacy_title" = "Privacy Policy";
+"legal.privacy_updated" = "Last updated · May 2026";
+
+/* Register screen (Figma redesign) */
+"register.back" = "Sign In";
+"register.title" = "Create account";
+"register.subtitle" = "Join the Droob community";
+"register.section_info" = "Your Info";
+"register.first_name" = "First name";
+"register.last_name" = "Last name";
+"register.email" = "Email";
+"register.password" = "Password";
+"register.password_placeholder" = "••••••••";
+"register.password_hint" = "At least 8 characters with one number or symbol.";
+"register.create_account" = "Create Account";
+"register.creating_account" = "Creating…";
+"register.terms_prefix" = "By creating an account you agree to Droob's ";
+"register.terms_of_service" = "Terms of Service";
+"register.terms_and" = " and ";
+"register.privacy_policy" = "Privacy Policy";
+"register.terms_suffix" = ".";
+
+/* Forgot Password */
+"forgot.back" = "Sign In";
+"forgot.title_line1" = "Reset Password";
+"forgot.title_line2" = "";
+"forgot.description" = "Enter the email address linked to your account and we'll send a reset code.";
+"forgot.email_section" = "Email";
+"forgot.email_label" = "Email";
+"forgot.email_placeholder" = "name@email.com";
+"forgot.hint" = "You'll receive a 6-digit code to create a new password.";
+"forgot.send_button" = "Send Reset Code";
+"forgot.sending" = "Sending…";
+"forgot.error_empty" = "Please enter your email address.";
+"forgot.sent_neutral" = "If an account exists for that email, a 6-digit reset code is on the way. Check your inbox (and spam).";
+"forgot.have_code" = "I have a code";
+
+/* Splash & Onboarding */
+"brand.name" = "Droob";
+"splash.tagline" = "PREMIUM LEARNING";
+"onboarding.slide1_title" = "Learn at your own pace";
+"onboarding.slide1_description" = "40+ premium courses. Download for offline. No schedule needed.";
+"onboarding.slide1_cta" = "Get Started";
+"onboarding.slide2_title" = "Track your real progress";
+"onboarding.slide2_description" = "Daily streaks, XP milestones, and per-lesson tracking keep you moving forward.";
+"onboarding.slide2_cta" = "Next";
+"onboarding.slide3_title" = "Join live sessions & office hours";
+"onboarding.slide3_description" = "Book masterclasses, get real-time feedback, and connect with your instructors.";
+"onboarding.slide3_cta" = "Start Learning";
+/* Illustration card copy */
+"onboarding.my_courses_title" = "My Courses";
+"onboarding.my_courses_subtitle" = "3 enrolled";
+"onboarding.sample_course_1" = "UX/UI Fundamentals";
+"onboarding.sample_course_2" = "React Mastery";
+"onboarding.sample_course_3" = "Digital Marketing";
+"mac_unsupported.title" = "Droob is for iPhone and iPad";
+"mac_unsupported.body" = "This app isn't supported on Mac. Open Droob on your iPhone or iPad to continue learning.";
+"onboarding.streak_label" = "12-day streak";
+"onboarding.streak_subtitle" = "Keep it going";
+"onboarding.progress_this_course" = "This course";
+"onboarding.stats_streak" = "12-day streak";
+"onboarding.stats_watch_time" = "Watch time";
+"onboarding.stats_quiz_avg" = "Quiz average";
+"onboarding.instructor_role" = "UX/UI · Senior Instructor";
+"onboarding.badge_live" = "LIVE";
+"onboarding.session_viewers" = "38 watching";
+"onboarding.session_duration" = "60 min";
+"onboarding.session_started_ago" = "Started 14 min ago";
+"onboarding.join_button" = "Join";
+"onboarding.office_hours_title" = "Office Hours — UX/UI";
+"onboarding.office_hours_time" = "5:00 PM · 60 min ·";
+"onboarding.book_button" = "Book";
+
+/* General */
+"general.loading" = "Loading…";
+"general.error" = "Error";
+"general.retry" = "Retry";
+"general.ok" = "OK";
+"general.empty" = "Nothing here yet";
+"general.done" = "Done";
+"general.confirm" = "Confirm";
+"general.cancel" = "Cancel";
+"general.save" = "Save";
+"general.back" = "Back";
+"general.close" = "Close";
+
+/* Home */
+"home.greeting_morning" = "Good morning";
+"home.greeting_afternoon" = "Good afternoon";
+"home.greeting_evening" = "Good evening";
+"home.welcome_prefix" = "Welcome to";
+"home.continue_learning" = "CONTINUE LEARNING";
+"home.in_progress" = "IN PROGRESS";
+"home.continue_button" = "Continue";
+"home.stat_streak" = "Day streak";
+"home.stat_streak_unit" = "";
+"home.stat_watch" = "Watched";
+"home.stat_quiz_avg" = "Quiz avg";
+"home.stat_courses" = "Courses";
+"home.my_courses" = "My Courses";
+"home.see_all" = "See All";
+"home.next_session" = "Next Session";
+"home.next_session_all" = "All";
+"home.join_session" = "Join";
+"home.empty_title" = "No courses yet";
+"home.empty_subtitle" = "Browse the catalogue and enrol in your first course to get started.";
+"home.browse_courses" = "Browse Courses";
+"home.recommended" = "Recommended for you";
+"home.recommended_reason_fmt" = "Because you enrolled in %@";
+"home.recommended_meta_fmt" = "%1$@ · %2$d lessons";
+"home.course_meta_fmt" = "%1$d lessons · %2$@h · ★ %3$@";
+"home.enrolled_count_fmt" = "%d enrolled";
+
+/* Home — Ask Droob AI hero card */
+"home.ai_hero.eyebrow" = "AI TUTOR";
+"home.ai_hero.title" = "Ask Droob AI";
+"home.ai_hero.cta" = "Start a question";
+"home.ai_hero.phrase_1" = "Solving a calculus problem";
+"home.ai_hero.phrase_2" = "Reading a PDF worksheet";
+"home.ai_hero.phrase_3" = "Building a solutions sheet";
+"home.ai_hero.phrase_4" = "Explaining step by step";
+"home.ai_hero.a11y" = "Ask Droob AI. Solves calculus problems, reads PDF worksheets, builds a solutions sheet, and explains step by step.";
+"home.ai_hero.a11y_hint" = "Opens the Droob AI tutor";
+
+/* Courses tab */
+"courses.segment_mine" = "Enrolled";
+"courses.segment_explore" = "Explore";
+"courses.count_fmt" = "%d courses";
+"enrolled.subtitle_fmt" = "%1$d instructors · %2$d active courses";
+"enrolled.stat_courses" = "Courses";
+"enrolled.stat_in_progress" = "In progress";
+"enrolled.stat_completed" = "Completed";
+"enrolled.stat_pending" = "Pending";
+"enrolled.course_singular" = "course";
+"enrolled.course_plural" = "courses";
+"enrolled.percent_complete" = "complete";
+"enrolled.live_sessions_fmt" = "%d live sessions";
+"enrolled.live_session_singular_fmt" = "%d live session";
+"enrolled.completed" = "Completed";
+"enrolled.pending_approval" = "Pending approval";
+"enrolled.discover_more" = "Discover more instructors";
+"enrolled.empty_welcome_prefix" = "Welcome to Droob,";
+"enrolled.empty_how_title" = "How Droob works";
+"enrolled.empty_pick_title" = "Pick a teacher";
+"enrolled.empty_pick_subtitle" = "Browse their courses on their profile";
+"enrolled.empty_request_title" = "Request to enroll";
+"enrolled.empty_request_subtitle" = "Send a short note";
+"enrolled.empty_browse_all_fmt" = "Browse all %d instructors";
+"explore.segment_instructors" = "Instructors";
+"explore.segment_courses" = "Courses";
+"explore.browse_instructors_fmt" = "Browse %d expert instructors";
+"explore.instructor_students_fmt" = "%d students";
+"explore.instructor_courses_fmt" = "%d courses";
+"explore.instructors_count_fmt" = "%d instructors";
+"explore.stat_years" = "Years";
+"explore.stat_rating" = "Rating";
+"explore.stat_students" = "Students";
+"explore.stat_courses" = "Courses";
+"explore.view_courses" = "View courses";
+"explore.no_courses" = "No published courses yet";
+"explore.new_badge" = "New";
+"explore.see_all_courses_fmt" = "See all %d courses";
+"explore.see_all" = "See all";
+"courses.sort" = "Sort";
+"courses.filter" = "Filter";
+"courses.all_chip" = "All";
+"courses.sort_title" = "Sort by";
+"courses.sort_done" = "Done";
+"courses.sort_recently_added" = "Recently Added";
+"courses.sort_most_popular" = "Most Popular";
+"courses.sort_highest_rated" = "Highest Rated";
+"courses.sort_price_low_high" = "Price: Low to High";
+"courses.sort_price_high_low" = "Price: High to Low";
+"my_courses.sort_recently_active" = "Recently Active";
+"my_courses.sort_recently_enrolled" = "Recently Enrolled";
+"my_courses.sort_progress_high_low" = "Progress: High to Low";
+"courses.filter_title" = "Filter";
+"courses.filter_all" = "All";
+"courses.filter_free" = "";
+"courses.filter_paid" = "Paid";
+"courses.filter_enrolled" = "Enrolled";
+"courses.filter_sheet_title" = "Filter Courses";
+"courses.filter_clear_all" = "Clear all";
+"courses.filter_apply" = "Apply Filters";
+"courses.filter_section_price" = "PRICE";
+"courses.filter_section_rating" = "RATING";
+"courses.filter_section_level" = "LEVEL";
+"courses.filter_price_any" = "Any";
+"courses.filter_price_under_50" = "Under $50";
+"courses.filter_price_50_100" = "$50 – $100";
+"courses.filter_price_100_plus" = "$100+";
+"courses.filter_rating_any" = "Any";
+"courses.filter_rating_45" = "★ 4.5+";
+"courses.filter_rating_40" = "★ 4.0+";
+"courses.filter_rating_35" = "★ 3.5+";
+"courses.filter_level_all" = "All Levels";
+"courses.filter_level_beginner" = "Beginner";
+"courses.filter_level_intermediate" = "Intermediate";
+"courses.filter_level_advanced" = "Advanced";
+
+/* Course detail sheet */
+"course_detail.video_lessons_hours_fmt" = "%1$d video lessons · %2$d hours";
+"course_detail.certificate" = "Certificate on completion";
+"course_detail.offline_downloads" = "Offline downloads";
+"course_detail.apple_pay" = "Pay";
+"course_detail.or" = "or";
+"course_detail.enrol_with_card_fmt" = "Enrol with Card — %@";
+"course_detail.footer_guarantee" = "14-day refund guarantee · Secure checkout";
+"course_detail.enroll_free_cta" = "Enroll";
+"course_detail.enroll_free_failed" = "Couldn’t enroll. Please try again.";
+"course_detail.curriculum_title" = "Curriculum";
+"course_detail.curriculum_empty" = "No curriculum modules yet.";
+"curriculum.module_quiz" = "Module Quiz";
+"curriculum.quiz_prompt" = "Test your knowledge";
+"curriculum.quiz_questions_one" = "1 question";
+"curriculum.quiz_questions_two" = "2 questions";
+"curriculum.quiz_questions_fmt" = "%d questions";
+"curriculum.quiz_questions_many_fmt" = "%d questions";
+"course_detail.ratings_title" = "Ratings & Reviews";
+"course_detail.ratings_count_fmt" = "%lld ratings";
+"course_detail.see_all_reviews_fmt" = "See all %lld reviews";
+"course_detail.review_age_just_now" = "just now";
+"course_detail.review_age_minutes_fmt" = "%d min ago";
+"course_detail.review_age_hours_fmt" = "%d hr ago";
+"course_detail.review_age_days_fmt" = "%d days ago";
+"course_detail.review_age_weeks_fmt" = "%d weeks ago";
+"course_detail.review_age_months_fmt" = "%d months ago";
+"course_detail.qa_title" = "Q&A";
+"course_detail.rate_this_course" = "Rate This Course";
+"course_detail.ask_a_question" = "Ask a Question";
+"course_detail.rate_sheet_title" = "Rate this course";
+"course_detail.rate_sheet_placeholder" = "Share what you thought of the course…";
+"course_detail.rate_sheet_submit" = "Submit review";
+"course_detail.rate_sheet_only_enrolled" = "Only enrolled students can leave a review.";
+"course_detail.rate_sheet_thanks" = "Thanks — your review was saved.";
+"course_detail.rate_sheet_question" = "How was the course?";
+"course_detail.rate_sheet_prompt" = "Your review helps other learners on their droob.";
+"course_detail.rate_sheet_submit_button" = "Submit Rating";
+"course_detail.rate_sheet_cancel" = "Cancel";
+"course_detail.rate_sheet_label_1" = "Terrible";
+"course_detail.rate_sheet_label_2" = "Poor";
+"course_detail.rate_sheet_label_3" = "Average";
+"course_detail.rate_sheet_label_4" = "Great";
+"course_detail.rate_sheet_label_5" = "Outstanding";
+"course_detail.rate_sheet_thanks_fmt" = "Thanks, %@!";
+"course_detail.rate_sheet_success_subtitle" = "Your rating helps other learners discover great content on Droob.";
+"course_detail.rate_sheet_back_to_course" = "Back to Course";
+"course_detail.rate_sheet_edit_review" = "Edit My Review";
+"course_detail.rate_sheet_you_fallback" = "You";
+"course_detail.generic_error" = "Something went wrong. Please try again.";
+
+/* Enrollment requests (ADR-0006) */
+"enroll_request.request_to_enroll" = "Enroll and Start";
+"course.guest_sign_in_to_enroll" = "Sign In to Enroll";
+"course.guest_preview_hint" = "Browse any course for free. Sign in only when you want to enroll.";
+"guest.browse_title" = "Browse Courses";
+"guest.browse_sign_in" = "Sign In";
+"login.browse_courses_guest" = "Browse courses without signing in";
+"enroll_request.subtitle_personal_fmt" = "Tell %@ why you want to join · they review each request";
+"enroll_request.note_to_fmt" = "Note to %@";
+"enroll_request.sent_banner" = "Request sent.";
+"enroll_request.pending_button" = "Request Pending";
+"enroll_request.pending_subtitle" = "Awaiting instructor approval";
+"enroll_request.sheet_title_create" = "Enroll & Start";
+"enroll_request.sheet_title_edit" = "Your Pending Request";
+"enroll_request.sheet_prompt_create" = "Leave an optional message for the instructor — you'll be enrolled and can start right away.";
+"enroll_request.sheet_prompt_edit" = "Edit your note or withdraw your request while it's still pending.";
+"enroll_request.note_placeholder" = "Leave a message for the instructor (optional)…";
+"enroll_request.submit_create" = "Enroll and Start";
+"enroll_request.submit_edit" = "Save Changes";
+"enroll_request.cancel_request" = "Cancel Request";
+"enroll_request.close" = "Not Now";
+"enroll_request.success_title" = "You're enrolled!";
+"enroll_request.success_subtitle" = "You're all set — start watching the lessons now.";
+"enroll_request.back_to_course" = "Back to Course";
+"enroll_request.cancel_confirm_title" = "Cancel Request?";
+"enroll_request.cancel_confirm_message" = "Your enrollment request will be withdrawn. You can request again later.";
+"enroll_request.cancel_confirm_yes" = "Cancel Request";
+"enroll_request.cancel_confirm_no" = "Keep Request";
+"enroll_request.decision_rejected" = "Your request wasn't approved. You can request again.";
+"enroll_request.decision_cancelled" = "This request was withdrawn.";
+"enroll_request.poll_stopped_hint" = "Still waiting on the instructor.";
+"enroll_request.check_now" = "Check now";
+
+"course_detail.all_reviews_title" = "Reviews";
+"course_detail.all_reviews_empty" = "No reviews yet. Be the first to share your thoughts.";
+"course_detail.qa_placeholder_title" = "Questions & Answers";
+"course_detail.qa_placeholder_body" = "Ask questions and read answers from the instructor and other students. This space is coming soon.";
+"course_detail.qa_upvotes_fmt" = "%d upvotes";
+"course_detail.qa_instructor_tag" = "Instructor";
+"course_detail.qa_see_all_fmt" = "See all %d questions";
+"course_detail.pinned_faqs_title" = "Questions you may ask";
+"course_detail.pinned_faqs_subtitle" = "Answered by your instructor";
+"qa.subtitle_fmt" = "%1$@ · %2$d questions";
+"qa.ask_placeholder" = "Ask a question…";
+"qa.filter_all" = "All";
+"qa.filter_answered" = "Answered";
+"qa.filter_unanswered" = "Unanswered";
+"qa.filter_mine" = "My Questions";
+"qa.status_answered" = "✓ Answered";
+"qa.status_unanswered" = "Unanswered";
+"qa.empty_state" = "No questions yet — be the first to ask.";
+"qa.ask_sheet_title" = "Ask a Question";
+"qa.ask_sheet_placeholder" = "What would you like to know?";
+"qa.ask_sheet_submit" = "Post Question";
+"qa.age_just_now" = "just now";
+"qa.age_minutes_fmt" = "%dm ago";
+"qa.age_hours_fmt" = "%dh ago";
+"qa.age_yesterday" = "Yesterday";
+"qa.age_days_fmt" = "%dd ago";
+"instructor_profile.students" = "Students";
+"instructor_profile.courses" = "Courses";
+"instructor_profile.rating" = "Rating";
+"instructor_profile.years" = "Years";
+"instructor_profile.about" = "ABOUT";
+"instructor_profile.bio_placeholder" = "No bio yet.";
+"instructor_profile.message" = "Message";
+"instructor_profile.courses_section" = "COURSES";
+"instructor_profile.active_now" = "Active now";
+"instructor_profile.active_min_fmt" = "Active %dm ago";
+"instructor_profile.active_hour_fmt" = "Active %dh ago";
+"instructor_profile.active_day_fmt" = "Active %dd ago";
+"instructor_profile.tab_courses" = "Courses";
+"instructor_profile.tab_enrolled" = "Enrolled";
+"instructor_profile.tab_pending" = "Pending";
+"instructor_profile.tab_reviews" = "Reviews";
+"instructor_profile.view_course" = "View course";
+"instructor_profile.reviews_count_fmt" = "%lld reviews";
+"instructor_profile.courses_empty" = "No published courses yet.";
+"instructor_profile.enrolled_empty" = "You're not enrolled in any of this instructor's courses yet.";
+"instructor_profile.pending_empty" = "You have no pending requests with this instructor.";
+"instructor_profile.pending_pill" = "Pending";
+"instructor_profile.start_learning_fmt" = "Start learning with %@";
+"instructor_profile.enrolled_empty_sub" = "Once you request to enroll in one of their courses, it will appear here.";
+"instructor_profile.your_note" = "Your note";
+"instructor_profile.edit_note" = "Edit note";
+"instructor_profile.waiting_just_now" = "Just now";
+"instructor_profile.waiting_hours_fmt" = "%lld hours waiting";
+"instructor_profile.waiting_days_fmt" = "%lld days waiting";
+"instructor_profile.waiting_weeks_fmt" = "%lld weeks waiting";
+"instructor_profile.all_reviews_fmt" = "All reviews · %lld";
+"instructor_profile.enroll_first" = "Enroll first to add review";
+"instructor_profile.enrolled_header_fmt" = "Your courses with %@";
+"instructor_profile.enrolled_in_progress_fmt" = "%lld in progress";
+"instructor_profile.enrolled_completed_fmt" = "%lld completed";
+"instructor_profile.enrolled_of_lessons_fmt" = " of %lld lessons";
+"instructor_profile.progress" = "Progress";
+"instructor_profile.next_lesson" = "Next lesson";
+"instructor_profile.review_action" = "Review";
+"instructor_profile.all_lessons_completed_fmt" = "All %lld lessons completed";
+"instructor_profile.see_other_courses_fmt" = "See %1$@'s %2$lld other courses";
+"instructor_review.rate_button" = "Rate this instructor";
+"instructor_review.edit_button" = "Edit your review";
+"instructor_review.empty" = "No reviews yet. Be the first to share your experience.";
+"instructor_review.sheet_question_fmt" = "How was your experience with %@?";
+"instructor_review.sheet_prompt" = "Your honest feedback helps other students.";
+"instructor_review.sheet_role_label" = "Instructor";
+"instructor_review.sheet_placeholder" = "Share what stood out about working with this instructor…";
+"instructor_review.sheet_success_subtitle" = "Your rating helps other learners discover great content on Droob.";
+"instructor_review.your_review_badge" = "YOUR REVIEW";
+"instructor_review.card_edit" = "Edit";
+"instructor_review.card_delete" = "Delete";
+"instructor_review.delete_confirm_title" = "Delete your review?";
+"instructor_review.delete_confirm_message" = "This permanently removes your rating and review. You can add a new one anytime.";
+"instructor_review.delete_confirm_action" = "Delete";
+"instructor_review.delete_failed" = "Couldn't delete your review. Please try again.";
+"instructor_review.sheet_your_rating" = "YOUR RATING";
+"instructor_review.sheet_your_review" = "YOUR REVIEW";
+"instructor_review.sheet_optional_fmt" = "Optional · %lld / %lld";
+"instructor_review.sheet_post_button" = "Post Review";
+"instructor_review.success_edit_button" = "Edit My Review";
+"chat.composer_placeholder" = "Message…";
+"chat.day_today" = "Today";
+"chat.day_yesterday" = "Yesterday";
+"chat.seen_fmt" = "Seen %@";
+"chat.attachment_title" = "SEND AN ATTACHMENT";
+"chat.attachment_gallery_title" = "Gallery";
+"chat.attachment_gallery_subtitle" = "Photos & videos from your library";
+"chat.attachment_documents_title" = "Documents";
+"chat.attachment_documents_subtitle" = "PDF, Word, Slides & more";
+"chat.attachment_cancel" = "Cancel";
+"chat.attachment_uploading" = "Uploading…";
+"chat.attachment_error_empty" = "This file is empty. Pick another and try again.";
+"chat.attachment_error_too_large_fmt" = "File is too large. Max size is %d MB.";
+"chat.attachment_error_unsupported" = "This file type isn't supported in chat.";
+"chat.attachment_error_network" = "Couldn't upload — check your connection and try again.";
+"chat.attachment_error_generic" = "Couldn't upload that file. Please try again.";
+"chat.document_default" = "Document";
+"chat.voice_recording" = "Recording…";
+"chat.voice_mic_denied_title" = "Microphone access required";
+"chat.voice_mic_denied_body" = "Enable microphone access in Settings to record voice notes.";
+"chat.voice_mic_denied_ok" = "OK";
+
+/* Course preview screen */
+
+/* Confirm payment sheet */
+"confirm_payment.title" = "Confirm Payment";
+"confirm_payment.lifetime_access" = "Lifetime access";
+"confirm_payment.course_price" = "Course price";
+"confirm_payment.limited_offer" = "Limited offer";
+"confirm_payment.total" = "Total";
+"confirm_payment.double_click_face_id" = "Double-click to pay with Face ID";
+"confirm_payment.secured_footer" = "Secured by Apple Pay · End-to-end encrypted";
+"confirm_payment.cancel" = "Cancel";
+
+/* Payment complete */
+"payment_complete.title" = "Payment complete";
+"payment_complete.full_access_fmt" = "You now have full access to\n%@";
+"payment_complete.amount" = "Amount";
+"payment_complete.transaction_id" = "Transaction ID";
+"payment_complete.payment_method" = "Payment method";
+"payment_complete.start_learning" = "Start Learning";
+"payment_complete.view_receipt" = "View Receipt";
+"payment_complete.method_apple_pay" = "Apple Pay";
+"payment_complete.method_card_fmt" = "Visa ···· %@";
+
+/* Receipt screen */
+"receipt.nav_back" = "Payments";
+"receipt.title" = "Receipt";
+"receipt.payment_successful" = "Payment Successful";
+"receipt.items_section" = "ITEMS";
+"receipt.transaction_section" = "TRANSACTION";
+"receipt.course_enrolment" = "Course enrolment";
+"receipt.tax_fmt" = "Tax (%d%%)";
+"receipt.total" = "Total";
+"receipt.date" = "Date";
+"receipt.download_pdf" = "Download PDF";
+"receipt.request_refund" = "Request Refund";
+"receipt.refund_requested_pill" = "Refund requested · pending review";
+"receipt.refund_approved_pill" = "Refund approved";
+"receipt.refund_denied_pill" = "Refund denied";
+
+/* PDF download modals */
+"receipt.download_preparing_title" = "Preparing download";
+"receipt.download_preparing_subtitle" = "Your receipt PDF is being generated.";
+"receipt.downloaded_title" = "Downloaded";
+"receipt.downloaded_subtitle" = "Check your Downloads folder for the PDF.";
+"receipt.downloaded_done" = "Done";
+
+/* Refund flow */
+"refund.nav_title" = "Request refund";
+"refund.reason_header" = "REASON";
+"refund.reason_intro" = "Tell us why you need a refund. We will review your request within 2 business days.";
+"refund.reason_changed_my_mind" = "Changed my mind";
+"refund.reason_course_not_as_expected" = "Course not as expected";
+"refund.reason_accidental_purchase" = "Accidental purchase";
+"refund.reason_other" = "Other";
+"refund.continue_button" = "Continue";
+"refund.confirm_header" = "CONFIRM";
+"refund.confirm_copy" = "Submitting sends this refund request to support. You can still use the course until a decision is made.";
+"refund.confirm_agree" = "I agree to the refund policy and confirm the details above are correct.";
+"refund.confirm_submit" = "Submit request";
+"refund.summary_header" = "SUMMARY";
+"refund.summary_course" = "Course";
+"refund.summary_amount" = "Amount";
+"refund.summary_transaction" = "Transaction";
+"refund.summary_reason" = "Reason";
+"refund.summary_footer" = "Approved refunds return to your original payment method in 5-10 business days.";
+"refund.submitted_nav_title" = "Refund";
+"refund.submitted_title" = "Request submitted";
+"refund.submitted_subtitle" = "We emailed you a confirmation. You will get an update when your refund is processed.";
+"refund.submitted_back_to_receipt" = "Back to receipt";
+"refund.other_note_placeholder" = "Tell us more (optional)";
+
+/* Tabs */
+"tab.home" = "Home";
+"tab.courses" = "Courses";
+"tab.sessions" = "Sessions";
+"tab.messages" = "Messages";
+"tab.more" = "More";
+
+/* Catalog header */
+"catalog.title_prefix" = "Browse ";
+"catalog.title_accent" = "Catalog";
+"catalog.subtitle" = "Discover premium courses from expert instructors";
+"catalog.search_placeholder" = "Search courses or instructors";
+"catalog.browse_entry_title" = "Browse Catalog";
+"catalog.browse_entry_subtitle" = "Discover premium courses";
+
+/* Messages */
+"messages.screen_title" = "Messages";
+"messages.tab_inbox" = "Inbox";
+"messages.tab_inbox_fmt" = "Inbox (%d)";
+"messages.tab_announcements" = "Announcements";
+"messages.empty_title" = "No messages yet";
+"messages.empty_subtitle" = "Your conversations with instructors will appear here.";
+"messages.announcements_empty_title" = "No announcements";
+"messages.announcements_empty_subtitle" = "Course updates and notifications will appear here.";
+"messages.preview_empty" = "No messages yet";
+
+/* Sessions feature */
+"sessions.title_live" = "Live ";
+"sessions.title_sessions" = "Sessions";
+"sessions.empty_title" = "No Upcoming Sessions";
+"sessions.empty_subtitle" = "Sessions from your enrolled courses will appear here.";
+"sessions.join_now" = "Join Session →";
+"sessions.title" = "Sessions";
+"sessions.upcoming_header" = "UPCOMING";
+"sessions.duration_min_fmt" = "%d min";
+"sessions.duration_hr_fmt" = "%d hr";
+"sessions.duration_hr_min_fmt" = "%1$d hr %2$d min";
+"sessions.join" = "Join";
+"sessions.remind" = "Remind";
+"sessions.remind_permission_denied" = "Enable notifications in Settings to get reminders.";
+"sessions.remind_too_close" = "Session is too close to set a reminder.";
+"sessions.remind_generic_error" = "Could not set reminder.";
+
+/* Messages feature */
+"messages.title" = "Messages";
+"messages.online" = "Online";
+"messages.placeholder" = "Type a message…";
+
+/* Profile (Figma redesign) */
+"profile.student_pill" = "Student";
+"profile.streak_days_suffix" = "-day streak";
+"profile.account_section" = "ACCOUNT";
+"profile.security_section" = "SECURITY";
+"profile.edit_profile" = "Edit Profile";
+"profile.edit_subtitle" = "Name, avatar, bio";
+"profile.notifications_row" = "Notifications";
+"profile.notifications_subtitle" = "Manage what reaches you";
+"profile.inbox_row" = "Inbox";
+"profile.inbox_all_caught" = "All caught up";
+"profile.inbox_unread_suffix" = " unread";
+"profile.password_2fa_row" = "Password & 2FA";
+"profile.password_2fa_enabled" = "2FA enabled";
+"profile.password_2fa_disabled" = "2FA disabled";
+"profile.devices_row" = "Devices";
+"profile.devices_active_suffix" = " active";
+"profile.sign_out" = "Sign Out";
+"profile.sign_out_confirm" = "Are you sure you want to log out?";
+"profile.footer_version" = "Droob v%@ · droob.co";
+"profile.stat_courses" = "Courses";
+"profile.stat_lessons" = "Lessons";
+"profile.stat_certs" = "Certs";
+"profile.stat_avg" = "Avg";
+
+/* Profile (Figma redesign) */
+"profile.enrolled_courses_label" = "ENROLLED COURSES";
+"profile.personal_info_section" = "PERSONAL INFO";
+"profile.username_row" = "Username";
+"profile.contact_section" = "CONTACT";
+"profile.email_row" = "Email";
+"profile.settings_section" = "SETTINGS";
+"profile.learning_section" = "LEARNING";
+
+/* Edit Username / Email sheets */
+"edit.save" = "Save";
+"edit.username_title" = "Username";
+"edit.username_section_label" = "USERNAME";
+"edit.username_placeholder" = "Enter a username";
+"edit.username_empty" = "Username can't be empty.";
+"edit.email_title" = "Email";
+"edit.email_current_label" = "CURRENT EMAIL";
+"edit.email_current_row" = "Current";
+"edit.email_new_label" = "NEW EMAIL";
+"edit.email_new_placeholder" = "name@example.com";
+"edit.email_helper" = "We'll send a verification code to the new address. Your email won't change until you confirm.";
+"edit.email_code_sent_fmt" = "We sent a 6-digit code to %@.";
+"edit.email_code_label" = "VERIFICATION CODE";
+"edit.email_code_placeholder" = "000000";
+"edit.email_verify" = "Verify";
+
+/* Settings hub */
+"settings.title" = "Settings";
+"settings.account_section" = "ACCOUNT";
+"settings.notifications" = "Notifications";
+"settings.security" = "Security";
+"settings.payments" = "Payments";
+"settings.language" = "Language";
+"settings.preferences_section" = "PREFERENCES";
+"settings.dark_mode" = "Dark Mode";
+"settings.autoplay" = "Autoplay Next Lesson";
+"settings.support_section" = "SUPPORT";
+"settings.help_support" = "Help & Support";
+
+/* Language screen */
+"language.title" = "Language";
+"language.section_label" = "LANGUAGE";
+"language.english_option" = "English (EN)";
+"language.arabic_option" = "العربية (AR)";
+"language.subtitles_section" = "SUBTITLES";
+"language.auto_show_subtitles" = "Auto-show subtitles";
+"language.auto_show_subtitles_subtitle" = "When available in the lesson";
+"language.subtitle_language" = "Subtitle language";
+
+/* Help & Support */
+"help.title" = "Help & Support";
+"help.contact_us_section" = "CONTACT US";
+"help.email_support" = "Email Support";
+"help.email_subject" = "Droob Support Request";
+
+/* Security & Devices */
+"security.screen_title" = "Security & Devices";
+"security.account_secured" = "Account Secured";
+"security.secured_subtitle" = "2FA enabled · Strong password";
+"security.not_secured_subtitle" = "2FA disabled — turn it on for stronger security";
+"security.change_password" = "Change Password";
+"security.change_password_save" = "Save";
+"security.current_password" = "Current password";
+"security.new_password" = "New password";
+"security.confirm_password" = "Confirm new password";
+"security.password_too_short" = "Password must be at least 8 characters.";
+"security.password_needs_number_or_symbol" = "Password must contain a number or symbol.";
+"security.passwords_dont_match" = "Passwords don't match.";
+"security.password_req_length" = "At least 8 characters";
+"security.password_req_number" = "Contains a number or symbol";
+"security.danger_zone" = "Danger Zone";
+"security.delete_account_row" = "Delete Account";
+"security.delete_account_subtitle" = "Permanently close your account";
+"security.delete_account_title" = "Delete account?";
+"security.delete_account_warning" = "This permanently closes your account and erases your personal data. Your enrollments, progress, and access will be lost. This can't be undone.";
+"security.delete_account_confirm" = "Delete my account";
+"security.delete_account_acknowledge" = "I understand this can't be undone";
+"security.last_changed_never" = "Last changed never";
+"security.last_changed_prefix" = "Last changed ";
+"security.two_factor_row" = "Two-Factor Auth";
+"security.two_factor_enabled_via" = "Enabled via Authenticator";
+"security.two_factor_disabled" = "Disabled";
+"security.biometric_row" = "Sign In with Face ID";
+"security.biometric_enabled" = "Enabled on this device";
+"security.biometric_disabled" = "Use Face ID instead of typing your password";
+"security.biometric_enroll_reason" = "Enable Face ID sign-in for Droob";
+"security.active_devices" = "Active Devices";
+"security.sign_out_all" = "Sign out all";
+"security.current_device" = "Current";
+"security.sign_out" = "Sign out";
+"security.device_limit_title" = "Device Limit";
+"security.device_limit_message" = "Up to %d devices. Video streams on 1 device at a time.";
+
+/* 2FA */
+"twofactor.enable_title_prefix" = "Enable ";
+"twofactor.enable_title_accent" = "Two-Factor Auth";
+"twofactor.enable_subtitle" = "Scan the code with your authenticator, then enter the 6-digit code it shows.";
+"twofactor.manual_entry_hint" = "Can't scan? Enter this secret manually:";
+"twofactor.copy" = "Copy";
+"twofactor.copied" = "Copied";
+"twofactor.six_digit_label" = "6-digit code";
+"twofactor.verify_enable" = "Verify & Enable";
+"twofactor.disable_title_prefix" = "Disable ";
+"twofactor.disable_title_accent" = "Two-Factor Auth";
+"twofactor.disable_subtitle" = "Enter a 6-digit code from your authenticator, or one of your recovery codes.";
+"twofactor.disable_button" = "Disable 2FA";
+"twofactor.recovery_title" = "Save these ";
+"twofactor.recovery_accent" = "recovery codes";
+"twofactor.recovery_subtitle" = "Use any of these once if you lose access to your authenticator app.";
+"twofactor.recovery_warning" = "These codes are shown only once. Store them somewhere safe — a password manager works well.";
+"twofactor.copy_all" = "Copy all";
+"twofactor.copied_all" = "Copied!";
+"twofactor.share" = "Share";
+"twofactor.challenge_prefix" = "Two-Factor ";
+"twofactor.challenge_accent" = "Required";
+"twofactor.challenge_auth_hint" = "Enter the 6-digit code from your authenticator app.";
+"twofactor.challenge_recovery_hint" = "Enter one of your recovery codes.";
+"twofactor.verify_sign_in" = "Verify & Sign In";
+"twofactor.use_recovery" = "Use a recovery code instead";
+"twofactor.use_authenticator" = "Use authenticator code instead";
+
+/* Notification preferences */
+"notifications.screen_title" = "Notifications";
+"notifications.section_learning" = "LEARNING";
+"notifications.section_sessions" = "SESSIONS & MESSAGES";
+"notifications.section_marketing" = "MARKETING";
+"notifications.lesson_reminders" = "Lesson reminders";
+"notifications.lesson_reminders_subtitle" = "Daily learning nudge";
+"notifications.streak_alerts" = "Streak alerts";
+"notifications.streak_alerts_subtitle" = "Don't break your streak";
+"notifications.course_updates" = "Course updates";
+"notifications.course_updates_subtitle" = "New lessons and course changes";
+"notifications.quiz_results" = "Quiz results";
+"notifications.quiz_results_subtitle" = "When graded";
+"notifications.live_session" = "Live session reminders";
+"notifications.live_session_subtitle" = "15 minutes before";
+"notifications.new_messages" = "New messages";
+"notifications.new_messages_subtitle" = "From instructors";
+"notifications.new_course" = "New course alerts";
+"notifications.promotions" = "Promotions & offers";
+
+/* Inbox */
+"inbox.title" = "Inbox";
+"inbox.mark_all_read" = "Mark all read";
+"inbox.empty_title" = "No notifications yet";
+"inbox.empty_subtitle" = "You'll see lesson reminders, message alerts, and live-session pings here.";
+"inbox.kind_lesson_reminder_title" = "Time to learn";
+"inbox.kind_streak_title" = "Don't break your streak!";
+"inbox.kind_quiz_result_title" = "Quiz graded";
+"inbox.kind_live_session_title" = "Live session starting soon";
+"inbox.kind_new_message_title" = "New message";
+"inbox.kind_new_course_title" = "New course";
+"inbox.kind_promotion_title" = "Special offer";
+"inbox.kind_unknown_title" = "Notification";
+"inbox.kind_new_lesson_title" = "New lesson";
+"inbox.kind_course_updated_title" = "Course updated";
+"inbox.kind_revision_title" = "Revision materials";
+"inbox.kind_enrollment_approved_title" = "Enrollment approved";
+"inbox.kind_new_quiz_title" = "New quiz";
+"inbox.kind_session_starting_title" = "Session starting now";
+"inbox.kind_session_scheduled_title" = "Session scheduled";
+"inbox.kind_session_cancelled_title" = "Session cancelled";
+"inbox.kind_session_rescheduled_title" = "Session rescheduled";
+"inbox.kind_instructor_reply_title" = "Instructor replied";
+"inbox.kind_announcement_title" = "Announcement";
+"inbox.announcement_from_fmt" = "From %@";
+"inbox.kind_study_room_message_title" = "Study room message";
+"inbox.kind_study_room_joined_title" = "Someone joined your room";
+"inbox.kind_study_room_ended_title" = "Study room ended";
+"inbox.kind_study_room_waitlist_request_title" = "Join request";
+"inbox.kind_study_room_waitlist_approved_title" = "Request approved";
+"inbox.kind_study_room_waitlist_rejected_title" = "Request declined";
+"inbox.kind_study_room_removed_title" = "Removed from room";
+"inbox.kind_study_room_promoted_title" = "You're now a moderator";
+"inbox.kind_study_room_became_host_title" = "You're now the host";
+"inbox.tab_all" = "All";
+"inbox.tab_unread" = "Unread";
+"inbox.tab_messages" = "Messages";
+"inbox.tab_courses" = "Courses";
+"inbox.tab_sessions" = "Sessions";
+"inbox.tab_quizzes" = "Quizzes";
+"inbox.tab_study_rooms" = "Study Rooms";
+"inbox.action_join" = "Join";
+"inbox.caught_up_title" = "You're all caught up";
+"inbox.caught_up_subtitle" = "No new notifications right now. We'll buzz when something happens in your courses or sessions.";
+"inbox.filter_empty_title" = "Nothing here yet";
+"inbox.delete" = "Delete";
+"inbox.clear_all" = "Clear all";
+
+/* Study Rooms (V47) */
+"study_rooms.together_title" = "Study together";
+"study_rooms.together_subtitle" = "Join your classmates in the course study room";
+"study_rooms.rooms_live_fmt" = "%d rooms live now";
+"study_rooms.one_room_live" = "1 room live now";
+"study_rooms.list_title" = "Study Rooms";
+"study_rooms.empty_title" = "No live rooms yet";
+"study_rooms.empty_subtitle" = "Be the first to start a study room for this course.";
+"study_rooms.create_cta" = "New room";
+"study_rooms.join_by_code_cta" = "Join with code";
+"study_rooms.participants_fmt" = "%1$d / %2$d studying";
+
+/* Study Rooms — Create / Join entry */
+"study_rooms.create_tab" = "Create room";
+"study_rooms.join_tab" = "Join room";
+"study_rooms.cover_label" = "COVER";
+"study_rooms.room_name_label" = "ROOM NAME";
+"study_rooms.room_name_placeholder" = "useEffect & Custom Hooks";
+"study_rooms.what_study_label" = "WHAT WILL YOU STUDY?";
+"study_rooms.what_study_placeholder" = "Reviewing useEffect dependencies, cleanup functions, and building 3 custom hooks together.";
+"study_rooms.privacy_label" = "PRIVACY";
+"study_rooms.privacy_public" = "Public";
+"study_rooms.privacy_private" = "Private";
+"study_rooms.privacy_help_public" = "Anyone in this course can join";
+"study_rooms.privacy_help_private" = "Only people with the code can join";
+"study_rooms.create_button" = "Create";
+"study_rooms.code_field_label" = "JOIN CODE";
+"study_rooms.code_field_placeholder" = "Enter 6-digit code";
+"study_rooms.join_by_code_btn" = "Join with code";
+"study_rooms.browse_public" = "Public rooms in this course";
+
+/* Study Rooms — Success */
+"study_rooms.ready_title_prefix" = "Room is";
+"study_rooms.ready_title_suffix" = "Ready";
+"study_rooms.ready_subtitle_public_fmt" = "%@ is now open. We'll let your friends in %@ know.";
+"study_rooms.ready_subtitle_private_fmt" = "%@ is now open.";
+"study_rooms.enter_room" = "Enter the room";
+"study_rooms.share" = "Share";
+
+/* Study Rooms — Invite sheet */
+"study_rooms.invite_sheet_title" = "Invite to study";
+"study_rooms.invite_room_link_label" = "ROOM LINK";
+"study_rooms.invite_copy" = "Copy";
+"study_rooms.invite_copied" = "Copied";
+"study_rooms.invite_code_label" = "JOIN CODE";
+
+/* Study Rooms — In-room chat */
+"study_rooms.header_just_you" = "Just you · waiting for others";
+"study_rooms.header_studying_fmt" = "%d studying";
+"study_rooms.pinned_prefix" = "Studying";
+"study_rooms.empty_alone" = "The room is all yours";
+"study_rooms.empty_alone_subtitle" = "Nobody's here yet. Invite your classmates or drop the first message to get the study session going.";
+"study_rooms.empty_with_others_title" = "No messages yet";
+"study_rooms.empty_with_others_subtitle" = "Be the first to say something — your group is here, waiting for the conversation to start.";
+"study_rooms.empty_ended_title" = "No messages in this room";
+"study_rooms.empty_ended_subtitle" = "This room has ended, so the chat is read-only.";
+"study_rooms.invite_classmates" = "Invite classmates";
+"study_rooms.say_hi" = "Say hi";
+"study_rooms.say_hi_message" = "Hi everyone!";
+"study_rooms.composer_placeholder" = "Message your room…";
+"study_rooms.member_joined_fmt" = "%@ joined the room";
+"study_rooms.member_left_fmt" = "%@ left the room";
+"study_rooms.host_changed_fmt" = "%@ is now the host";
+"study_rooms.room_closed" = "Room closed";
+"study_rooms.link_pending_host_approval" = "Your request to join is waiting on the host's approval.";
+"study_rooms.link_enrollment_required" = "You need to enrol in the course before joining this study room.";
+
+/* Messages tab — Chats / Rooms switcher + sub-filters + status pills + empty states */
+"messages.switcher_chats" = "Chats";
+"messages.switcher_rooms" = "Rooms";
+"messages.rooms_filter_all" = "All";
+"messages.rooms_filter_running" = "Running";
+"messages.rooms_filter_ended" = "Ended";
+"messages.room_status_live" = "LIVE";
+"messages.room_status_ended" = "ENDED";
+"messages.host_badge_short" = "HOST";
+"messages.co_host_badge_short" = "CO-HOST";
+"messages.no_chats_title" = "No messages yet";
+"messages.no_chats_subtitle" = "Your conversations with instructors will appear here once you're enrolled in a course.";
+"messages.no_chats_cta" = "Browse courses";
+"messages.no_rooms_title" = "No rooms yet";
+"messages.no_rooms_subtitle" = "Join a study room from your courses to chat with classmates in real time.";
+"messages.no_rooms_cta" = "Browse study rooms";
+"messages.no_ended_rooms_title" = "No ended rooms";
+"messages.no_ended_rooms_subtitle" = "When a room closes, the chat history will show up here.";
+
+/* Study Rooms — "You're the last one here" confirmation sheet */
+"study_rooms.last_one_title" = "You're the last one here";
+"study_rooms.last_one_subtitle" = "Everyone else has left this room.";
+"study_rooms.last_one_detail" = "If you leave now, the room will close permanently and the chat history will be archived as read-only.";
+"study_rooms.last_one_stay" = "Stay in the room";
+"study_rooms.last_one_leave_and_close" = "Leave & close room";
+
+/* Study Rooms — closed-room composer banner */
+"study_rooms.closed_banner_title" = "This room has ended";
+"study_rooms.closed_banner_subtitle" = "You can still read messages but no one can post anymore.";
+"study_rooms.room_ended_exit" = "Back to course";
+
+/* Study Rooms — removed-member read-only composer banner */
+"study_rooms.removed_banner_title" = "You're no longer in this room";
+"study_rooms.removed_banner_subtitle" = "A host removed you. You can still read past messages but can't send new ones.";
+
+/* Study Rooms — left-room read-only composer banner */
+"study_rooms.left_banner_title" = "You left this room";
+"study_rooms.left_banner_subtitle" = "You can still read past messages but can't send new ones.";
+
+/* Study Rooms — Private create form + room code chip */
+"study_rooms.code_field_helper" = "Anyone with this code can enter the room.";
+"study_rooms.private_banner_title" = "Hidden · passcode required to join";
+"study_rooms.private_banner_subtitle" = "Won't appear anywhere. Share the code with whoever you choose.";
+"study_rooms.room_code_chip" = "Room code";
+
+/* Study Rooms — header / events */
+"study_rooms.invite_action" = "Invite";
+"study_rooms.room_members_fmt" = "%d members";
+"study_rooms.room_one_member" = "1 member";
+"study_rooms.today" = "Today";
+"study_rooms.yesterday" = "Yesterday";
+"study_rooms.joined_suffix" = "joined";
+"study_rooms.left_suffix" = "left";
+"study_rooms.is_now_host_suffix" = "is now the host";
+"study_rooms.system_actor_you" = "You";
+"study_rooms.combined_left_and_other_host_fmt" = "%1$@ left · %2$@ is now the host";
+"study_rooms.host_fallback" = "The host";
+
+/* Study Rooms — Join tab list */
+"study_rooms.enter_code_title" = "Enter room code";
+"study_rooms.paste_code" = "Paste code";
+"study_rooms.or_join_public" = "OR JOIN A PUBLIC ROOM";
+"study_rooms.search_placeholder" = "Search rooms";
+"study_rooms.rooms_header_fmt" = "%1$d rooms · %2$@";
+"study_rooms.rooms_header_one" = "1 room · %@";
+"study_rooms.hosted_by_fmt" = "Hosted by %@";
+"study_rooms.join_action" = "Join";
+"study_rooms.open_action" = "Open";
+"study_rooms.no_rooms_title" = "No rooms yet";
+"study_rooms.no_rooms_subtitle" = "Be the first to start a study room for this course.";
+"study_rooms.no_match_title" = "No room found";
+"study_rooms.no_match_subtitle_fmt" = "We couldn't find a public room matching \"%@.\" Check the spelling or try a different topic.";
+"study_rooms.create_instead_fmt" = "Create \"%@\" instead";
+
+/* Study Rooms — Joining loading screen */
+"study_rooms.joining_title" = "Joining the room…";
+"study_rooms.cancel" = "Cancel";
+
+/* Study Rooms — relative time */
+"study_rooms.ago_now" = "just now";
+"study_rooms.ago_min_fmt" = "%d min";
+"study_rooms.ago_hour_fmt" = "%d hr";
+"study_rooms.ago_day_fmt" = "%d d";
+
+/* Study Rooms — Settings + All Members + Waitlist + Documents */
+"study_rooms.settings_title" = "Room settings";
+"study_rooms.done" = "Done";
+"study_rooms.subtitle_created_you" = "created by you";
+"study_rooms.subtitle_created_by_fmt" = "created by %@";
+"study_rooms.members_section" = "MEMBERS";
+"study_rooms.view_all_members" = "View all members";
+"study_rooms.view_waitlist" = "View Waitlist";
+"study_rooms.invite_to_room" = "Invite to room";
+"study_rooms.general_section" = "GENERAL";
+"study_rooms.shared_content" = "SHARED CONTENT";
+"study_rooms.documents_and_files" = "Documents & files";
+"study_rooms.leave_room" = "Leave room";
+
+"study_rooms.all_members_title" = "All members";
+"study_rooms.host_section" = "HOST";
+"study_rooms.host_you" = "You";
+"study_rooms.host_created_room" = "Host · created the room";
+"study_rooms.co_host_role_label" = "Co-host";
+"study_rooms.members_header_fmt" = "MEMBERS · %d";
+"study_rooms.actions_for_fmt" = "Actions for %@";
+"study_rooms.make_co_host" = "Make co-host";
+"study_rooms.demote_co_host" = "Demote to member";
+"study_rooms.remove_from_room" = "Remove from room";
+"study_rooms.action_cancel" = "Cancel";
+
+"study_rooms.waitlist_title" = "Waitlist";
+"study_rooms.waitlist_host_view" = "HOST VIEW";
+"study_rooms.waiting_people_fmt" = "WAITING · %d PEOPLE";
+"study_rooms.approve_all" = "Approve all";
+"study_rooms.just_arrived" = "Just arrived";
+"study_rooms.min_wait_fmt" = "%d min wait";
+"study_rooms.hr_wait_fmt" = "%d hr wait";
+"study_rooms.waitlist_empty" = "No pending requests";
+
+"study_rooms.documents_title" = "Documents";
+"study_rooms.documents_search_placeholder" = "Search documents";
+"study_rooms.documents_count_fmt" = "%d DOCUMENTS";
+"study_rooms.documents_one_fmt" = "1 DOCUMENT";
+"study_rooms.documents_found_fmt" = "%d FOUND";
+"study_rooms.documents_no_results_title" = "No documents found";
+"study_rooms.documents_no_results_subtitle_fmt" = "No files match \"%@.\" Try a different name.";
+"study_rooms.documents_filter" = "PDF · PPT · Word only";
+"study_rooms.documents_empty" = "No documents shared yet";
+"study_rooms.uploader_you" = "You";
+
+"study_rooms.pending_title" = "Waiting for host";
+"study_rooms.pending_subtitle_fmt" = "Your request to join \"%@\" is waiting on the host's approval. We'll let you know.";
+"study_rooms.pending_notify_me" = "OK";
+"study_rooms.pending_back" = "Back to rooms";
+
+/* Study Rooms — Leave flow + host badges + new-host banner */
+"study_rooms.leave_sheet_title" = "Leave the room?";
+"study_rooms.leave_sheet_subtitle_member" = "You'll leave the room and stop receiving its messages. You can rejoin later via the room code or link.";
+"study_rooms.leave_sheet_subtitle_host_fmt" = "You're the host of %@. Pass the room to someone or just leave and we'll pick a new host automatically.";
+"study_rooms.pass_host_and_leave" = "Pass host & leave";
+"study_rooms.pass_host_subtitle_fmt" = "Room continues with %@ as host";
+"study_rooms.pass_host_subtitle_auto" = "Choose who runs the room next";
+"study_rooms.just_leave" = "Just leave";
+"study_rooms.just_leave_subtitle" = "Auto-pick a new host from co-hosts";
+"study_rooms.just_leave_subtitle_no_co_host" = "Auto-pick the longest-tenured member";
+"study_rooms.stay_in_room" = "Stay in room";
+
+"study_rooms.leave_confirm_title" = "Leave this room?";
+"study_rooms.leave_confirm_detail" = "Chat & notes are saved";
+"study_rooms.leave_now_cta" = "Leave Room Now";
+
+"study_rooms.pass_host_title" = "Leave room";
+"study_rooms.pass_host_banner_fmt" = "Pick who runs %@ after you leave. They'll be able to manage members, edit the room and pin messages.";
+"study_rooms.pass_host_section_label" = "NEW HOST";
+"study_rooms.co_host_badge" = "CO-HOST";
+"study_rooms.make_host_and_leave_fmt" = "Make %@ host & leave";
+
+"study_rooms.youre_host_badge" = "YOU'RE HOST";
+"study_rooms.host_role_badge" = "HOST";
+"study_rooms.instructor_role_badge" = "INSTRUCTOR";
+"study_rooms.anon_student_fmt" = "Student %d";
+"study_rooms.became_host_banner_title" = "You're now the host";
+"study_rooms.became_host_banner_fmt" = "%@ left and made you host of %@.";
+"study_rooms.combined_left_and_host_fmt" = "%@ left · you are now the host";
+
+"study_rooms.documents_empty_title" = "No documents yet";
+"study_rooms.documents_empty_subtitle" = "Share a PDF, PowerPoint or Word doc and it'll show up here for everyone in the room.";
+"study_rooms.documents_empty_cta" = "Add the first document";
+"study_rooms.documents_empty_closed_title" = "No documents in this room";
+"study_rooms.documents_empty_closed_subtitle" = "This room has ended, so no files can be added.";
+
+/* Quiz — section quiz flow (intro → play → finishing → result → review) */
+"quiz.nav_title" = "Quiz";
+"quiz.section_quiz" = "Section Quiz";
+"quiz.mcq" = "MCQ";
+"quiz.questions" = "Questions";
+"quiz.pass_mark" = "Pass mark";
+"quiz.best_score" = "Best score";
+"quiz.start" = "Start Quiz";
+"quiz.retake" = "Retake Quiz";
+"quiz.review_lesson_first" = "Review Lesson First";
+"quiz.review_past_grade" = "Review past grade";
+"quiz.review_past_grades" = "Review past grades";
+"quiz.past_grades_title" = "Past grades";
+"quiz.no_past_attempts" = "No past attempts yet";
+"quiz.passed_badge" = "Passed";
+"quiz.failed_badge" = "Failed";
+"quiz.attempt_number" = "Attempt %d";
+"quiz.tap_to_select_single" = "Tap to select single answer";
+"quiz.tap_to_select_multiple" = "Tap to select multiple answers";
+"quiz.submit_answer" = "Submit Answer";
+"quiz.skip" = "Skip";
+"quiz.prev" = "‹ Prev";
+"quiz.next" = "Next";
+"quiz.finish" = "Finish";
+"quiz.last_question_nudge" = "Last question · ready to see your results";
+"quiz.finishing_title" = "Finishing your quiz…";
+"quiz.quiz_complete" = "Quiz complete";
+"quiz.well_done" = "Well done";
+"quiz.well_done_so_far" = "Well done so far";
+"quiz.you_passed" = "You passed";
+"quiz.not_this_time" = "Not this time";
+"quiz.you_didnt_pass" = "You didn't pass";
+"quiz.flawless" = "Flawless";
+"quiz.perfect_score" = "Perfect score · top of the class";
+"quiz.correct" = "CORRECT";
+"quiz.wrong" = "WRONG";
+"quiz.question_breakdown" = "QUESTION BREAKDOWN";
+"quiz.review_answers" = "Review answers";
+"quiz.exit" = "Exit";
+"quiz.filter_all" = "All";
+"quiz.filter_correct" = "Correct";
+"quiz.filter_wrong" = "Wrong";
+"quiz.tap_to_review" = "Tap any question to review its details";
+"quiz.review_only" = "Review only";
+"quiz.your_answer" = "Your answer";
+"quiz.you_missed_this" = "You missed this";
+"quiz.correct_answer" = "Correct answer";
+"quiz.confirm_finish_title" = "Finish with unanswered questions?";
+"quiz.confirm_finish_cta" = "Finish anyway";
+"quiz.cancel" = "Cancel";
+"quiz.question_n_of_n" = "%d of %d";
+"quiz.selected_of_total" = "%d of %d selected";
+"quiz.finishing_subtitle" = "Scoring %d questions and preparing your results";
+"quiz.score_out_of" = "%d / %d pts";
+"quiz.unanswered_warning" = "You have %d unanswered. They'll be marked wrong.";
+"quiz.filter_count" = "%@ · %d";
+
+/* Review-before-submit screen */
+"quiz.answered" = "ANSWERED";
+"quiz.all_complete" = "All complete";
+"quiz.ready_to_submit" = "Ready to submit?";
+"quiz.unanswered_title" = "%d questions unanswered";
+"quiz.unanswered_subtitle" = "There are unanswered questions.\nYou can still go back, or submit as-is.";
+"quiz.all_answered_subtitle" = "All %d questions answered. Once you submit, you cannot change your answers.";
+"quiz.jump_back_to" = "JUMP BACK TO";
+"quiz.question_label" = "Question %d";
+"quiz.looking_good_title" = "Looking good";
+"quiz.looking_good_body" = "You completed every question. Tap Submit Quiz to see your results.";
+"quiz.all_answered" = "All answered";
+"quiz.n_answered" = "%d answered";
+"quiz.n_skipped" = "%d skipped";
+"quiz.submit_quiz" = "Submit Quiz";
+"quiz.submit_anyway" = "Submit anyway";
+"quiz.go_back" = "Go back";
+
+/* Ask Droob AI */
+"ai_droob.title" = "Ask Droob AI";
+"ai_droob.subtitle" = "I can help you with Math, Physics, Chemistry, and more!";
+"ai_droob.placeholder" = "Type your question...";
+"ai_droob.scan_problem" = "Scan a Problem";
+"ai_droob.solving_math" = "Solve Math Problem";
+"ai_droob.physics_explain" = "Explain Physics";
+"ai_droob.review_lesson" = "Review Lesson";
+"ai_droob.ask_anything" = "Ask Any Question";
+"ai_droob.thinking" = "Thinking...";
+"ai_droob.no_text_found" = "No text found in the image. Try a clearer photo.";
+"ai_droob.scanned_text" = "Scanned Text:";
+"ai_droob.settings" = "AI Settings";
+"ai_droob.no_key" = "No API key configured. Go to Settings > AI to add one.";
+
+/* ─────────────────────────────────────────────────────────────
+   Arabic-only pass — English side kept, not deleted, so flipping
+   AppLocaleDefault.englishHidden back to false restores the
+   bilingual app on these surfaces too.
+   ───────────────────────────────────────────────────────────── */
+
+/* Settings */
+"settings.subtitles" = "Subtitles";
+"settings.developer_section" = "DEVELOPER";
+"settings.test_detection" = "Test Detection";
+"general.share" = "Share";
+
+/* Lesson complete */
+"lesson_complete.title" = "Lesson Complete!";
+"lesson_complete.xp_earned" = "+%d XP Earned";
+"lesson_complete.next_lesson" = "Next Lesson";
+"lesson_complete.back_to_course" = "Back to Course";
+"lesson_complete.progress_label" = "complete";
+
+/* Login chrome */
+"turnstile.verifying" = "Verifying you're not a robot…";
+"playback.certificate_error" = "Could not load the FairPlay certificate.";
+
+/* Catalog empty states */
+"catalog.empty_title" = "No Courses Yet";
+"catalog.empty_body" = "New courses will appear here when they're available.";
+"catalog.no_match" = "No courses match \"%@\"";
+
+/* Registration + password validation */
+"auth.err_first_name" = "Please enter your first name.";
+"auth.err_email" = "Please enter your email.";
+"auth.err_password_rule" = "Password must be at least 8 characters with one number or symbol.";
+"auth.err_email_taken" = "This email is already registered. Please log in.";
+"auth.err_password_short" = "Password must be at least 8 characters.";
+"auth.err_password_no_digit" = "Password must contain a number or symbol.";
+"auth.err_password_mismatch" = "Passwords don't match.";
+
+/* Password reset */
+"reset.done_title" = "Password updated";
+"reset.done_body" = "Your password has been reset. You can now sign in with your new password.";
+"reset.title" = "Create New Password";
+"reset.subtitle" = "Choose a strong password you haven't used on Droob before.";
+"reset.hint" = "Use at least 8 characters with a number and a symbol.";
+"reset.strength" = "Password strength";
+"reset.update_button" = "Update Password";
+"reset.updating" = "Updating…";
+
+/* Two-factor */
+"totp.title_line1" = "Two-Factor ";
+"totp.title_line2" = "Required";
+"totp.subtitle" = "Enter the 6-digit code from your authenticator app.";
+"totp.verify_sign_in" = "Verify & Sign In";
+"totp.use_recovery" = "Use a recovery code instead";
+"two_fa.enable_line1" = "Enable ";
+"two_fa.title" = "Two-Factor Auth";
+"two_fa.enroll_subtitle" = "Scan the code with your authenticator, then enter the 6-digit code it shows.";
+"two_fa.qr_failed" = "Couldn't render QR";
+"two_fa.manual_secret" = "Can't scan? Enter this secret manually:";
+"two_fa.code_field" = "6-digit code";
+"two_fa.verify_enable" = "Verify & Enable";
+"two_fa.disable_line1" = "Disable ";
+"two_fa.disable_subtitle" = "Enter a 6-digit code from your authenticator, or one of your recovery codes.";
+"two_fa.disable_action" = "Disable 2FA";
+"recovery.save_line1" = "Save these ";
+"recovery.line2" = "recovery codes";
+"recovery.subtitle" = "Use any of these once if you lose access to your authenticator app.";
+"recovery.warning" = "These codes are shown only once. Store them somewhere safe — a password manager works well.";
+"recovery.copy_all" = "Copy all";
+"recovery.copied" = "Copied!";
+
+/* Post-signup / returning-user covers */
+"welcome.new_account_badge" = "NEW ACCOUNT";
+"welcome.journey_line1" = "Your journey\n";
+"welcome.journey_line2" = "starts here.";
+"welcome.greeting" = "Welcome, %@!";
+"welcome.ready_body" = "Your Droob account is ready. Explore hundreds of courses and begin your first droob today.";
+"welcome.new_badge" = "New";
+"welcome.waiting_header" = "WHAT IS WAITING FOR YOU";
+"welcome.categories" = "Design · dev · business · languages · more";
+"welcome.live_qa_title" = "Live Q&A with Instructors";
+"welcome.live_qa_body" = "Ask anything, get real answers";
+"welcome.track_title" = "Track Your Progress";
+"welcome.track_body" = "Streaks, milestones & learning stats";
+"welcome.meet_instructors" = "Meet your Instructors";
+"welcome.expert_instructors_count" = "%d Expert Instructors";
+"welcome.expert_instructors" = "Expert Instructors";
+"welcome.back_line" = "Welcome back,";
+"welcome.back_body" = "You're signed in to your Droob account. Ready to continue your learning journey?";
+"welcome.go_to_dashboard" = "Go to Dashboard";
+"welcome.stat_courses" = "Courses";
+"welcome.stat_streak" = "Day Streak";
+"welcome.stat_progress" = "Progress";
+"welcome.continue_last_course" = "Continue Last Course";
+
+/* Study rooms */
+"study_room.empty_line1" = "The room is";
+"study_room.empty_line2" = "all yours";
+"study_room.shared_notes" = "Shared notes";
+
+/* Notification inbox + local push */
+"notif.instructor" = "Instructor";
+"notif.score" = "Score: %d%%";
+"notif.new_quiz" = "A new quiz is available";
+"notif.live_session" = "Live session";
+"notif.starts_in_minutes" = "%1$@ · starts in %2$d min";
+"notif.session_live" = "Your session is live now";
+"notif.courses_in_progress" = "You have %d courses in progress";
+"notif.pick_up_where_left" = "Pick up where you left off";
+"notif.keep_streak_days" = "Keep your %d-day streak going!";
+"notif.keep_streak" = "Keep your streak going!";
+"push.live_session_title" = "Live session starting soon";
+"push.live_session_body" = "%@ starts in 5 minutes.";
+
+/* Security — device sessions */
+"security.active_now" = "Active now";
+"security.active_ago" = "Active %@";
+
+/* Messages — relative timestamps */
+"messages.now" = "now";
+"messages.minutes_ago" = "%dm";
+"messages.hours_ago" = "%dh";
+
+/* Presence-guard debug panel (visible on TestFlight) */
+"guard.watermark" = "Watermark";
+"guard.side_dim" = "Privacy side-dim (cosmetic)";
+"guard.tilt_dim" = "Tilt 3D dim (gyro)";
+"guard.presence" = "Presence guard (faces)";
+"guard.phone_rec" = "Phone / REC detection";
+"guard.block_recording" = "Block screen recording";
+"guard.layers_title" = "Privacy layers";
+"guard.layers_hint" = "Switch each layer on/off to test it in isolation. Camera and tilt layers need a real device (no sensors in the Simulator).";
+"guard.sample_video" = "SAMPLE LESSON VIDEO";
+"guard.harness" = "ViewerPresenceGuard test harness";
+"guard.reset_consent" = "Reset consent";
+"guard.simulate" = "SIMULATE (works on Simulator)";
+"totp.use_authenticator" = "Use authenticator code instead";
+"guard.section_overlay" = "Overlay layers";
+"guard.section_camera" = "Camera layers (real device)";
+"guard.section_app_wide" = "App-wide";
+"onb.demo_instructor_name" = "Dr. Layla Hassan";
+"onb.demo_instructor_initials" = "LH";
+"onb.demo_session_title" = "Figma Deep Dive: Auto Layout Mastery";
+"onb.demo_month" = "APR";
+
+/* Networking errors — DroobError */
+"err.network" = "Couldn't reach the server. Check your internet connection and try again.";
+"err.request_failed" = "The request failed. Please try again.";
+"err.bad_response" = "The server sent an unexpected response. Please try again.";
+"err.invalid_url" = "Invalid URL";
+"err.login_again" = "Please log in again";
+"err.access_denied" = "Access denied";
+"err.not_found" = "Resource not found";
+"err.conflict" = "That conflicts with something already saved. Please review and try again.";
+"err.server" = "Something went wrong on our side. Please try again shortly.";
+"err.unknown" = "An unknown error occurred";
+
+/* Create New Password — field labels and strength readout */
+"reset.strength_weak" = "Weak";
+"reset.strength_fair" = "Fair";
+"reset.strength_good" = "Good";
+"reset.strength_strong" = "Strong";
+"reset.section_new_password" = "New password";
+"reset.field_password" = "Password";
+"reset.field_confirm" = "Confirm";

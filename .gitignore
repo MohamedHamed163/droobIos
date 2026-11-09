@@ -1,0 +1,53 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xcuserdatad/
+xcuserdata/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+.swiftpm/
+
+# CocoaPods (if ever used)
+Pods/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+.bundle/
+vendor/bundle/
+*.mobileprovision
+*.p12
+*.cer
+*.certSigningRequest
+
+# macOS
+.DS_Store
+
+# Secrets — never commit
+*.p8
+AuthKey_*.p8
+.env
+.env.*
+!.env.example
+
+# Nested sibling repos cloned for reference (not part of the iOS app)
+instructor-site/
+backend/
+
+# Firebase config (API keys) — never commit
+GoogleService-Info.plist

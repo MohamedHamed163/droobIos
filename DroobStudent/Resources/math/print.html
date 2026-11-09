@@ -1,0 +1,1094 @@
+<!doctype html>
+<html lang="{{LANG}}" dir="{{DIR}}">
+<head>
+<meta charset="utf-8">
+<!-- Android's force-dark and iOS's Smart Invert both repaint a WebView they
+     believe is a light UI. A worksheet is a printed artefact, not a screen, so
+     the page opts out of scheme adaptation entirely and stays on paper. -->
+<meta name="color-scheme" content="light only">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="katex.min.css">
+<script src="katex.min.js"></script>
+<script src="auto-render.min.js"></script>
+<script src="marked.min.js"></script>
+<style>
+/* ==========================================================================
+   Droob — solved-problems print sheet
+   Loaded with the math/ directory as its base URL, so the four KaTeX/marked
+   files beside it resolve relatively and nothing leaves the bundle.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  --paper:      #FAF7F0;
+  --ink:        #14120E;
+  --ink-soft:   #4A4235;
+  --ink-faint:  #6E6455;
+  --gold:       #C6A96B;
+  --gold-tint:  #F3EAD6;
+  /* The exam sheet reads as two alternating boxes: the prompt, then the
+     working. Both stay inside Droob's warm range — the question carries the
+     brand brown, the solution a muted olive that separates it at a glance
+     without introducing a second, colder palette. */
+  --q-border:   #7A5D2C;
+  --q-fill:     #F7EFDD;
+  --s-border:   #5E7A46;
+  --s-fill:     #EEF4E5;
+  --brown:      #7A5D2C;
+  --rule:       #DED3BC;
+
+  --page-w: 210mm;
+  /* A4 is 297mm, but the renderer's own page box is occasionally a hair
+     shorter after unit rounding. A sheet that overshoots by half a millimetre
+     costs a blank page after every problem, so the sheet is cut fractionally
+     short and the difference is invisible. */
+  --page-h: 296.4mm;
+  --margin-x: 16mm;
+  --margin-top: 13mm;
+  --margin-bottom: 12mm;
+}
+
+@page {
+  size: A4;
+  /* The margins are the sheet's own padding. Ceding them to @page instead
+     would let the renderer decide where the running header sits, and the
+     header has to sit at a known offset for the footer maths to line up. */
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: -apple-system, system-ui, "SF Arabic", Roboto,
+               "Noto Naskh Arabic", "Segoe UI", sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.58;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   Sheets
+   Content is flowed into fixed A4 boxes by script rather than left to the
+   renderer's own page breaking. That is what makes a real page counter
+   possible: the renderer never tells the document how many pages it produced,
+   but a document that decides its own page boundaries already knows.
+   -------------------------------------------------------------------------- */
+
+.sheet {
+  position: relative;
+  box-sizing: border-box;
+  width: var(--page-w);
+  height: var(--page-h);
+  padding: var(--margin-top) var(--margin-x) var(--margin-bottom);
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  break-after: page;
+  page-break-after: always;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.sheet:last-child {
+  break-after: auto;
+  page-break-after: auto;
+}
+
+/* A single problem taller than one page cannot be placed whole. Rather than
+   clip it, the sheet holding it is allowed to grow and the renderer breaks it
+   the ordinary way — the one case where a solution may split. */
+.sheet--overflow {
+  height: auto;
+  min-height: var(--page-h);
+  overflow: visible;
+}
+
+.flow {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.sheet--overflow .flow { overflow: visible; }
+
+/* --------------------------------------------------------------------------
+   Masthead (first sheet) and running header (the rest)
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  flex: 0 0 auto;
+  margin-bottom: 7mm;
+}
+
+.masthead-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6mm;
+}
+
+.wordmark {
+  font-size: 19pt;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--brown);
+  /* The wordmark is Latin whichever way the prose runs. */
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.wordmark::after {
+  content: "";
+  display: block;
+  width: 14mm;
+  height: 1.6mm;
+  margin-top: 1.4mm;
+  background: var(--gold);
+  border-radius: 1mm;
+}
+
+.doc-date {
+  font-size: 9pt;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.doc-title {
+  margin: 5mm 0 0;
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ink);
+  text-align: start;
+}
+
+.doc-subtitle {
+  margin: 1.5mm 0 0;
+  font-size: 10pt;
+  color: var(--ink-soft);
+  text-align: start;
+}
+
+/* Two rules of different weight rather than two tints of gold: the pair still
+   reads as a deliberate divider after the page has been photocopied. */
+.masthead-rule {
+  margin-top: 4.5mm;
+  border-top: 1.1mm solid var(--gold);
+  border-bottom: 0.25mm solid var(--brown);
+  height: 1mm;
+}
+
+.runhead {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6mm;
+  padding-bottom: 2.2mm;
+  margin-bottom: 6mm;
+  border-bottom: 0.25mm solid var(--rule);
+  font-size: 8.5pt;
+  color: var(--ink-faint);
+}
+
+.runhead .wordmark {
+  font-size: 10.5pt;
+  font-weight: 700;
+}
+
+.runhead .wordmark::after { display: none; }
+
+.runhead-title {
+  text-align: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.sheet-footer {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6mm;
+  margin-top: 6mm;
+  padding-top: 2.2mm;
+  border-top: 0.25mm solid var(--rule);
+  font-size: 8pt;
+  color: var(--ink-faint);
+}
+
+.folio {
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.footnote {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Problem card
+   -------------------------------------------------------------------------- */
+
+.problem {
+  /* A pair of boxes rather than one card. Keeping the pair together is a
+     nice-to-have, not a rule: a long worked solution must be allowed to break
+     across sheets, so only the individual boxes below forbid it. */
+  margin-bottom: 6mm;
+}
+
+.q-box,
+.solution {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  padding: 3.6mm 4.2mm;
+  border-radius: 2mm;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.q-box {
+  background: var(--q-fill);
+  border: 0.4mm solid var(--q-border);
+}
+
+.solution {
+  margin-top: 3mm;
+  background: var(--s-fill);
+  border: 0.4mm solid var(--s-border);
+}
+
+/* Once the working is long enough to span sheets, avoid becomes a liability —
+   it would push a half-page of white ahead of it. */
+.solution--long {
+  break-inside: auto;
+  page-break-inside: auto;
+}
+
+.problem:last-child { margin-bottom: 0; }
+
+.problem-head {
+  display: flex;
+  align-items: center;
+  gap: 2.5mm;
+  margin-bottom: 2.2mm;
+}
+
+.problem-num {
+  flex: 0 0 auto;
+  min-width: 7mm;
+  height: 7mm;
+  padding: 0 1.4mm;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brown);
+  color: var(--paper);
+  border-radius: 3.5mm;
+  font-size: 9.5pt;
+  font-weight: 700;
+  /* Ordinals stay Latin and left-to-right so "10" does not arrive as "01"
+     inside an Arabic paragraph. */
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.problem-label {
+  font-size: 8.5pt;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+
+.problem-meta {
+  margin-inline-start: auto;
+  font-size: 8pt;
+  color: var(--ink-faint);
+}
+
+.section-label {
+  margin: 0 0 2mm;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--s-border);
+}
+
+.question {
+  font-size: 11pt;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+/* Multiple-choice options arrive as a markdown list and should read as a
+   lettered column, not as bullets. */
+.question ol,
+.question ul {
+  list-style: none;
+  margin: 1.8mm 0 0;
+  padding-inline-start: 4mm;
+}
+
+.question li {
+  margin-bottom: 1.1mm;
+}
+
+/* --------------------------------------------------------------------------
+   Steps
+   -------------------------------------------------------------------------- */
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+}
+
+.steps > li {
+  counter-increment: step;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.8mm;
+  margin-bottom: 2.6mm;
+  /* Even in the rare overflowing-problem case, a step should not straddle the
+     fold — a half-shown line of algebra is unreadable. */
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.steps > li:last-child { margin-bottom: 0; }
+
+.steps > li::before {
+  content: counter(step);
+  flex: 0 0 auto;
+  width: 5.6mm;
+  height: 5.6mm;
+  margin-top: 0.6mm;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-tint);
+  border: 0.35mm solid var(--brown);
+  color: var(--brown);
+  border-radius: 2.8mm;
+  font-size: 8pt;
+  font-weight: 700;
+  line-height: 1;
+  direction: ltr;
+  unicode-bidi: isolate;
+  font-variant-numeric: tabular-nums;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.step-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Final answer — the one block a student scans for, so it carries four
+   independent signals: a heavy start rule, a tint, a bold face and a label.
+   Any one of them survives a bad photocopy on its own.
+   -------------------------------------------------------------------------- */
+
+.answer {
+  /* inline-block so the frame hugs the answer the way a boxed letter does on
+     a marked exam paper, instead of ruling the full column width. */
+  display: inline-block;
+  margin-top: 3.2mm;
+  padding: 1.8mm 3mm;
+  background: #FFFFFF;
+  border: 0.45mm solid var(--ink);
+  border-radius: 1.2mm;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.answer-label {
+  display: block;
+  margin-bottom: 0.9mm;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brown);
+}
+
+/* The chip is one line wherever the answer allows it. */
+.answer-body p { margin: 0; }
+
+.answer-body {
+  font-size: 11.5pt;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.answer-body .katex { font-weight: normal; }
+
+.answer-note {
+  margin-top: 1.6mm;
+  font-size: 8.5pt;
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+/* --------------------------------------------------------------------------
+   Prose defaults inside the rich-text blocks
+   -------------------------------------------------------------------------- */
+
+.rt > *:first-child { margin-top: 0; }
+.rt > *:last-child  { margin-bottom: 0; }
+.rt p  { margin: 0 0 1.6mm; }
+.rt ul, .rt ol { margin: 0 0 1.6mm; padding-inline-start: 5mm; }
+.rt li { margin-bottom: 0.8mm; }
+.rt strong { font-weight: 700; }
+.rt a { color: inherit; text-decoration: underline; }
+
+.rt blockquote {
+  margin: 0 0 1.6mm;
+  padding-inline-start: 3mm;
+  border-inline-start: 0.5mm solid var(--rule);
+  color: var(--ink-soft);
+}
+
+.rt code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  background: #F0EADC;
+  padding: 0.3mm 1mm;
+  border-radius: 0.8mm;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.rt pre {
+  margin: 0 0 1.6mm;
+  padding: 2mm;
+  background: #F0EADC;
+  border: 0.25mm solid var(--rule);
+  border-radius: 1mm;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-break: break-word;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.rt pre code { background: transparent; padding: 0; }
+
+.rt table {
+  border-collapse: collapse;
+  margin: 0 0 1.6mm;
+  font-size: 9.5pt;
+}
+
+.rt th, .rt td {
+  border: 0.25mm solid var(--rule);
+  padding: 1mm 2mm;
+  text-align: start;
+}
+
+.rt th { background: var(--gold-tint); font-weight: 700; }
+
+/* --------------------------------------------------------------------------
+   Maths
+   -------------------------------------------------------------------------- */
+
+/* Maths is left-to-right whatever the surrounding prose does. Under an Arabic
+   (rtl) body the KaTeX spans are bidi-reordered — x^2 comes out as 2^x, a
+   fraction's numerator and denominator swap sides, and \neq splits apart. */
+.katex { direction: ltr; unicode-bidi: isolate; }
+
+.katex-display {
+  direction: ltr;
+  unicode-bidi: isolate;
+  margin: 2mm 0;
+  /* On screen KaTeX scrolls a wide formula sideways. Paper cannot scroll, so
+     overflow here would silently amputate the right-hand side of an integral;
+     wide displays are scaled down by script instead. */
+  overflow: visible;
+}
+
+.katex-display.is-fitted > .katex {
+  display: inline-block;
+  transform: scale(var(--fit, 1));
+  transform-origin: center center;
+}
+
+/* --------------------------------------------------------------------------
+   Screen preview — only so the template can be opened in a desktop browser
+   while it is being worked on. None of this reaches the PDF.
+   -------------------------------------------------------------------------- */
+
+@media screen {
+  body { background: #56514A; padding: 8mm 0; }
+  .sheet {
+    margin: 0 auto 8mm;
+    box-shadow: 0 2mm 6mm rgba(0, 0, 0, 0.35);
+  }
+}
+
+@media print {
+  body { background: var(--paper); padding: 0; }
+  .sheet { margin: 0; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Document strings arrive as element text, not as attributes, so the native
+     side only has to escape &, < and > — no quote-escaping trap. -->
+<div id="droob-meta" hidden>
+  <span id="meta-title">{{TITLE}}</span>
+  <span id="meta-subtitle">{{SUBTITLE}}</span>
+  <span id="meta-date">{{DATE}}</span>
+  <span id="meta-footnote">{{FOOTER_NOTE}}</span>
+</div>
+
+<script type="application/json" id="droob-labels">{{LABELS}}</script>
+<script type="application/json" id="droob-problems">{{PROBLEMS}}</script>
+
+<div id="doc"></div>
+
+<script>
+(function () {
+  "use strict";
+
+  // The fallback when {{LABELS}} fails to substitute — which is precisely the
+  // failure mode that used to produce a wholly English exported PDF in an
+  // Arabic-only app. Arabic is the safer default; the host still overrides
+  // these with the session's own labels on the normal path.
+  var DEFAULT_LABELS = {
+    problem: "مسألة",
+    question: "السؤال",
+    steps: "الحل",
+    answer: "الإجابة النهائية",
+    pageOf: "صفحة {n} من {m}"
+  };
+
+  function readJson(id, fallback) {
+    var el = document.getElementById(id);
+    if (!el) return fallback;
+    var raw = (el.textContent || "").trim();
+    // An unsubstituted placeholder is not an error worth aborting the PDF over —
+    // opening the raw template should still render its chrome.
+    if (!raw || raw.indexOf("{{") === 0) return fallback;
+    try { return JSON.parse(raw); } catch (e) { return fallback; }
+  }
+
+  function metaText(id) {
+    var el = document.getElementById(id);
+    if (!el) return "";
+    var t = (el.textContent || "").trim();
+    return t.indexOf("{{") === 0 ? "" : t;
+  }
+
+  var LABELS = Object.assign({}, DEFAULT_LABELS, readJson("droob-labels", {}));
+  var PROBLEMS = readJson("droob-problems", []);
+  if (!Array.isArray(PROBLEMS)) PROBLEMS = [];
+
+  var META = {
+    title: metaText("meta-title"),
+    subtitle: metaText("meta-subtitle"),
+    date: metaText("meta-date"),
+    footnote: metaText("meta-footnote")
+  };
+
+  var DELIMITERS = [
+    { left: "$$", right: "$$", display: true },
+    { left: "$",  right: "$",  display: false }
+  ];
+
+  // Answers arrive as markdown from a remote model, and marked passes raw HTML
+  // straight through. This page is live until the PDF is captured, so a model
+  // echoing a <script> back out of a photographed worksheet would run it here.
+  // Only the markup marked legitimately emits survives.
+  var DROP = /^(SCRIPT|IFRAME|OBJECT|EMBED|LINK|META|STYLE|BASE|FORM|INPUT|BUTTON|TEXTAREA|SELECT)$/;
+
+  function sanitize(root) {
+    var nodes = root.querySelectorAll("*");
+    for (var i = nodes.length - 1; i >= 0; i--) {
+      var el = nodes[i];
+      if (DROP.test(el.tagName)) { el.parentNode && el.parentNode.removeChild(el); continue; }
+      var attrs = Array.prototype.slice.call(el.attributes);
+      for (var j = 0; j < attrs.length; j++) {
+        var name = attrs[j].name.toLowerCase();
+        if (name.indexOf("on") === 0) {
+          el.removeAttribute(attrs[j].name);
+        } else if ((name === "href" || name === "src" || name === "xlink:href") &&
+                   /^\s*(javascript|data|vbscript):/i.test(attrs[j].value)) {
+          el.removeAttribute(attrs[j].name);
+        }
+      }
+    }
+  }
+
+  // ---- keeping markdown's hands off the maths --------------------------
+  //
+  // marked runs first, and markdown treats a backslash as an escape character.
+  // That silently destroys real LaTeX: `\\` is a row separator inside
+  // \begin{vmatrix} but markdown folds it to a single `\`, so a determinant
+  // arrives as one flat row. `_` and `*` inside a formula turn into emphasis
+  // for the same reason. So every maths span is lifted out before markdown
+  // sees it and put back afterwards, untouched.
+
+  var MATH_SPAN = /\$\$[\s\S]+?\$\$|\$[^$\n]+?\$/g;
+  var MATH_TOKEN = /\u2063MATH(\d+)\u2063/g;
+  var mathStash = [];
+
+  function maskMath(text) {
+    mathStash = [];
+    return text.replace(MATH_SPAN, function (found) {
+      mathStash.push(found);
+      // An invisible separator: no meaning to markdown, and it cannot occur
+      // in a model's prose the way a literal @@ or {{ }} sentinel could.
+      return "\u2063MATH" + (mathStash.length - 1) + "\u2063";
+    });
+  }
+
+  function restoreMath(html) {
+    return html.replace(MATH_TOKEN, function (whole, index) {
+      var raw = mathStash[Number(index)];
+      if (raw == null) return whole;
+      // Going back in as innerHTML, so the three markup characters have to be
+      // entities — `&` above all, since it separates matrix columns. KaTeX
+      // reads textContent, which the browser decodes back to the real glyph.
+      return raw
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    });
+  }
+
+  /** A markdown + KaTeX block. Sanitising sits between the two so KaTeX's own
+   *  output is never walked. */
+  function richText(src, extraClass) {
+    var el = document.createElement("div");
+    el.className = "rt" + (extraClass ? " " + extraClass : "");
+    var text = src == null ? "" : String(src);
+    if (window.marked && typeof window.marked.parse === "function") {
+      el.innerHTML = restoreMath(window.marked.parse(maskMath(text)));
+      sanitize(el);
+    } else {
+      el.textContent = text;
+    }
+    if (typeof window.renderMathInElement === "function") {
+      window.renderMathInElement(el, { delimiters: DELIMITERS, throwOnError: false });
+    }
+    return el;
+  }
+
+  function labelled(text) {
+    var el = document.createElement("div");
+    el.className = "section-label";
+    el.textContent = text;
+    return el;
+  }
+
+  function buildProblem(problem, position) {
+    var art = document.createElement("article");
+    art.className = "problem";
+
+    var head = document.createElement("div");
+    head.className = "problem-head";
+
+    var num = document.createElement("span");
+    num.className = "problem-num";
+    num.textContent = String(problem.index != null ? problem.index : position);
+    head.appendChild(num);
+
+    var lbl = document.createElement("span");
+    lbl.className = "problem-label";
+    lbl.textContent = LABELS.problem;
+    head.appendChild(lbl);
+
+    if (problem.meta) {
+      var meta = document.createElement("span");
+      meta.className = "problem-meta";
+      meta.textContent = String(problem.meta);
+      head.appendChild(meta);
+    }
+    var qbox = document.createElement("div");
+    qbox.className = "q-box";
+    qbox.appendChild(head);
+
+    if (problem.question) {
+      qbox.appendChild(richText(problem.question, "question"));
+    }
+    art.appendChild(qbox);
+
+    // Everything the tutor produced lives in the second box, so the sheet
+    // alternates prompt / working the whole way down.
+    var sol = document.createElement("div");
+    sol.className = "solution";
+    var solved = false;
+
+    var steps = Array.isArray(problem.steps) ? problem.steps : [];
+    if (steps.length) {
+      solved = true;
+      sol.appendChild(labelled(LABELS.steps));
+      var ol = document.createElement("ol");
+      ol.className = "steps";
+      for (var i = 0; i < steps.length; i++) {
+        var li = document.createElement("li");
+        var body = richText(steps[i], "step-body");
+        body.className = "rt step-body";
+        li.appendChild(body);
+        ol.appendChild(li);
+      }
+      sol.appendChild(ol);
+    }
+
+    if (problem.answer) {
+      solved = true;
+      var box = document.createElement("div");
+      box.className = "answer";
+
+      var al = document.createElement("span");
+      al.className = "answer-label";
+      al.textContent = LABELS.answer;
+      box.appendChild(al);
+
+      var ab = richText(problem.answer, "answer-body");
+      ab.className = "rt answer-body";
+      box.appendChild(ab);
+
+      if (problem.note) {
+        var note = richText(problem.note, "answer-note");
+        note.className = "rt answer-note";
+        box.appendChild(note);
+      }
+      sol.appendChild(box);
+    }
+
+    if (solved) {
+      // Four steps of working is about where a solution stops fitting beside
+      // its question, and forcing it whole starts costing more paper than it
+      // saves in legibility.
+      if (steps.length > 4) sol.className = "solution solution--long";
+      art.appendChild(sol);
+    }
+
+    return art;
+  }
+
+  // ---- sheet chrome ------------------------------------------------------
+
+  function buildMasthead() {
+    var m = document.createElement("header");
+    m.className = "masthead";
+
+    var top = document.createElement("div");
+    top.className = "masthead-top";
+
+    var mark = document.createElement("div");
+    mark.className = "wordmark";
+    mark.textContent = "Droob";
+    top.appendChild(mark);
+
+    if (META.date) {
+      var d = document.createElement("div");
+      d.className = "doc-date";
+      d.textContent = META.date;
+      top.appendChild(d);
+    }
+    m.appendChild(top);
+
+    if (META.title) {
+      var h = document.createElement("h1");
+      h.className = "doc-title";
+      h.textContent = META.title;
+      m.appendChild(h);
+    }
+    if (META.subtitle) {
+      var s = document.createElement("p");
+      s.className = "doc-subtitle";
+      s.textContent = META.subtitle;
+      m.appendChild(s);
+    }
+
+    var rule = document.createElement("div");
+    rule.className = "masthead-rule";
+    m.appendChild(rule);
+    return m;
+  }
+
+  function buildRunningHead() {
+    var h = document.createElement("header");
+    h.className = "runhead";
+
+    var mark = document.createElement("span");
+    mark.className = "wordmark";
+    mark.textContent = "Droob";
+    h.appendChild(mark);
+
+    var t = document.createElement("span");
+    t.className = "runhead-title";
+    t.textContent = META.title || "";
+    h.appendChild(t);
+    return h;
+  }
+
+  function buildFooter() {
+    var f = document.createElement("footer");
+    f.className = "sheet-footer";
+
+    var note = document.createElement("span");
+    note.className = "footnote";
+    note.textContent = META.footnote || "";
+    f.appendChild(note);
+
+    var folio = document.createElement("span");
+    folio.className = "folio";
+    f.appendChild(folio);
+    return f;
+  }
+
+  function newSheet(isFirst) {
+    var sheet = document.createElement("section");
+    sheet.className = "sheet";
+    sheet.appendChild(isFirst ? buildMasthead() : buildRunningHead());
+
+    var flow = document.createElement("div");
+    flow.className = "flow";
+    sheet.appendChild(flow);
+
+    sheet.appendChild(buildFooter());
+    return sheet;
+  }
+
+  // ---- wide display maths ------------------------------------------------
+
+  function fitDisplays(root) {
+    var displays = root.querySelectorAll(".katex-display");
+    for (var i = 0; i < displays.length; i++) {
+      var d = displays[i];
+      var inner = d.querySelector(".katex");
+      if (!inner) continue;
+      var avail = d.clientWidth;
+      var w = inner.getBoundingClientRect().width;
+      if (avail > 0 && w > avail) {
+        // Floor at 0.55: below that the formula is technically on the page but
+        // no longer readable, and clipping would at least be honest.
+        var s = Math.max(0.55, (avail / w) * 0.98);
+        d.style.setProperty("--fit", String(s));
+        d.classList.add("is-fitted");
+      }
+    }
+  }
+
+  // ---- pagination --------------------------------------------------------
+
+  function paginate() {
+    var doc = document.getElementById("doc");
+    doc.textContent = "";
+
+    var nodes = [];
+    for (var i = 0; i < PROBLEMS.length; i++) {
+      nodes.push(buildProblem(PROBLEMS[i] || {}, i + 1));
+    }
+
+    var sheet = newSheet(true);
+    doc.appendChild(sheet);
+    var flow = sheet.querySelector(".flow");
+    var avail = flow.clientHeight;
+    var placedOnSheet = 0;
+
+    for (var n = 0; n < nodes.length; n++) {
+      flow.appendChild(nodes[n]);
+      // +1px of slack: sub-pixel layout rounding otherwise bumps the last
+      // problem on an otherwise perfectly full page onto a sheet of its own.
+      if (flow.scrollHeight > avail + 1) {
+        if (placedOnSheet === 0) {
+          // Nothing else is on this sheet, so the problem is simply taller
+          // than a page. Let it break rather than lose it.
+          sheet.classList.add("sheet--overflow");
+          placedOnSheet = 1;
+          continue;
+        }
+        flow.removeChild(nodes[n]);
+        sheet = newSheet(false);
+        doc.appendChild(sheet);
+        flow = sheet.querySelector(".flow");
+        avail = flow.clientHeight;
+        flow.appendChild(nodes[n]);
+        placedOnSheet = 1;
+        if (flow.scrollHeight > avail + 1) {
+          sheet.classList.add("sheet--overflow");
+        }
+      } else {
+        placedOnSheet++;
+      }
+    }
+
+    return numberSheets();
+  }
+
+  /** Folios are stamped after the flow settles, because an oversized problem
+   *  can make one sheet occupy several physical pages and the count has to
+   *  reflect what the printer will actually emit. */
+  function numberSheets() {
+    var sheets = document.querySelectorAll(".sheet");
+    var pageHeight = sheets.length ? sheets[0].getBoundingClientRect().height : 0;
+    var starts = [];
+    var spans = [];
+    var cursor = 1;
+
+    for (var i = 0; i < sheets.length; i++) {
+      var h = sheets[i].getBoundingClientRect().height;
+      // Ceiling, not rounding: a sheet spilling a fifth of a page onto the next
+      // one still costs a whole sheet of paper. The epsilon absorbs the float
+      // noise in h/pageHeight so an ordinary full-height sheet stays at 1.
+      var span = pageHeight > 0
+        ? Math.max(1, Math.ceil(h / pageHeight - 0.02))
+        : 1;
+      starts.push(cursor);
+      spans.push(span);
+      cursor += span;
+    }
+    var total = cursor - 1;
+
+    for (var j = 0; j < sheets.length; j++) {
+      var folio = sheets[j].querySelector(".folio");
+      if (!folio) continue;
+      var shown = spans[j] > 1
+        ? starts[j] + "–" + (starts[j] + spans[j] - 1)
+        : String(starts[j]);
+      folio.textContent = String(LABELS.pageOf)
+        .replace("{n}", shown)
+        .replace("{m}", String(total));
+    }
+
+    var rects = [];
+    for (var k = 0; k < sheets.length; k++) {
+      var r = sheets[k].getBoundingClientRect();
+      rects.push({
+        x: r.left + window.scrollX,
+        y: r.top + window.scrollY,
+        width: r.width,
+        height: r.height
+      });
+    }
+    return { pages: total, sheets: sheets.length, rects: rects };
+  }
+
+  function announce(state) {
+    window.DROOB_PRINT = state;
+    document.documentElement.setAttribute("data-droob-ready", "1");
+    // Both hosts are told the same thing; whichever bridge exists answers.
+    try {
+      window.webkit.messageHandlers.printReady.postMessage(state.pages);
+    } catch (e) { /* not iOS */ }
+    try {
+      window.DroobPrint.onReady(state.pages);
+    } catch (e) { /* not Android */ }
+  }
+
+  /** Last line of defence against a clipped answer.
+   *
+   *  `.flow` hides its overflow, so anything the paginator misjudges is not
+   *  merely ugly - it is gone from the PDF, and a student would never know a
+   *  step was missing. Rather than trust the measurement, check the result:
+   *  any sheet still overflowing is released to grow, which costs paper and
+   *  never costs content. */
+  function guardOverflow() {
+    var sheets = document.querySelectorAll(".sheet");
+    for (var i = 0; i < sheets.length; i++) {
+      var flow = sheets[i].querySelector(".flow");
+      if (flow && flow.scrollHeight > flow.clientHeight + 1) {
+        sheets[i].classList.add("sheet--overflow");
+      }
+    }
+  }
+
+  function settle() {
+    var state;
+    try {
+      // Second pass. The first one loaded KaTeX's faces; this one measures
+      // against them.
+      state = paginate();
+      fitDisplays(document);
+      guardOverflow();
+      // Scaling a wide formula changes nothing about its box, so the folios
+      // stay correct and only the rects need refreshing.
+      state = Object.assign(state, numberSheets());
+    } catch (err) {
+      state = { pages: 0, sheets: 0, rects: [], error: String(err) };
+    }
+    announce(state);
+  }
+
+  function run() {
+    // KaTeX only requests its web fonts once it has actually rendered a
+    // formula, which happens here - inside the first paginate. So the
+    // fonts.ready that got us this far resolved while the document still had
+    // no maths in it, and every measurement below it used fallback metrics
+    // that are wider and shorter than the real thing. Lay out once to trigger
+    // the font loads, wait for them, then lay out again for real.
+    try {
+      paginate();
+    } catch (err) {
+      announce({ pages: 0, sheets: 0, rects: [], error: String(err) });
+      return;
+    }
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      document.fonts.ready.then(settle, settle);
+    } else {
+      setTimeout(settle, 120);
+    }
+  }
+
+  /** Native code calls this to learn where each sheet sits, for hosts that
+   *  capture the PDF a rect at a time rather than through the print pipeline. */
+  window.droobPrintLayout = function () {
+    return window.DROOB_PRINT || null;
+  };
+
+  function start() {
+    // KaTeX swaps in its own faces after first paint and every glyph changes
+    // width when it does. Measuring before that lands puts the page breaks in
+    // the wrong places, so pagination waits for the fonts.
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      document.fonts.ready.then(run, run);
+    } else {
+      setTimeout(run, 120);
+    }
+  }
+
+  if (document.readyState === "complete") {
+    start();
+  } else {
+    window.addEventListener("load", start);
+  }
+})();
+</script>
+</body>
+</html>

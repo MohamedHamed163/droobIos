@@ -1,0 +1,73 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Push a new beta build to TestFlight"
+  lane :beta do
+    setup_ci if ENV["CI"]
+
+    api_key = app_store_connect_api_key(
+      key_id: ENV["APP_STORE_KEY_ID"],
+      issuer_id: ENV["APP_STORE_ISSUER_ID"],
+      key_content: ENV["APP_STORE_API_KEY_P8"],
+      is_key_content_base64: false,
+      in_house: false
+    )
+
+    match(
+      type: "appstore",
+      readonly: true,
+      api_key: api_key,
+      git_basic_authorization: Base64.strict_encode64("#{ENV['MATCH_GIT_USER']}:#{ENV['MATCH_GIT_TOKEN']}")
+    )
+
+    update_code_signing_settings(
+      use_automatic_signing: false,
+      path: "DroobStudent.xcodeproj",
+      team_id: "97DNR5Y3Y5",
+      code_sign_identity: "Apple Distribution",
+      bundle_identifier: "sa.droob.studentapp",
+      profile_name: ENV["sigh_sa.droob.studentapp_appstore_profile-name"] || "match AppStore sa.droob.studentapp",
+      targets: ["DroobStudent"]
+    )
+
+    # Apple scopes build-number uniqueness to the marketing-version train, but
+    # latest_testflight_build_number reports the newest upload across all trains,
+    # which can sit below the number this train already holds. Take the higher of
+    # the two so the next number is free here and never goes backwards overall.
+    marketing_version = get_version_number(
+      xcodeproj: "DroobStudent.xcodeproj",
+      target: "DroobStudent",
+      configuration: "Release"
+    )
+    latest_any_train = latest_testflight_build_number(
+      app_identifier: "sa.droob.studentapp",
+      api_key: api_key,
+      initial_build_number: 0
+    )
+    latest_this_train = latest_testflight_build_number(
+      app_identifier: "sa.droob.studentapp",
+      api_key: api_key,
+      version: marketing_version,
+      initial_build_number: 0
+    )
+    increment_build_number(
+      build_number: [latest_any_train.to_i, latest_this_train.to_i].max + 1,
+      xcodeproj: "DroobStudent.xcodeproj"
+    )
+
+    build_app(
+      scheme: "DroobStudent",
+      configuration: "Release",
+      export_method: "app-store",
+      output_directory: "./build",
+      output_name: "DroobStudent",
+      clean: true
+    )
+
+    upload_to_testflight(
+      api_key: api_key,
+      skip_waiting_for_build_processing: true,
+      skip_submission: true
+    )
+  end
+end

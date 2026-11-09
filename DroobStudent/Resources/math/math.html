@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="katex.min.css">
+<script src="katex.min.js"></script>
+<script src="auto-render.min.js"></script>
+<script src="marked.min.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+  }
+  #content > *:first-child { margin-top: 0; }
+  #content > *:last-child { margin-bottom: 0; }
+  pre, code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 14px;
+  }
+  pre {
+    background: rgba(127,127,127,0.12);
+    padding: 8px;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+  code { background: rgba(127,127,127,0.15); padding: 1px 4px; border-radius: 4px; }
+  pre code { background: transparent; padding: 0; }
+  .katex-display { margin: 0.5em 0; overflow-x: auto; overflow-y: hidden; }
+  /* Maths is always left-to-right. Under an Arabic (rtl) body the spans would
+     otherwise be bidi-reordered — `x²` renders as `²x`, `≠` splits into `= /`. */
+  .katex { direction: ltr; unicode-bidi: isolate; }
+  p { margin: 0.4em 0; }
+  /* Logical, not physical. MathMarkdownView sets body dir="rtl" under Arabic,
+     and `padding-left` indents every numbered solution step from the WRONG
+     side — on the surface a maths tutor uses most, because an answer IS a
+     numbered list. `print.html` already does this correctly; this is the port. */
+  ul, ol { margin: 0.4em 0; padding-inline-start: 1.3em; }
+  a { color: inherit; text-decoration: underline; }
+  blockquote {
+    border-inline-start: 3px solid rgba(127,127,127,0.4);
+    margin: 0.4em 0;
+    padding-inline-start: 0.8em;
+    color: inherit;
+    opacity: 0.85;
+  }
+  h1, h2, h3 { font-weight: 600; margin: 0.6em 0 0.3em; }
+  h1 { font-size: 1.15em; }
+  h2 { font-size: 1.1em; }
+  h3 { font-size: 1.05em; }
+</style>
+</head>
+<body>
+<div id="content"></div>
+<script>
+  function report() {
+    const h = document.documentElement.scrollHeight;
+    window.webkit.messageHandlers.heightChanged.postMessage(h);
+  }
+  // ---- keeping markdown's hands off the maths --------------------------
+  //
+  // marked runs first, and markdown treats a backslash as an escape character.
+  // That silently destroys real LaTeX: `\\` is a row separator inside
+  // \begin{vmatrix} but markdown folds it to a single `\`, so a determinant
+  // arrives as one flat row. `_` and `*` inside a formula turn into emphasis
+  // for the same reason, and `\,` — which the tutor prompt mandates before dx
+  // — is eaten outright. So every maths span is lifted out before markdown
+  // sees it and put back afterwards, untouched.
+  //
+  // Ported verbatim from print.html, which has always done this. Until now the
+  // screen and the exported PDF disagreed on the same string.
+  var MATH_SPAN = /\$\$[\s\S]+?\$\$|\$[^$\n]+?\$/g;
+  var MATH_TOKEN = /\u2063MATH(\d+)\u2063/g;
+  var mathStash = [];
+
+  function maskMath(text) {
+    mathStash = [];
+    return text.replace(MATH_SPAN, function (found) {
+      mathStash.push(found);
+      // An invisible separator: no meaning to markdown, and it cannot occur
+      // in a model's prose the way a literal @@ or {{ }} sentinel could.
+      return "\u2063MATH" + (mathStash.length - 1) + "\u2063";
+    });
+  }
+
+  function restoreMath(html) {
+    return html.replace(MATH_TOKEN, function (whole, index) {
+      var raw = mathStash[Number(index)];
+      if (raw == null) return whole;
+      // Going back in as innerHTML, so the three markup characters have to be
+      // entities — `&` above all, since it separates matrix columns. KaTeX
+      // reads textContent, which the browser decodes back to the real glyph.
+      return raw
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    });
+  }
+
+  function render(src) {
+    const el = document.getElementById('content');
+    el.innerHTML = restoreMath(window.marked.parse(maskMath(src)));
+    window.renderMathInElement(el, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
+      ],
+      throwOnError: false
+    });
+    report();
+  }
+  // Math-only variant for instructor-authored text (quiz questions, options,
+  // explanations). The source goes in as textContent, never innerHTML, so the
+  // only markup that can reach the DOM is KaTeX's own escaped output — a quiz
+  // question can't smuggle in HTML that runs on another student's device.
+  function renderMathOnly(src) {
+    const el = document.getElementById('content');
+    el.textContent = src;
+    window.renderMathInElement(el, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$',  right: '$',  display: false}
+      ],
+      throwOnError: false
+    });
+    report();
+  }
+  // The Swift side calls these after loading.
+  window.droobRender = render;
+  window.droobRenderMath = renderMathOnly;
+  new ResizeObserver(report).observe(document.documentElement);
+</script>
+</body>
+</html>

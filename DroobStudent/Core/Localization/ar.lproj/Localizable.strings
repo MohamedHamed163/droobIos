@@ -1,0 +1,1660 @@
+/* Auth */
+"auth.login" = "تسجيل الدخول";
+"auth.register" = "إنشاء حساب";
+"auth.logout" = "تسجيل الخروج";
+"auth.email" = "البريد الإلكتروني";
+"auth.password" = "كلمة المرور";
+"auth.display_name" = "الاسم الكامل";
+"auth.login_button" = "دخول";
+"auth.register_button" = "إنشاء الحساب";
+"auth.no_account" = "ليس لديك حساب؟";
+"auth.have_account" = "لديك حساب بالفعل؟";
+"auth.welcome_back" = "مرحباً بعودتك";
+"auth.create_account" = "أنشئ حسابك";
+"auth.kicker" = "وصول آمن";
+"auth.sign_in_title" = "تسجيل الدخول إلى دروب";
+"auth.sign_in_subtitle" = "ادخل إلى دوراتك وجلساتك ومدفوعاتك ودروسك المحمية.";
+"auth.sign_up_title" = "أنشئ حسابك";
+"auth.sign_up_subtitle" = "ادخل إلى دوراتك وجلساتك ومدفوعاتك ودروسك المحمية.";
+"auth.email_placeholder" = "البريد الإلكتروني";
+"auth.password_placeholder" = "كلمة المرور";
+"auth.full_name_placeholder" = "الاسم الكامل";
+"auth.continue_apple" = "المتابعة باستخدام Apple";
+"auth.continue_google" = "المتابعة باستخدام Google";
+"auth.forgot_password" = "هل نسيت كلمة المرور؟";
+"auth.sign_in_link" = "لديك حساب؟ سجّل الدخول";
+"auth.sign_up_link" = "ليس لديك حساب؟ أنشئ حسابًا";
+"auth.theme_dark" = "داكن";
+"auth.theme_light" = "فاتح";
+"auth.lang_arabic" = "العربية";
+"auth.lang_english" = "English";
+
+/* Catalog */
+"catalog.title" = "الكتالوج";
+"catalog.courses" = "الدورات";
+"catalog.load_more" = "تحميل المزيد";
+"catalog.enrolled" = "مسجل";
+"catalog.enroll" = "التسجيل";
+"catalog.price" = "السعر";
+"catalog.free" = "مجاني";
+
+/* Course Detail */
+"course.detail" = "تفاصيل الدورة";
+"course.sections" = "الأقسام";
+"course.lessons" = "الدروس";
+"course.instructor" = "المدرب";
+"course.subscribe_now" = "اشترك الآن";
+"course.already_enrolled" = "مسجل بالفعل";
+"course.confirm_subscribe" = "الاشتراك في الدورة";
+"course.confirm_subscribe_message" = "هل تريد الاشتراك في هذه الدورة؟";
+"course.subscribe_success" = "تم الاشتراك بنجاح!";
+
+/* My Courses */
+"my_courses.title" = "دوراتي";
+"my_courses.no_enrollments" = "لا توجد دورات مسجل بها بعد";
+"my_courses.browse_catalog" = "تصفح الكتالوج";
+"my_courses.title_my" = "دوراتي";
+"my_courses.title_courses" = " ";
+"my_courses.enrolled_word" = "مسجلة";
+"my_courses.completed_word" = "مكتملة";
+"my_courses.filter_all" = "الكل";
+"my_courses.filter_in_progress" = "قيد التقدم";
+"my_courses.filter_completed" = "مكتملة";
+"my_courses.filter_empty" = "لا توجد دورات تطابق هذا التصفية";
+"my_courses.empty_subtitle" = "ابدأ التعلم عبر تصفح الكتالوج";
+"my_courses.continue_learning" = "تابع التعلم";
+"my_courses.completed_cert_earned" = "مكتملة · تم الحصول على الشهادة";
+"my_courses.badge_in_progress" = "قيد التقدم";
+"my_courses.badge_not_started" = "لم تبدأ";
+"my_courses.badge_done" = "تمت";
+"my_courses.completed_filter" = "مكتملة";
+"my_courses.offline_footer" = "الدروس التي تم تحميلها متاحة بدون اتصال. اضغط للمتابعة.";
+"my_courses.complete_label" = "مكتملة";
+"my_courses.subtitle_fmt" = "%1$d مسجلة · %2$d مكتملة";
+"course.lessons_lower" = "درس";
+
+/* Course Detail v2 */
+"course.bestseller" = "الأكثر مبيعًا";
+"course.category_ux_ui" = "تصميم تجربة المستخدم";
+"course.your_progress" = "تقدمك";
+"course.progress_of" = "من";
+"course.progress_next" = "التالي";
+"course.instructor_subtitle" = "مدرّب أول";
+"course.module" = "الوحدة";
+"course.in_progress_lower" = "قيد التقدم";
+"course.not_started_lower" = "لم تبدأ";
+
+/* Lesson */
+"lesson.title" = "الدرس";
+"lesson.video" = "فيديو";
+"lesson.document" = "مستند";
+"lesson.text" = "نص";
+"lesson.no_documents" = "لا توجد مستندات لهذا الدرس";
+"lesson.documents" = "المستندات";
+
+"lesson_player.retry" = "إعادة المحاولة";
+"lesson_player.protected" = "محمي";
+"lesson_player.add_note" = "إضافة ملاحظة";
+"lesson_player.view_notes" = "عرض الملاحظات";
+"lesson_player.previous_lesson" = "السابق";
+"lesson_player.next_lesson" = "التالي";
+"lesson_player.notes" = "الملاحظات";
+"lesson_player.new_note" = "ملاحظة جديدة";
+"lesson_player.mark_finished" = "وضع علامة كمكتمل";
+"lesson_player.note_saved_title" = "تم حفظ الملاحظة في ملاحظاتي";
+"lesson_player.note_saved_pinned_fmt" = "مثبّتة عند %@";
+"lesson_player.note_saved_dismiss" = "إغلاق";
+"lesson_player.mark_done" = "تم الإنهاء";
+"lesson_player.completed" = "مكتمل";
+"lesson_player.up_next" = "التالي";
+"lesson_player.attendees_fmt" = "%d طالبًا";
+"lesson_player.your_note" = "ملاحظتك";
+"lesson_player.notes_count_fmt" = "%d ملاحظة في هذا الدرس";
+"lesson_player.eyebrow_lesson" = "الدرس";
+
+/* مشغل الدرس — الفيديو غير متاح (قيد المعالجة مقابل خطأ فعلي) */
+"lesson_player.processing_title" = "هذا الفيديو قيد المعالجة";
+"lesson_player.processing_message" = "ستتوفر المعاينة فور انتهاء الترميز، ويستغرق ذلك عادةً بضع دقائق.";
+"lesson_player.processing_check_again" = "تحقق مرة أخرى";
+"lesson_player.error_processing_failed" = "تعذّرت معالجة هذا الفيديو. حاول لاحقاً أو تواصل مع الدعم.";
+"lesson_player.error_invalid_url" = "رابط الفيديو غير صالح.";
+"lesson_player.error_not_enrolled" = "أنت غير مسجّل في هذه الدورة.";
+"lesson_player.error_unknown" = "خطأ غير معروف";
+"lesson_player.error_playback_failed_fmt" = "فشل التشغيل: %@";
+"lesson_player.error_playback_stopped_fmt" = "توقف التشغيل: %@";
+
+/* حارس حضور المشاهد (مكافحة المشاركة والتسجيل) */
+"presence_guard.continue" = "اضغط للمتابعة";
+"presence_guard.no_face_title" = "هل ما زلت موجوداً؟";
+"presence_guard.no_face_message" = "أوقفنا التشغيل لعدم وجود مشاهد. هذا الدرس محمي من التسجيل خارج الشاشة.";
+"presence_guard.multiple_title" = "تم اكتشاف أكثر من مشاهد";
+"presence_guard.multiple_message" = "هذا الدرس مخصص لحسابك فقط. يرجى التأكد من مشاهدته بمفردك للمتابعة.";
+"presence_guard.wrong_person_title" = "يرجى التحقق من هويتك";
+"presence_guard.wrong_person_message" = "لم نتمكن من التأكد من أن صاحب الحساب هو من يشاهد. واجه الكاميرا ثم اضغط للمتابعة.";
+"presence_guard.low_light_title" = "الإضاءة منخفضة";
+"presence_guard.low_light_message" = "يرجى تحسين الإضاءة لنتمكن من التأكد من مشاهدتك، ثم اضغط للمتابعة.";
+"presence_guard.recording_title" = "تم اكتشاف جهاز تسجيل";
+"presence_guard.recording_message" = "تم رصد هاتف أو شاشة موجهة نحو الفيديو. أزله لمواصلة المشاهدة.";
+"presence_guard.hud_recording" = "تسجيل؟";
+"presence_guard.alert_multiple_fmt" = "%d أشخاص في الإطار";
+"presence_guard.alert_phone" = "احتمال وجود جهاز تسجيل";
+
+/* شاشة الموافقة على استخدام الكاميرا */
+"presence_consent.title" = "مشاهدة محمية";
+"presence_consent.subtitle" = "لحماية محتوى الدورة، يستخدم دروب الكاميرا الأمامية أثناء تشغيل الدروس المحمية. إليك ما يعنيه ذلك بالضبط.";
+"presence_consent.bullet1_title" = "الكاميرا الأمامية أثناء التشغيل فقط";
+"presence_consent.bullet1_body" = "تعمل الكاميرا فقط أثناء تشغيل فيديو محمي، وتتوقف فور إيقافك أو مغادرتك.";
+"presence_consent.bullet2_title" = "خفيفة وعلى جهازك";
+"presence_consent.bullet2_body" = "تُجرى الفحوصات بضع مرات في الثانية على جهازك ولا تُبطئ الفيديو أو تقاطعه أبداً.";
+"presence_consent.bullet3_title" = "لا يتم حفظ أو رفع أي شيء";
+"presence_consent.bullet3_body" = "لا تُحفظ أي صور أو فيديو. يُحتفظ فقط ببصمة وجه خاصة على جهازك، ويمكنك حذفها في أي وقت.";
+"presence_consent.bullet4_title" = "أنت المتحكم";
+"presence_consent.bullet4_body" = "يمكنك الرفض ومواصلة المشاهدة — تبقى العلامة المائية المتحركة في الحالتين.";
+"presence_consent.accept" = "السماح بالمشاهدة المحمية";
+"presence_consent.decline" = "ليس الآن";
+"presence_camera_required.title" = "الوصول إلى الكاميرا مطلوب";
+"presence_camera_required.message" = "هذا الدرس محمي. فعّل الوصول إلى الكاميرا لنتمكن من التأكد من أن مشاهداً واحداً مسجلاً هو من يشاهد.";
+"presence_camera_required.button" = "تفعيل الوصول إلى الكاميرا";
+"presence_guard.tilt_hint" = "أمسك الهاتف بشكل مستقيم للحفاظ على خصوصية الفيديو";
+
+/* حماية المحتوى (تسجيل الشاشة / الالتقاط) */
+"capture.blocked_title" = "التقاط الشاشة غير مسموح";
+"capture.blocked_message" = "أوقف تسجيل الشاشة أو AirPlay أو نسخ شاشة الآيفون للمتابعة.";
+"capture.blocked_external_message" = "افصل الشاشة الخارجية أو الكابل أو النسخ للمتابعة.";
+"capture.screen_off_title" = "شغّل الشاشة للمتابعة";
+"capture.screen_off_message" = "يتم إخفاء المحتوى أثناء إطفاء شاشة الآيفون — بما في ذلك عند نسخها أو التحكم بها من جهاز Mac. شغّل الشاشة لمتابعة المشاهدة.";
+"security.content_protection_section" = "حماية المحتوى";
+"security.screen_record_row" = "منع تسجيل الشاشة ولقطات الشاشة";
+"security.screen_record_on" = "تم منع لقطات الشاشة وتسجيل الشاشة في كل التطبيق";
+"security.screen_record_off" = "لقطات الشاشة وتسجيل الشاشة مسموحة حالياً";
+"security.delete_section" = "حذف الحساب";
+"security.delete_account" = "حذف حسابي";
+"security.delete_account_subtitle" = "حذف حسابك وبياناتك نهائياً";
+"security.delete_confirm_title" = "حذف حسابك؟";
+"security.delete_confirm_message" = "سيؤدي هذا إلى حذف حسابك وتسجيلاتك وملاحظاتك وبياناتك نهائياً. لا يمكن التراجع عن ذلك.";
+"integrity.blocked_title" = "جهاز غير مدعوم";
+"integrity.blocked_message" = "لحماية المحتوى، لا يمكن تشغيل دروب على جهاز مكسور الحماية (jailbreak). الرجاء استخدام دروب على آيفون أو آيباد قياسي ومحدّث.";
+"fullscreen.required_title" = "وضع ملء الشاشة مطلوب";
+"fullscreen.required_message" = "يعرض دروب المحتوى المحمي بوضع ملء الشاشة فقط. اجعل التطبيق بملء الشاشة للمتابعة.";
+
+"lesson.reading_required_eyebrow" = "قراءة مطلوبة";
+"lesson.reading_progress_label" = "تقدم القراءة";
+"lesson.reading_progress_fmt" = "ص.%d من %d";
+"lesson.reading_start" = "ابدأ القراءة";
+"lesson.reading_continue" = "متابعة القراءة";
+"lesson.materials_eyebrow" = "مواد الدرس";
+
+"lesson.add_note_title_add" = "إضافة ملاحظة";
+"lesson.add_note_title_edit" = "تعديل الملاحظة";
+"lesson.add_note_cancel" = "إلغاء";
+"lesson.add_note_save" = "حفظ";
+"lesson.add_note_placeholder" = "اكتب ملاحظتك...";
+"lesson.add_note_failed" = "تعذّر حفظ الملاحظة. حاول مجددًا.";
+"lesson.add_note_selected_text_label" = "النص المحدد";
+"lesson.add_note_selected_text_page_fmt" = "النص المحدد · ص.%d";
+"lesson.add_note_footer_page_fmt" = "صفحة %d · %@";
+
+"lesson.notes_list_title" = "ملاحظاتي";
+"lesson.notes_list_add" = "إضافة";
+"lesson.notes_list_empty" = "لا توجد ملاحظات بعد — اضغط إضافة لتسجيل أول ملاحظة.";
+"lesson.notes_edit" = "تعديل";
+"lesson.notes_delete" = "حذف";
+"playback_settings.back"             = "الإعدادات";
+"playback_settings.title"            = "التشغيل";
+"playback_settings.speed"            = "السرعة";
+"playback_settings.speed_footer"     = "تنطبق على هذا الدرس فقط. تُحفظ بين الجلسات.";
+"playback_settings.quality"          = "جودة الفيديو";
+"playback_settings.quality_footer"   = "تنطبق على البث. التحميلات تستخدم إعدادات الجودة الخاصة بها.";
+"playback_settings.quality_single"   = "يُبث هذا الدرس بجودة واحدة فقط.";
+"playback_settings.quality_low"      = "480p";
+"playback_settings.quality_low_sub"  = "استهلاك بيانات منخفض";
+"playback_settings.quality_med"      = "720p HD";
+"playback_settings.quality_med_sub"  = "موصى بها";
+"playback_settings.quality_high"     = "1080p Full HD";
+"playback_settings.quality_high_sub" = "استهلاك بيانات مرتفع";
+"playback_settings.options"          = "الخيارات";
+"playback_settings.autoplay"         = "تشغيل تلقائي للدرس التالي";
+"playback_settings.subtitles"        = "الترجمة / النصوص المغلقة";
+"playback_settings.subtitles_unavailable" = "الترجمة غير متاحة لهذا الدرس بعد.";
+
+"lesson.notes_filter_all"      = "الكل";
+"lesson.notes_filter_document" = "المستند";
+"lesson.notes_filter_video"    = "الفيديو";
+"lesson.notes_type_video"      = "فيديو";
+"lesson.notes_type_document"   = "مستند";
+"lesson.notes_date_today"      = "اليوم";
+"lesson.notes_date_yesterday"  = "أمس";
+"lesson.notes_subtitle_fmt"    = "%1$d ملاحظة · %2$d مصادر";
+"lesson.notes_page_prefix_fmt" = "ص.%d";
+"lesson.notes_callout_eyebrow_fmt" = "ملاحظتك · صفحة %d";
+"lesson.notes_callout_eyebrow" = "ملاحظتك";
+
+"lesson_pdf.eyebrow_fmt" = "الدرس %@";
+"lesson_pdf.page_of_fmt" = "PDF · الصفحة %d من %d";
+"lesson_pdf.pages_label" = "صفحات";
+"lesson_pdf.prev" = "السابق";
+"lesson_pdf.next" = "التالي";
+"lesson_pdf.add_note" = "إضافة ملاحظة";
+"lesson_pdf.add" = "إضافة";
+"lesson_pdf.my_notes" = "ملاحظاتي";
+"lesson_pdf.invalid_url" = "رابط المستند غير صالح";
+"lesson_pdf.open_failed" = "تعذّر فتح المستند";
+"lesson_pdf.search_placeholder" = "ابحث في المستند";
+"lesson_pdf.search_no_matches" = "لا توجد نتائج";
+"lesson_pdf.search_match_count_fmt" = "%1$d من %2$d";
+"lesson_pdf.notes_pill" = "ملاحظات";
+
+/* Document note flow (June 2026 redesign) */
+"lesson.doc_note_new_title" = "ملاحظة جديدة";
+"lesson.doc_note_edit_title" = "تعديل الملاحظة";
+"lesson.doc_note_subtitle_fmt" = "ملاحظة %1$d من %2$d · صفحة %3$d";
+"lesson.doc_note_content_label" = "المحتوى";
+"lesson.doc_note_your_note_label" = "ملاحظتك";
+"lesson.doc_note_optional" = "اختياري";
+"lesson.doc_note_paste_hint" = "ألصق نص المصدر";
+"lesson.doc_note_content_placeholder" = "ألصق مقطعًا من الصفحة لربط ملاحظتك به…";
+"lesson.doc_note_your_note_placeholder" = "اكتب أفكارك أو أسئلتك أو ملخصك هنا…";
+"lesson.doc_note_words_fmt" = "%1$d / %2$d كلمة";
+"lesson.doc_note_helper" = "املأ أحد الحقلين — أو كليهما. يلزم حقل واحد على الأقل للحفظ.";
+"lesson.doc_note_delete" = "حذف";
+"lesson.doc_note_delete_title" = "حذف هذه الملاحظة؟";
+"lesson.doc_note_delete_message_fmt" = "سيؤدي هذا إلى حذف الملاحظة في صفحة %d نهائيًا. لا يمكن التراجع عن ذلك.";
+"lesson.doc_note_delete_keep" = "متابعة التعديل";
+"lesson.doc_note_delete_discard" = "تجاهل";
+"lesson.notes_on_page_title" = "ملاحظات هذه الصفحة";
+"lesson.notes_on_page_subtitle_fmt" = "صفحة %1$d · %2$@";
+"lesson.notes_on_page_empty" = "لا توجد ملاحظات على هذه الصفحة بعد";
+"lesson.notes_on_page_add" = "إضافة ملاحظة";
+"lesson.notes_all_link" = "كل الملاحظات";
+"lesson.notes_see_all" = "عرض الكل";
+"lesson.note_saved_to_my_notes" = "تم حفظ الملاحظة في ملاحظاتي";
+"lesson.note_deleted_toast" = "تم حذف الملاحظة";
+"lesson.note_undo" = "تراجع";
+
+/* AI Tutor */
+"ai_tutor.title" = "المدرس الذكي";
+"ai_tutor.ask_question" = "اطرح سؤالاً";
+"ai_tutor.placeholder" = "اكتب سؤالك…";
+"ai_tutor.send" = "إرسال";
+"ai_tutor.streaming" = "بث مباشر";
+"ai_tutor.sources" = "المصادر";
+"ai_tutor.page" = "صفحة";
+"ai_tutor.thumbs_up" = "مفيد";
+"ai_tutor.thumbs_down" = "غير مفيد";
+"ai_tutor.select_course" = "اختر دورة مسجلاً بها لاستخدام المدرس الذكي";
+"ai_tutor.select_course_short" = "اختر دورة";
+"ai_tutor.error_select_course" = "يرجى اختيار دورة أولًا.";
+"ai_tutor.error_fmt" = "خطأ: %@";
+"ai_tutor.error_unknown" = "حدث خطأ ما. يرجى المحاولة مرة أخرى.";
+"ai_tutor.error_config" = "المدرس الذكي غير متاح حاليًا.";
+"ai_tutor.error_encoding" = "تعذّر إرسال سؤالك. يرجى المحاولة مرة أخرى.";
+"ai_tutor.error_stream" = "توقّفت الإجابة في منتصفها. يرجى المحاولة مرة أخرى.";
+"ai_tutor.error_stream_inline_fmt" = "\n[خطأ: %@]";
+
+/* AI Tutor · multi-model ask */
+"ai_multi.title" = "اسأل الذكاء الاصطناعي";
+"ai_multi.entry_title" = "اسأل الذكاء الاصطناعي عن هذه الدورة";
+"ai_multi.entry_subtitle" = "تعثّرت في نقطة ما؟ احصل على شرح في ثوانٍ، أو قارن إجابات عدة نماذج ذكاء اصطناعي.";
+"ai_multi.entry_lesson" = "اسأل الذكاء الاصطناعي";
+"ai_multi.open_chat" = "فتح المحادثة";
+"ai_multi.mode_fast" = "سريع";
+"ai_multi.mode_deep" = "معمّق";
+"ai_multi.mode_fast_hint" = "نموذج واحد. أسرع إجابة مفيدة.";
+"ai_multi.mode_deep_hint" = "يسأل عدة نماذج في آنٍ واحد ويحدّد أفضل إجابة. قد يستغرق حتى 30 ثانية.";
+"ai_multi.models_label" = "النماذج";
+"ai_multi.models_auto" = "اترك الاختيار لـ Droob";
+"ai_multi.models_compare_all" = "قارن الكل";
+"ai_multi.models_compare_all_hint" = "اسأل كل النماذج المتاحة ورتّب الإجابات.";
+"ai_multi.models_picker_title" = "اختر النماذج";
+"ai_multi.models_cap_hint_fast" = "الوضع السريع يستخدم نموذجًا واحدًا. اختر واحدًا، أو اترك الاختيار لـ Droob.";
+"ai_multi.models_cap_hint_deep" = "اختر حتى 3 نماذج، أو قارنها كلها.";
+"ai_multi.models_loading" = "جارٍ تحميل النماذج…";
+"ai_multi.models_empty" = "لا توجد نماذج متاحة حاليًا.";
+"ai_multi.models_error" = "تعذّر تحميل قائمة النماذج.";
+"ai_multi.models_selected_one" = "نموذج واحد مختار";
+"ai_multi.models_selected_two" = "نموذجان مختاران";
+"ai_multi.models_selected_fmt" = "%d نماذج مختارة";
+"ai_multi.models_selected_many_fmt" = "%d نموذجًا مختارًا";
+"ai_multi.model_vision" = "يقرأ الصور";
+"ai_multi.model_fast_default" = "افتراضي";
+"ai_multi.vision_filter_note" = "تُعرض النماذج القادرة على قراءة صورتك فقط.";
+"ai_multi.question_placeholder" = "اسأل عن أي شيء في هذه الدورة…";
+"ai_multi.ask" = "اسأل";
+"ai_multi.waiting_title_one" = "جارٍ سؤال نموذج واحد…";
+"ai_multi.waiting_title_two" = "جارٍ سؤال نموذجين…";
+"ai_multi.waiting_title_fmt" = "جارٍ سؤال %d نماذج…";
+"ai_multi.waiting_title_many_fmt" = "جارٍ سؤال %d نموذجًا…";
+"ai_multi.waiting_title_unknown" = "جارٍ سؤال المدرس الذكي…";
+"ai_multi.waiting_subtitle" = "تصل كل الإجابات معًا، لذا قد يستغرق الأمر لحظات.";
+"ai_multi.waiting_cancel" = "إيقاف";
+"ai_multi.status_timeout" = "انتهت المهلة";
+"ai_multi.status_rate_limited" = "تجاوز حد الاستخدام";
+"ai_multi.status_error" = "لم يُجب";
+"ai_multi.status_timeout_hint" = "استغرق هذا النموذج وقتًا طويلًا للرد.";
+"ai_multi.status_rate_limited_hint" = "بلغ هذا النموذج المجاني حدّ استخدامه. حاول بعد دقيقة.";
+"ai_multi.status_error_hint" = "تعذّر على هذا النموذج الإجابة هذه المرة.";
+"ai_multi.best_badge" = "الأفضل";
+"ai_multi.best_rationale_title" = "لماذا فازت هذه الإجابة";
+"ai_multi.copy" = "نسخ";
+"ai_multi.copied" = "تم النسخ";
+"ai_multi.latency_fmt" = "%@ ث";
+"ai_multi.answer_position_fmt" = "%1$d من %2$d";
+"ai_multi.answered_summary_fmt" = "أجاب %1$d من %2$d نموذجًا";
+"ai_multi.empty_title" = "اسأل عن أي شيء في هذه الدورة";
+"ai_multi.empty_subtitle" = "اكتب سؤالك بالأسفل. يمكنك إرفاق صورة لرسم بياني أو مسألة مكتوبة بخط اليد.";
+"ai_multi.error_all_failed" = "لم يتمكّن أي نموذج من الإجابة الآن. يرجى المحاولة بعد قليل.";
+"ai_multi.error_generic" = "حدث خطأ ما. يرجى المحاولة مرة أخرى.";
+"ai_multi.unknown_model" = "نموذج غير معروف";
+"ai_multi.error_empty_question" = "اكتب سؤالك أولًا.";
+"ai_multi.attach_photo" = "إرفاق صورة";
+"ai_multi.photo_attached" = "تم إرفاق الصورة";
+"ai_multi.photo_remove" = "إزالة";
+"ai_multi.photo_uploading" = "جارٍ رفع الصورة…";
+"ai_multi.photo_not_image" = "يرجى اختيار صورة.";
+"ai_multi.rating_thanks" = "شكرًا على ملاحظتك";
+/* AI Tutor · hub (bottom-bar entry) */
+"ai_hub.title" = "المدرّس الذكي";
+"ai_hub.tab_a11y" = "المدرّس الذكي";
+"ai_hub.tab_a11y_hint" = "اسأل عن إحدى دوراتك";
+"ai_hub.headline" = "اسأل عن أي شيء في دوراتك";
+"ai_hub.subheadline" = "تجيب عدة نماذج ذكاء اصطناعي في آنٍ واحد، ويحدّد Droob أفضل إجابة.";
+"ai_hub.pick_course" = "اختر دورة";
+"ai_hub.pick_course_hint" = "يجيب المدرّس اعتمادًا على دروس تلك الدورة وموادها.";
+"ai_hub.loading" = "جارٍ إيجاد دوراتك…";
+"ai_hub.empty_title" = "لا توجد دورات لتسأل عنها بعد";
+"ai_hub.empty_body" = "يجيب المدرّس الذكي عن أسئلتك حول الدورات المسجّل بها — فهو يقرأ دروسها وموادها. سجّل في دورة وستظهر هنا.";
+"ai_hub.empty_cta" = "تصفّح الدورات";
+"ai_hub.close" = "إغلاق";
+
+/* Profile */
+"profile.title" = "الملف الشخصي";
+"profile.language" = "اللغة";
+"profile.english" = "الإنجليزية";
+"profile.arabic" = "العربية";
+
+/* OTP code entry */
+"otp.back" = "رجوع";
+"otp.title" = "أدخل الرمز";
+"otp.subtitle_fmt" = "أرسلنا رمزًا مكوّنًا من 6 خانات إلى %@";
+"otp.verify" = "تحقّق";
+"otp.verifying" = "جارٍ التحقّق…";
+"otp.didnt_receive" = "لم يصلك الرمز؟";
+"otp.resend_code" = "إعادة إرسال الرمز";
+"otp.resend_cooldown_fmt" = "إعادة الإرسال · %@";
+"otp.resending_banner" = "تم إرسال رمز جديد.";
+"otp.totp_required_fallback" = "هذا الحساب مفعّل عليه التحقّق بخطوتين. يُرجى تسجيل الدخول بكلمة المرور بدلاً من ذلك.";
+
+/* Email OTP (passwordless) */
+"email_otp.login_cta" = "الدخول برمز عبر البريد";
+"email_otp.register_cta" = "التسجيل برمز عبر البريد";
+"email_otp.login_email_title" = "الدخول عبر البريد";
+"email_otp.login_email_subtitle" = "أدخل بريدك الإلكتروني وسنرسل لك رمزًا لمرة واحدة.";
+"email_otp.register_email_title" = "أنشئ حسابك";
+"email_otp.register_email_subtitle" = "سنُرسل رمزًا للتأكّد من بريدك.";
+"email_otp.send_code" = "إرسال الرمز";
+"email_otp.sending" = "جارٍ الإرسال…";
+"email_otp.use_password_instead" = "استخدم كلمة المرور";
+
+/* Display name prompt */
+"display_name.title" = "كيف نناديك؟";
+"display_name.subtitle" = "هذا هو الاسم الذي سيراه بقية المتعلمين.";
+"display_name.label" = "الاسم المعروض";
+"display_name.placeholder" = "مثال: لينا";
+"display_name.continue" = "متابعة";
+"display_name.continuing" = "جارٍ الإنهاء…";
+
+/* Login screen */
+"login.title" = "تسجيل الدخول إلى دروب";
+"login.subtitle" = "تابع من حيث توقّفت";
+"login.email_label" = "البريد الإلكتروني";
+"login.email_placeholder" = "name@email.com";
+"login.password_label" = "كلمة المرور";
+"login.password_placeholder" = "••••••••";
+"login.forgot" = "هل نسيت كلمة المرور؟";
+"login.show" = "إظهار";
+"login.hide" = "إخفاء";
+"login.keep_signed_in" = "أبقني مسجّلاً";
+"login.sign_in" = "تسجيل الدخول";
+"login.signing_in" = "جارٍ الدخول…";
+"login.try_again" = "حاول مرّة أخرى";
+"login.reset_password" = "إعادة تعيين كلمة المرور";
+"login.or" = "أو";
+"login.social_google" = "Google";
+"login.social_apple" = "Apple";
+"login.no_account_prefix" = "ليس لديك حساب؟";
+"login.sign_up_link" = "إنشاء حساب";
+"login.err_incorrect" = "البريد الإلكتروني أو كلمة المرور غير صحيحة";
+"login.err_wrong_credentials" = "بريد إلكتروني أو كلمة مرور غير صحيحة. حاول مرّة أخرى أو أعد تعيين كلمة المرور.";
+"login.err_attempts_fmt" = "تبقّى %d محاولات قبل قفل حسابك.";
+"login.err_missing_fields" = "يرجى إدخال البريد الإلكتروني وكلمة المرور.";
+"login.err_verify_email" = "يرجى التحقق من البريد الإلكتروني";
+"login.err_verify_password" = "يرجى التحقق من كلمة المرور";
+"login.err_captcha_dismissed" = "يلزم تحقّق إضافي لتسجيل الدخول. يرجى إكماله، أو إعادة تعيين كلمة المرور.";
+"login.err_device_not_authorized" = "هذا الحساب مستخدم بالفعل على جهاز آخر. تواصل مع الدعم لنقله إلى هذا الجهاز.";
+"login.biometric_face_id" = "تسجيل الدخول ببصمة الوجه";
+"login.biometric_touch_id" = "تسجيل الدخول ببصمة الإصبع";
+"login.biometric_reason" = "تسجيل الدخول إلى دروب";
+
+/* Legal screens */
+"legal.terms_title" = "شروط الخدمة";
+"legal.terms_updated" = "آخر تحديث · مايو 2026";
+"legal.privacy_title" = "سياسة الخصوصية";
+"legal.privacy_updated" = "آخر تحديث · مايو 2026";
+
+/* Register screen (Figma redesign) */
+"register.back" = "تسجيل الدخول";
+"register.title" = "إنشاء حساب";
+"register.subtitle" = "انضم إلى مجتمع دروب";
+"register.section_info" = "بياناتك";
+"register.first_name" = "الاسم الأول";
+"register.last_name" = "اسم العائلة";
+"register.email" = "البريد الإلكتروني";
+"register.password" = "كلمة المرور";
+"register.password_placeholder" = "••••••••";
+"register.password_hint" = "8 خانات على الأقل، تتضمّن رقمًا أو رمزًا.";
+"register.create_account" = "إنشاء الحساب";
+"register.creating_account" = "جارٍ الإنشاء…";
+"register.terms_prefix" = "بإنشاء حساب فإنك توافق على ";
+"register.terms_of_service" = "شروط الخدمة";
+"register.terms_and" = " و";
+"register.privacy_policy" = "سياسة الخصوصية";
+"register.terms_suffix" = " الخاصة بدروب.";
+
+/* Forgot Password */
+"forgot.back" = "تسجيل الدخول";
+"forgot.title_line1" = "إعادة تعيين كلمة المرور";
+"forgot.title_line2" = "";
+"forgot.description" = "أدخل البريد المرتبط بحسابك وسنرسل لك رمز إعادة التعيين.";
+"forgot.email_section" = "البريد الإلكتروني";
+"forgot.email_label" = "البريد الإلكتروني";
+"forgot.email_placeholder" = "name@email.com";
+"forgot.hint" = "سيصلك رمز مكوّن من 6 خانات لإعادة تعيين كلمة المرور.";
+"forgot.send_button" = "إرسال رمز الإعادة";
+"forgot.sending" = "جارٍ الإرسال…";
+"forgot.error_empty" = "يرجى إدخال البريد الإلكتروني.";
+"forgot.sent_neutral" = "إذا كان لديك حساب بهذا البريد فسيصلك رمز مكوّن من 6 خانات قريباً. تحقّق من البريد (والسبام).";
+"forgot.have_code" = "لديّ رمز";
+
+/* Splash & Onboarding */
+"brand.name" = "دروب";
+"splash.tagline" = "تعلّم متميّز";
+"onboarding.slide1_title" = "تعلّم بالوتيرة التي تناسبك";
+"onboarding.slide1_description" = "أكثر من 40 دورة مميّزة. التحميل للعرض دون اتصال. بدون جدول مسبق.";
+"onboarding.slide1_cta" = "ابدأ الآن";
+"onboarding.slide2_title" = "تتبّع تقدّمك الفعلي";
+"onboarding.slide2_description" = "تتابع يومي، إنجازات تحفيزية، وتتبّع لكل درس يحافظ على حماسك.";
+"onboarding.slide2_cta" = "التالي";
+"onboarding.slide3_title" = "انضم إلى الجلسات المباشرة وساعات المكتب";
+"onboarding.slide3_description" = "احجز ورش العمل المباشرة، اطرح أسئلتك فورًا، وتواصل مع المدرّبين.";
+"onboarding.slide3_cta" = "ابدأ التعلّم";
+/* Illustration card copy */
+"onboarding.my_courses_title" = "دوراتي";
+"onboarding.my_courses_subtitle" = "3 مسجّلة";
+"onboarding.sample_course_1" = "أساسيات تجربة المستخدم";
+/* "React" stays in Latin script — it is a product name, and transliterating it
+   reads as a typo to the developers this course is aimed at. */
+"onboarding.sample_course_2" = "إتقان React";
+"onboarding.sample_course_3" = "التسويق الرقمي";
+"mac_unsupported.title" = "دروب للآيفون والآيباد";
+"mac_unsupported.body" = "هذا التطبيق غير مدعوم على الماك. افتح دروب على آيفون أو آيباد لمتابعة التعلّم.";
+"onboarding.streak_label" = "تتابع 12 يومًا";
+"onboarding.streak_subtitle" = "حافظ على وتيرتك";
+"onboarding.progress_this_course" = "هذه الدورة";
+"onboarding.stats_streak" = "تتابع 12 يومًا";
+"onboarding.stats_watch_time" = "وقت المشاهدة";
+"onboarding.stats_quiz_avg" = "متوسط الاختبارات";
+"onboarding.instructor_role" = "تصميم تجربة المستخدم · مدرّب أول";
+"onboarding.badge_live" = "مباشر";
+"onboarding.session_viewers" = "38 مشاهدًا";
+"onboarding.session_duration" = "60 دقيقة";
+"onboarding.session_started_ago" = "بدأت قبل 14 دقيقة";
+"onboarding.join_button" = "انضم";
+"onboarding.office_hours_title" = "ساعات المكتب — UX/UI";
+"onboarding.office_hours_time" = "5:00 م · 60 دقيقة · مجاني";
+"onboarding.book_button" = "احجز";
+
+/* General */
+"general.loading" = "جارٍ التحميل…";
+"general.error" = "خطأ";
+"general.retry" = "إعادة المحاولة";
+"general.ok" = "موافق";
+"general.empty" = "لا يوجد شيء هنا بعد";
+"general.done" = "تم";
+"general.confirm" = "تأكيد";
+"general.cancel" = "إلغاء";
+"general.save" = "حفظ";
+"general.back" = "رجوع";
+"general.close" = "إغلاق";
+
+/* Home */
+"home.greeting_morning" = "صباح الخير";
+"home.greeting_afternoon" = "مساء الخير";
+"home.greeting_evening" = "مساء الخير";
+"home.welcome_prefix" = "مرحبًا بك في";
+"home.continue_learning" = "متابعة التعلّم";
+"home.in_progress" = "قيد التقدم";
+"home.continue_button" = "متابعة";
+"home.stat_streak" = "أيام متتالية";
+"home.stat_streak_unit" = "";
+"home.stat_watch" = "وقت المشاهدة";
+"home.stat_quiz_avg" = "متوسط الاختبارات";
+"home.stat_courses" = "دورات";
+"home.my_courses" = "دوراتي";
+"home.see_all" = "عرض الكل";
+"home.next_session" = "الجلسة القادمة";
+"home.next_session_all" = "الكل";
+"home.join_session" = "انضم";
+"home.empty_title" = "لا توجد دورات بعد";
+"home.empty_subtitle" = "تصفّح الكتالوج وسجّل في أول دورة لك للبدء.";
+"home.browse_courses" = "تصفّح الدورات";
+"home.recommended" = "موصى به لك";
+"home.recommended_reason_fmt" = "لأنّك سجّلت في %@";
+"home.recommended_meta_fmt" = "%1$@ · %2$d درس";
+"home.course_meta_fmt" = "%1$d درس · %2$@س · ★ %3$@";
+"home.enrolled_count_fmt" = "%d مسجّل";
+
+/* Home — Ask Droob AI hero card */
+"home.ai_hero.eyebrow" = "المدرّس الذكي";
+"home.ai_hero.title" = "اسأل الذكاء الاصطناعي";
+"home.ai_hero.cta" = "ابدأ سؤالاً";
+"home.ai_hero.phrase_1" = "حل مسألة تفاضل وتكامل";
+"home.ai_hero.phrase_2" = "قراءة ورقة عمل PDF";
+"home.ai_hero.phrase_3" = "إنشاء ورقة حلول";
+"home.ai_hero.phrase_4" = "شرح خطوة بخطوة";
+"home.ai_hero.a11y" = "اسأل الذكاء الاصطناعي. يحل مسائل التفاضل والتكامل، ويقرأ أوراق العمل بصيغة PDF، وينشئ ورقة حلول، ويشرح خطوة بخطوة.";
+"home.ai_hero.a11y_hint" = "يفتح المدرّس الذكي";
+
+/* Courses tab */
+"courses.segment_mine" = "المسجّلة";
+"courses.segment_explore" = "اكتشف";
+"courses.count_fmt" = "%d دورة";
+"enrolled.subtitle_fmt" = "%1$d مدرب · %2$d دورة نشطة";
+"enrolled.stat_courses" = "الدورات";
+"enrolled.stat_in_progress" = "قيد التقدم";
+"enrolled.stat_completed" = "مكتملة";
+"enrolled.stat_pending" = "قيد الانتظار";
+"enrolled.course_singular" = "دورة";
+"enrolled.course_plural" = "دورات";
+"enrolled.percent_complete" = "مكتمل";
+"enrolled.live_sessions_fmt" = "%d جلسات مباشرة";
+"enrolled.live_session_singular_fmt" = "%d جلسة مباشرة";
+"enrolled.completed" = "مكتملة";
+"enrolled.pending_approval" = "بانتظار الموافقة";
+"enrolled.discover_more" = "اكتشف المزيد من المدربين";
+"enrolled.empty_welcome_prefix" = "مرحبًا بك في دروب،";
+"enrolled.empty_how_title" = "كيف يعمل دروب";
+"enrolled.empty_pick_title" = "اختر معلمًا";
+"enrolled.empty_pick_subtitle" = "تصفّح دوراته من ملفه الشخصي";
+"enrolled.empty_request_title" = "اطلب الالتحاق";
+"enrolled.empty_request_subtitle" = "أرسل رسالة قصيرة";
+"enrolled.empty_browse_all_fmt" = "تصفّح كل %d مدرب";
+"explore.segment_instructors" = "المدربون";
+"explore.segment_courses" = "الدورات";
+"explore.browse_instructors_fmt" = "تصفّح %d مدرب خبير";
+"explore.instructor_students_fmt" = "%d طالب";
+"explore.instructor_courses_fmt" = "%d دورة";
+"explore.instructors_count_fmt" = "%d مدرب";
+"explore.stat_years" = "سنوات";
+"explore.stat_rating" = "التقييم";
+"explore.stat_students" = "الطلاب";
+"explore.stat_courses" = "الدورات";
+"explore.view_courses" = "عرض الدورات";
+"explore.no_courses" = "لا توجد دورات منشورة بعد";
+"explore.new_badge" = "جديد";
+"explore.see_all_courses_fmt" = "عرض كل %d دورة";
+"explore.see_all" = "عرض الكل";
+"courses.sort" = "ترتيب";
+"courses.filter" = "تصفية";
+"courses.all_chip" = "الكل";
+"courses.sort_title" = "ترتيب حسب";
+"courses.sort_done" = "تم";
+"courses.sort_recently_added" = "الأحدث إضافة";
+"courses.sort_most_popular" = "الأكثر شيوعًا";
+"courses.sort_highest_rated" = "الأعلى تقييمًا";
+"courses.sort_price_low_high" = "السعر: من الأقل إلى الأعلى";
+"courses.sort_price_high_low" = "السعر: من الأعلى إلى الأقل";
+"my_courses.sort_recently_active" = "آخر نشاط";
+"my_courses.sort_recently_enrolled" = "آخر تسجيل";
+"my_courses.sort_progress_high_low" = "التقدم: من الأعلى إلى الأقل";
+"courses.filter_title" = "تصفية";
+"courses.filter_all" = "الكل";
+"courses.filter_free" = "";
+"courses.filter_paid" = "مدفوع";
+"courses.filter_enrolled" = "مسجل";
+"courses.filter_sheet_title" = "تصفية الدورات";
+"courses.filter_clear_all" = "مسح الكل";
+"courses.filter_apply" = "تطبيق التصفية";
+"courses.filter_section_price" = "السعر";
+"courses.filter_section_rating" = "التقييم";
+"courses.filter_section_level" = "المستوى";
+"courses.filter_price_any" = "الكل";
+"courses.filter_price_under_50" = "أقل من $50";
+"courses.filter_price_50_100" = "$50 – $100";
+"courses.filter_price_100_plus" = "$100+";
+"courses.filter_rating_any" = "الكل";
+"courses.filter_rating_45" = "★ +4.5";
+"courses.filter_rating_40" = "★ +4.0";
+"courses.filter_rating_35" = "★ +3.5";
+"courses.filter_level_all" = "جميع المستويات";
+"courses.filter_level_beginner" = "مبتدئ";
+"courses.filter_level_intermediate" = "متوسط";
+"courses.filter_level_advanced" = "متقدم";
+
+/* Course detail sheet */
+"course_detail.video_lessons_hours_fmt" = "%1$d درس فيديو · %2$d ساعة";
+"course_detail.certificate" = "شهادة عند الإتمام";
+"course_detail.offline_downloads" = "تحميل دون اتصال";
+"course_detail.apple_pay" = "ادفع";
+"course_detail.or" = "أو";
+"course_detail.enrol_with_card_fmt" = "سجّل بالبطاقة — %@";
+"course_detail.footer_guarantee" = "ضمان استرداد 14 يوم · دفع آمن";
+"course_detail.enroll_free_cta" = "سجّل";
+"course_detail.enroll_free_failed" = "تعذّر التسجيل. حاول مرة أخرى.";
+"course_detail.curriculum_title" = "المنهج";
+"course_detail.curriculum_empty" = "لا توجد وحدات منهج بعد.";
+"curriculum.module_quiz" = "اختبار الوحدة";
+"curriculum.quiz_prompt" = "اختبر معلوماتك";
+"curriculum.quiz_questions_one" = "سؤال واحد";
+"curriculum.quiz_questions_two" = "سؤالان";
+"curriculum.quiz_questions_fmt" = "%d أسئلة";
+"curriculum.quiz_questions_many_fmt" = "%d سؤالًا";
+"course_detail.ratings_title" = "التقييمات والمراجعات";
+"course_detail.ratings_count_fmt" = "%lld تقييم";
+"course_detail.see_all_reviews_fmt" = "عرض كل %lld مراجعة";
+"course_detail.review_age_just_now" = "الآن";
+"course_detail.review_age_minutes_fmt" = "قبل %d دقيقة";
+"course_detail.review_age_hours_fmt" = "قبل %d ساعة";
+"course_detail.review_age_days_fmt" = "قبل %d يوم";
+"course_detail.review_age_weeks_fmt" = "قبل %d أسبوع";
+"course_detail.review_age_months_fmt" = "قبل %d شهر";
+"course_detail.qa_title" = "أسئلة وأجوبة";
+"course_detail.rate_this_course" = "قيّم هذه الدورة";
+"course_detail.ask_a_question" = "اطرح سؤالًا";
+"course_detail.rate_sheet_title" = "قيّم هذه الدورة";
+"course_detail.rate_sheet_placeholder" = "شاركنا رأيك في الدورة…";
+"course_detail.rate_sheet_submit" = "إرسال المراجعة";
+"course_detail.rate_sheet_only_enrolled" = "يمكن للطلاب المسجلين فقط ترك مراجعة.";
+"course_detail.rate_sheet_thanks" = "شكرًا — تم حفظ مراجعتك.";
+"course_detail.rate_sheet_question" = "كيف كانت الدورة؟";
+"course_detail.rate_sheet_prompt" = "مراجعتك تساعد الطلاب الآخرين في رحلتهم على دروب.";
+"course_detail.rate_sheet_submit_button" = "إرسال التقييم";
+"course_detail.rate_sheet_cancel" = "إلغاء";
+"course_detail.rate_sheet_label_1" = "سيّئة جدًا";
+"course_detail.rate_sheet_label_2" = "ضعيفة";
+"course_detail.rate_sheet_label_3" = "متوسطة";
+"course_detail.rate_sheet_label_4" = "ممتازة";
+"course_detail.rate_sheet_label_5" = "رائعة";
+"course_detail.rate_sheet_thanks_fmt" = "شكرًا، %@!";
+"course_detail.rate_sheet_success_subtitle" = "تقييمك يساعد الطلاب الآخرين على اكتشاف محتوى رائع على دروب.";
+"course_detail.rate_sheet_back_to_course" = "العودة للدورة";
+"course_detail.rate_sheet_edit_review" = "تعديل مراجعتي";
+"course_detail.rate_sheet_you_fallback" = "أنت";
+"course_detail.generic_error" = "حدث خطأ. حاول مرة أخرى.";
+
+/* Enrollment requests (ADR-0006) */
+"enroll_request.request_to_enroll" = "التحق وابدأ";
+"course.guest_sign_in_to_enroll" = "سجّل الدخول للالتحاق";
+"course.guest_preview_hint" = "تصفّح أي دورة مجانًا. سجّل الدخول فقط عندما تريد الالتحاق.";
+"guest.browse_title" = "تصفّح الدورات";
+"guest.browse_sign_in" = "تسجيل الدخول";
+"login.browse_courses_guest" = "تصفّح الدورات دون تسجيل الدخول";
+"enroll_request.subtitle_personal_fmt" = "أخبر %@ لماذا تريد الانضمام · تتم مراجعة كل طلب";
+"enroll_request.note_to_fmt" = "ملاحظة إلى %@";
+"enroll_request.sent_banner" = "تم إرسال الطلب.";
+"enroll_request.pending_button" = "الطلب قيد المراجعة";
+"enroll_request.pending_subtitle" = "بانتظار موافقة المدرّب";
+"enroll_request.sheet_title_create" = "التحق وابدأ";
+"enroll_request.sheet_title_edit" = "طلبك المعلّق";
+"enroll_request.sheet_prompt_create" = "اترك رسالة اختيارية للمدرّب — سيتم التحاقك ويمكنك البدء فوراً.";
+"enroll_request.sheet_prompt_edit" = "عدّل ملاحظتك أو اسحب طلبك ما دام قيد المراجعة.";
+"enroll_request.note_placeholder" = "اترك رسالة للمدرّب (اختياري)…";
+"enroll_request.submit_create" = "التحق وابدأ";
+"enroll_request.submit_edit" = "حفظ التغييرات";
+"enroll_request.cancel_request" = "إلغاء الطلب";
+"enroll_request.close" = "ليس الآن";
+"enroll_request.success_title" = "تم التحاقك!";
+"enroll_request.success_subtitle" = "كل شيء جاهز — ابدأ بمشاهدة الدروس الآن.";
+"enroll_request.back_to_course" = "العودة إلى الدورة";
+"enroll_request.cancel_confirm_title" = "إلغاء الطلب؟";
+"enroll_request.cancel_confirm_message" = "سيتم سحب طلب التحاقك. يمكنك تقديم الطلب مرة أخرى لاحقاً.";
+"enroll_request.cancel_confirm_yes" = "إلغاء الطلب";
+"enroll_request.cancel_confirm_no" = "الإبقاء على الطلب";
+"enroll_request.decision_rejected" = "لم تتم الموافقة على طلبك. يمكنك تقديم الطلب مرة أخرى.";
+"enroll_request.decision_cancelled" = "تم سحب هذا الطلب.";
+"enroll_request.poll_stopped_hint" = "ما زلنا بانتظار المدرّب.";
+"enroll_request.check_now" = "تحقّق الآن";
+
+"course_detail.all_reviews_title" = "المراجعات";
+"course_detail.all_reviews_empty" = "لا توجد مراجعات بعد. كن أول من يشارك تجربته.";
+"course_detail.qa_placeholder_title" = "الأسئلة والأجوبة";
+"course_detail.qa_placeholder_body" = "اطرح أسئلة واقرأ الإجابات من المدرّب ومن الطلاب الآخرين. هذه المساحة قيد التطوير.";
+"course_detail.qa_upvotes_fmt" = "%d تصويت";
+"course_detail.qa_instructor_tag" = "المدرّب";
+"course_detail.qa_see_all_fmt" = "عرض كل %d سؤال";
+"course_detail.pinned_faqs_title" = "أسئلة قد تطرحها";
+"course_detail.pinned_faqs_subtitle" = "يجيب عنها مدرّبك";
+"qa.subtitle_fmt" = "%1$@ · %2$d سؤال";
+"qa.ask_placeholder" = "اطرح سؤالاً…";
+"qa.filter_all" = "الكل";
+"qa.filter_answered" = "تمت الإجابة";
+"qa.filter_unanswered" = "بدون إجابة";
+"qa.filter_mine" = "أسئلتي";
+"qa.status_answered" = "✓ تمت الإجابة";
+"qa.status_unanswered" = "بدون إجابة";
+"qa.empty_state" = "لا توجد أسئلة بعد — كن أول من يسأل.";
+"qa.ask_sheet_title" = "اطرح سؤالاً";
+"qa.ask_sheet_placeholder" = "ماذا تريد أن تعرف؟";
+"qa.ask_sheet_submit" = "نشر السؤال";
+"qa.age_just_now" = "الآن";
+"qa.age_minutes_fmt" = "قبل %d د";
+"qa.age_hours_fmt" = "قبل %d س";
+"qa.age_yesterday" = "أمس";
+"qa.age_days_fmt" = "قبل %d ي";
+"instructor_profile.students" = "الطلاب";
+"instructor_profile.courses" = "الدورات";
+"instructor_profile.rating" = "التقييم";
+"instructor_profile.years" = "السنوات";
+"instructor_profile.about" = "نبذة";
+"instructor_profile.bio_placeholder" = "لا توجد نبذة بعد.";
+"instructor_profile.message" = "مراسلة";
+"instructor_profile.courses_section" = "الدورات";
+"instructor_profile.active_now" = "متصل الآن";
+"instructor_profile.active_min_fmt" = "نشط قبل %d د";
+"instructor_profile.active_hour_fmt" = "نشط قبل %d س";
+"instructor_profile.active_day_fmt" = "نشط قبل %d ي";
+"instructor_profile.tab_courses" = "الدورات";
+"instructor_profile.tab_enrolled" = "المسجَّلة";
+"instructor_profile.tab_pending" = "قيد الانتظار";
+"instructor_profile.tab_reviews" = "التقييمات";
+"instructor_profile.view_course" = "عرض الدورة";
+"instructor_profile.reviews_count_fmt" = "%lld تقييم";
+"instructor_profile.courses_empty" = "لا توجد دورات منشورة بعد.";
+"instructor_profile.enrolled_empty" = "لم تسجّل في أي من دورات هذا المدرب بعد.";
+"instructor_profile.pending_empty" = "ليس لديك طلبات قيد الانتظار مع هذا المدرب.";
+"instructor_profile.pending_pill" = "قيد الانتظار";
+"instructor_profile.start_learning_fmt" = "ابدأ التعلّم مع %@";
+"instructor_profile.enrolled_empty_sub" = "بمجرد طلبك الالتحاق بإحدى دوراته، ستظهر هنا.";
+"instructor_profile.your_note" = "ملاحظتك";
+"instructor_profile.edit_note" = "تعديل الملاحظة";
+"instructor_profile.waiting_just_now" = "الآن";
+"instructor_profile.waiting_hours_fmt" = "%lld ساعة في الانتظار";
+"instructor_profile.waiting_days_fmt" = "%lld يوم في الانتظار";
+"instructor_profile.waiting_weeks_fmt" = "%lld أسبوع في الانتظار";
+"instructor_profile.all_reviews_fmt" = "جميع التقييمات · %lld";
+"instructor_profile.enroll_first" = "التحق أولاً لإضافة تقييم";
+"instructor_profile.enrolled_header_fmt" = "دوراتك مع %@";
+"instructor_profile.enrolled_in_progress_fmt" = "%lld قيد التقدم";
+"instructor_profile.enrolled_completed_fmt" = "%lld مكتملة";
+"instructor_profile.enrolled_of_lessons_fmt" = " من %lld درسًا";
+"instructor_profile.progress" = "التقدّم";
+"instructor_profile.next_lesson" = "الدرس التالي";
+"instructor_profile.review_action" = "تقييم";
+"instructor_profile.all_lessons_completed_fmt" = "اكتملت جميع الدروس الـ%lld";
+"instructor_profile.see_other_courses_fmt" = "عرض دورات %1$@ الأخرى (%2$lld)";
+"instructor_review.rate_button" = "قيّم هذا المدرب";
+"instructor_review.edit_button" = "عدّل تقييمك";
+"instructor_review.empty" = "لا توجد تقييمات بعد. كن أول من يشارك تجربته.";
+"instructor_review.sheet_question_fmt" = "كيف كانت تجربتك مع %@؟";
+"instructor_review.sheet_prompt" = "ملاحظاتك الصادقة تساعد الطلاب الآخرين.";
+"instructor_review.sheet_role_label" = "مدرب";
+"instructor_review.sheet_placeholder" = "شارك ما تميّز في تجربتك مع هذا المدرب…";
+"instructor_review.sheet_success_subtitle" = "تقييمك يساعد المتعلمين الآخرين على اكتشاف محتوى رائع على دروب.";
+"instructor_review.your_review_badge" = "تقييمك";
+"instructor_review.card_edit" = "تعديل";
+"instructor_review.card_delete" = "حذف";
+"instructor_review.delete_confirm_title" = "حذف تقييمك؟";
+"instructor_review.delete_confirm_message" = "سيؤدي هذا إلى إزالة تقييمك ومراجعتك نهائيًا. يمكنك إضافة تقييم جديد في أي وقت.";
+"instructor_review.delete_confirm_action" = "حذف";
+"instructor_review.delete_failed" = "تعذّر حذف تقييمك. حاول مرة أخرى.";
+"instructor_review.sheet_your_rating" = "تقييمك";
+"instructor_review.sheet_your_review" = "مراجعتك";
+"instructor_review.sheet_optional_fmt" = "اختياري · %lld / %lld";
+"instructor_review.sheet_post_button" = "نشر التقييم";
+"instructor_review.success_edit_button" = "تعديل تقييمي";
+"chat.composer_placeholder" = "رسالة…";
+"chat.day_today" = "اليوم";
+"chat.day_yesterday" = "أمس";
+"chat.seen_fmt" = "تمت القراءة %@";
+"chat.attachment_title" = "إرسال مرفق";
+"chat.attachment_gallery_title" = "المعرض";
+"chat.attachment_gallery_subtitle" = "صور وفيديوهات من مكتبتك";
+"chat.attachment_documents_title" = "المستندات";
+"chat.attachment_documents_subtitle" = "PDF، Word، شرائح وغيرها";
+"chat.attachment_cancel" = "إلغاء";
+"chat.attachment_uploading" = "جارٍ الرفع…";
+"chat.attachment_error_empty" = "هذا الملف فارغ. اختر ملفًا آخر وحاول مجددًا.";
+"chat.attachment_error_too_large_fmt" = "الملف كبير جدًا. الحد الأقصى %d ميغابايت.";
+"chat.attachment_error_unsupported" = "نوع الملف هذا غير مدعوم في المحادثة.";
+"chat.attachment_error_network" = "تعذّر الرفع — تحقق من اتصالك وحاول مجددًا.";
+"chat.attachment_error_generic" = "تعذّر رفع الملف. حاول مجددًا من فضلك.";
+"chat.document_default" = "مستند";
+"chat.voice_recording" = "جارٍ التسجيل…";
+"chat.voice_mic_denied_title" = "يلزم الوصول إلى الميكروفون";
+"chat.voice_mic_denied_body" = "فعّل وصول الميكروفون من الإعدادات لتسجيل الرسائل الصوتية.";
+"chat.voice_mic_denied_ok" = "حسنًا";
+
+/* Course preview screen */
+
+/* Confirm payment sheet */
+"confirm_payment.title" = "تأكيد الدفع";
+"confirm_payment.lifetime_access" = "وصول مدى الحياة";
+"confirm_payment.course_price" = "سعر الدورة";
+"confirm_payment.limited_offer" = "عرض محدود";
+"confirm_payment.total" = "الإجمالي";
+"confirm_payment.double_click_face_id" = "اضغط مرتين للدفع بـ Face ID";
+"confirm_payment.secured_footer" = "محمي عبر Apple Pay · مشفّر تمامًا";
+"confirm_payment.cancel" = "إلغاء";
+
+/* Payment complete */
+"payment_complete.title" = "تمّ الدفع";
+"payment_complete.full_access_fmt" = "أصبح لديك وصول كامل إلى\n%@";
+"payment_complete.amount" = "المبلغ";
+"payment_complete.transaction_id" = "رقم العملية";
+"payment_complete.payment_method" = "طريقة الدفع";
+"payment_complete.start_learning" = "ابدأ التعلم";
+"payment_complete.view_receipt" = "عرض الإيصال";
+"payment_complete.method_apple_pay" = "Apple Pay";
+"payment_complete.method_card_fmt" = "فيزا ···· %@";
+
+/* Receipt screen */
+"receipt.nav_back" = "المدفوعات";
+"receipt.title" = "الإيصال";
+"receipt.payment_successful" = "تم الدفع بنجاح";
+"receipt.items_section" = "البنود";
+"receipt.transaction_section" = "العملية";
+"receipt.course_enrolment" = "تسجيل بالدورة";
+"receipt.tax_fmt" = "ضريبة (%d%%)";
+"receipt.total" = "الإجمالي";
+"receipt.date" = "التاريخ";
+"receipt.download_pdf" = "تنزيل PDF";
+"receipt.request_refund" = "طلب استرداد";
+"receipt.refund_requested_pill" = "طلب استرداد · قيد المراجعة";
+"receipt.refund_approved_pill" = "تمت الموافقة على الاسترداد";
+"receipt.refund_denied_pill" = "تم رفض الاسترداد";
+
+/* PDF download modals */
+"receipt.download_preparing_title" = "جارٍ التحضير";
+"receipt.download_preparing_subtitle" = "يتم إنشاء ملف الإيصال PDF.";
+"receipt.downloaded_title" = "تم التنزيل";
+"receipt.downloaded_subtitle" = "يمكنك إيجاد الملف في مجلد التنزيلات.";
+"receipt.downloaded_done" = "تم";
+
+/* Refund flow */
+"refund.nav_title" = "طلب استرداد";
+"refund.reason_header" = "السبب";
+"refund.reason_intro" = "أخبرنا لماذا تحتاج إلى استرداد. سنراجع طلبك خلال يومَي عمل.";
+"refund.reason_changed_my_mind" = "غيّرت رأيي";
+"refund.reason_course_not_as_expected" = "الدورة ليست كما توقّعت";
+"refund.reason_accidental_purchase" = "شراء عن طريق الخطأ";
+"refund.reason_other" = "سبب آخر";
+"refund.continue_button" = "متابعة";
+"refund.confirm_header" = "تأكيد";
+"refund.confirm_copy" = "إرسال هذا الطلب يحوّله إلى الدعم. يمكنك متابعة الدورة حتى تصدر القرار.";
+"refund.confirm_agree" = "أوافق على سياسة الاسترداد وأؤكد صحة التفاصيل أعلاه.";
+"refund.confirm_submit" = "إرسال الطلب";
+"refund.summary_header" = "الملخص";
+"refund.summary_course" = "الدورة";
+"refund.summary_amount" = "المبلغ";
+"refund.summary_transaction" = "العملية";
+"refund.summary_reason" = "السبب";
+"refund.summary_footer" = "تُعاد الاستردادات المعتمدة إلى طريقة الدفع الأصلية خلال 5-10 أيام عمل.";
+"refund.submitted_nav_title" = "الاسترداد";
+"refund.submitted_title" = "تم إرسال الطلب";
+"refund.submitted_subtitle" = "أرسلنا إليك تأكيدًا. ستصلك تحديثات عند معالجة الاسترداد.";
+"refund.submitted_back_to_receipt" = "العودة للإيصال";
+"refund.other_note_placeholder" = "أخبرنا المزيد (اختياري)";
+
+/* Tabs */
+"tab.home" = "الرئيسية";
+"tab.courses" = "الدورات";
+"tab.sessions" = "الجلسات";
+"tab.messages" = "الرسائل";
+"tab.more" = "المزيد";
+
+/* Catalog header */
+"catalog.title_prefix" = "تصفّح ";
+"catalog.title_accent" = "الكتالوج";
+"catalog.subtitle" = "اكتشف دورات احترافية من خبراء التدريس";
+"catalog.search_placeholder" = "ابحث عن دورات أو مدرّبين";
+"catalog.browse_entry_title" = "تصفّح الكتالوج";
+"catalog.browse_entry_subtitle" = "اكتشف الدورات المميّزة";
+
+/* Messages */
+"messages.screen_title" = "الرسائل";
+"messages.tab_inbox" = "الوارد";
+"messages.tab_inbox_fmt" = "الوارد (%d)";
+"messages.tab_announcements" = "الإعلانات";
+"messages.empty_title" = "لا توجد رسائل بعد";
+"messages.empty_subtitle" = "ستظهر هنا محادثاتك مع المدرّبين.";
+"messages.announcements_empty_title" = "لا توجد إعلانات";
+"messages.announcements_empty_subtitle" = "ستظهر هنا تحديثات الدورات والإشعارات.";
+"messages.preview_empty" = "لا توجد رسائل بعد";
+
+/* Sessions feature */
+"sessions.title_live" = "جلسات ";
+"sessions.title_sessions" = "مباشرة";
+"sessions.empty_title" = "لا توجد جلسات قادمة";
+"sessions.empty_subtitle" = "ستظهر هنا الجلسات من دوراتك المسجلة.";
+"sessions.join_now" = "انضم للجلسة →";
+"sessions.title" = "الجلسات";
+"sessions.upcoming_header" = "القادمة";
+"sessions.duration_min_fmt" = "%d دقيقة";
+"sessions.duration_hr_fmt" = "%d ساعة";
+"sessions.duration_hr_min_fmt" = "%1$d ساعة %2$d دقيقة";
+"sessions.join" = "انضمام";
+"sessions.remind" = "تذكير";
+"sessions.remind_permission_denied" = "فعّل الإشعارات من الإعدادات لتلقّي التذكيرات.";
+"sessions.remind_too_close" = "الجلسة قريبة جدًا لإضافة تذكير.";
+"sessions.remind_generic_error" = "تعذّر ضبط التذكير.";
+
+/* Messages feature */
+"messages.title" = "الرسائل";
+"messages.online" = "متصل";
+"messages.placeholder" = "اكتب رسالة…";
+
+/* Profile */
+"profile.student_pill" = "طالب";
+"profile.streak_days_suffix" = " يوم متتالٍ";
+"profile.account_section" = "الحساب";
+"profile.security_section" = "الأمان";
+"profile.edit_profile" = "تعديل الملف الشخصي";
+"profile.edit_subtitle" = "الاسم، الصورة، النبذة";
+"profile.notifications_row" = "الإشعارات";
+"profile.notifications_subtitle" = "تحكم بما يصلك";
+"profile.inbox_row" = "صندوق الوارد";
+"profile.inbox_all_caught" = "لا يوجد جديد";
+"profile.inbox_unread_suffix" = " غير مقروء";
+"profile.password_2fa_row" = "كلمة المرور والمصادقة الثنائية";
+"profile.password_2fa_enabled" = "المصادقة الثنائية مفعّلة";
+"profile.password_2fa_disabled" = "المصادقة الثنائية معطّلة";
+"profile.devices_row" = "الأجهزة";
+"profile.devices_active_suffix" = " نشطة";
+"profile.sign_out" = "تسجيل الخروج";
+"profile.sign_out_confirm" = "هل أنت متأكد من تسجيل الخروج؟";
+"profile.footer_version" = "دروب الإصدار %@ · droob.co";
+"profile.stat_courses" = "دورات";
+"profile.stat_lessons" = "دروس";
+"profile.stat_certs" = "شهادات";
+"profile.stat_avg" = "متوسط";
+
+/* Profile (Figma redesign) */
+"profile.enrolled_courses_label" = "الدورات المسجّلة";
+"profile.personal_info_section" = "المعلومات الشخصية";
+"profile.username_row" = "اسم المستخدم";
+"profile.contact_section" = "معلومات التواصل";
+"profile.email_row" = "البريد الإلكتروني";
+"profile.settings_section" = "الإعدادات";
+"profile.learning_section" = "التعلّم";
+
+/* Edit Username / Email sheets */
+"edit.save" = "حفظ";
+"edit.username_title" = "اسم المستخدم";
+"edit.username_section_label" = "اسم المستخدم";
+"edit.username_placeholder" = "أدخل اسم المستخدم";
+"edit.username_empty" = "لا يمكن ترك اسم المستخدم فارغاً.";
+"edit.email_title" = "البريد الإلكتروني";
+"edit.email_current_label" = "البريد الحالي";
+"edit.email_current_row" = "الحالي";
+"edit.email_new_label" = "البريد الجديد";
+"edit.email_new_placeholder" = "name@example.com";
+"edit.email_helper" = "سنرسل رمز تحقق إلى البريد الجديد. لن يتغيّر بريدك حتى تؤكّده.";
+"edit.email_code_sent_fmt" = "أرسلنا رمزاً من 6 أرقام إلى %@.";
+"edit.email_code_label" = "رمز التحقق";
+"edit.email_code_placeholder" = "000000";
+"edit.email_verify" = "تحقّق";
+
+/* Settings hub */
+"settings.title" = "الإعدادات";
+"settings.account_section" = "الحساب";
+"settings.notifications" = "الإشعارات";
+"settings.security" = "الأمان";
+"settings.payments" = "المدفوعات";
+"settings.language" = "اللغة";
+"settings.preferences_section" = "التفضيلات";
+"settings.dark_mode" = "الوضع الداكن";
+"settings.autoplay" = "تشغيل الدرس التالي تلقائياً";
+"settings.support_section" = "الدعم";
+"settings.help_support" = "المساعدة والدعم";
+
+/* Language screen */
+"language.title" = "اللغة";
+"language.section_label" = "اللغة";
+"language.english_option" = "English (EN)";
+"language.arabic_option" = "العربية (AR)";
+"language.subtitles_section" = "الترجمة";
+"language.auto_show_subtitles" = "إظهار الترجمة تلقائياً";
+"language.auto_show_subtitles_subtitle" = "عند توفّرها في الدرس";
+"language.subtitle_language" = "لغة الترجمة";
+
+/* Help & Support */
+"help.title" = "المساعدة والدعم";
+"help.contact_us_section" = "تواصل معنا";
+"help.email_support" = "مراسلة الدعم";
+"help.email_subject" = "طلب دعم درّوب";
+
+/* Security & Devices */
+"security.screen_title" = "الأمان والأجهزة";
+"security.account_secured" = "الحساب آمن";
+"security.secured_subtitle" = "المصادقة الثنائية مفعّلة · كلمة مرور قوية";
+"security.not_secured_subtitle" = "المصادقة الثنائية معطّلة — فعّلها لتعزيز الأمان";
+"security.change_password" = "تغيير كلمة المرور";
+"security.change_password_save" = "حفظ";
+"security.current_password" = "كلمة المرور الحالية";
+"security.new_password" = "كلمة المرور الجديدة";
+"security.confirm_password" = "تأكيد كلمة المرور الجديدة";
+"security.password_too_short" = "يجب أن تتكوّن كلمة المرور من 8 أحرف على الأقل.";
+"security.password_needs_number_or_symbol" = "يجب أن تحتوي كلمة المرور على رقم أو رمز.";
+"security.passwords_dont_match" = "كلمتا المرور غير متطابقتين.";
+"security.password_req_length" = "8 أحرف على الأقل";
+"security.password_req_number" = "تحتوي على رقم أو رمز";
+"security.danger_zone" = "منطقة الخطر";
+"security.delete_account_row" = "حذف الحساب";
+"security.delete_account_subtitle" = "إغلاق حسابك نهائيًا";
+"security.delete_account_title" = "حذف الحساب؟";
+"security.delete_account_warning" = "سيؤدي هذا إلى إغلاق حسابك نهائيًا وحذف بياناتك الشخصية. ستفقد اشتراكاتك وتقدّمك وإمكانية الوصول. لا يمكن التراجع عن هذا الإجراء.";
+"security.delete_account_confirm" = "حذف حسابي";
+"security.delete_account_acknowledge" = "أفهم أنه لا يمكن التراجع عن هذا الإجراء";
+"security.last_changed_never" = "لم تُغيَّر من قبل";
+"security.last_changed_prefix" = "آخر تغيير ";
+"security.two_factor_row" = "المصادقة الثنائية";
+"security.two_factor_enabled_via" = "مفعّلة عبر تطبيق المصادقة";
+"security.two_factor_disabled" = "معطّلة";
+"security.biometric_row" = "تسجيل الدخول ببصمة الوجه";
+"security.biometric_enabled" = "مفعّلة على هذا الجهاز";
+"security.biometric_disabled" = "استخدم بصمة الوجه بدلاً من كلمة المرور";
+"security.biometric_enroll_reason" = "تفعيل تسجيل الدخول ببصمة الوجه لدروب";
+"security.active_devices" = "الأجهزة النشطة";
+"security.sign_out_all" = "تسجيل الخروج من الكل";
+"security.current_device" = "الحالي";
+"security.sign_out" = "تسجيل خروج";
+"security.device_limit_title" = "حد الأجهزة";
+"security.device_limit_message" = "حتى %d أجهزة. تشغيل الفيديو على جهاز واحد فقط.";
+
+/* 2FA */
+"twofactor.enable_title_prefix" = "تفعيل ";
+"twofactor.enable_title_accent" = "المصادقة الثنائية";
+"twofactor.enable_subtitle" = "امسح الرمز ضوئيًا عبر تطبيق المصادقة، ثم أدخل الرقم المكوّن من 6 خانات.";
+"twofactor.manual_entry_hint" = "لا يمكنك المسح؟ أدخل هذا المفتاح يدويًا:";
+"twofactor.copy" = "نسخ";
+"twofactor.copied" = "تم النسخ";
+"twofactor.six_digit_label" = "رمز من 6 خانات";
+"twofactor.verify_enable" = "تحقّق وفعّل";
+"twofactor.disable_title_prefix" = "تعطيل ";
+"twofactor.disable_title_accent" = "المصادقة الثنائية";
+"twofactor.disable_subtitle" = "أدخل رمزًا من 6 خانات من تطبيق المصادقة، أو أحد رموز الاسترداد.";
+"twofactor.disable_button" = "تعطيل المصادقة الثنائية";
+"twofactor.recovery_title" = "احفظ ";
+"twofactor.recovery_accent" = "رموز الاسترداد";
+"twofactor.recovery_subtitle" = "استخدم أيًّا منها مرة واحدة في حال فقدان وصولك لتطبيق المصادقة.";
+"twofactor.recovery_warning" = "تُعرض هذه الرموز مرة واحدة فقط. احفظها في مكان آمن — مدير كلمات المرور خيار جيد.";
+"twofactor.copy_all" = "نسخ الكل";
+"twofactor.copied_all" = "تم النسخ!";
+"twofactor.share" = "مشاركة";
+"twofactor.challenge_prefix" = "المصادقة ";
+"twofactor.challenge_accent" = "مطلوبة";
+"twofactor.challenge_auth_hint" = "أدخل الرمز المكوّن من 6 خانات من تطبيق المصادقة.";
+"twofactor.challenge_recovery_hint" = "أدخل أحد رموز الاسترداد.";
+"twofactor.verify_sign_in" = "تحقّق وسجّل الدخول";
+"twofactor.use_recovery" = "استخدم رمز استرداد بدلاً منه";
+"twofactor.use_authenticator" = "استخدم رمز تطبيق المصادقة بدلاً منه";
+
+/* Notification preferences */
+"notifications.screen_title" = "الإشعارات";
+"notifications.section_learning" = "التعلّم";
+"notifications.section_sessions" = "الجلسات والرسائل";
+"notifications.section_marketing" = "العروض";
+"notifications.lesson_reminders" = "تذكيرات الدروس";
+"notifications.lesson_reminders_subtitle" = "تنبيه يومي للتعلّم";
+"notifications.streak_alerts" = "تنبيهات التتابع";
+"notifications.streak_alerts_subtitle" = "حافظ على تتابعك";
+"notifications.course_updates" = "تحديثات الدورة";
+"notifications.course_updates_subtitle" = "الدروس الجديدة وتغييرات الدورة";
+"notifications.quiz_results" = "نتائج الاختبارات";
+"notifications.quiz_results_subtitle" = "عند التصحيح";
+"notifications.live_session" = "تذكيرات الجلسات المباشرة";
+"notifications.live_session_subtitle" = "قبل 15 دقيقة";
+"notifications.new_messages" = "رسائل جديدة";
+"notifications.new_messages_subtitle" = "من المدرّبين";
+"notifications.new_course" = "تنبيهات الدورات الجديدة";
+"notifications.promotions" = "العروض والتخفيضات";
+
+/* Inbox */
+"inbox.title" = "صندوق الوارد";
+"inbox.mark_all_read" = "تعليم الكل كمقروء";
+"inbox.empty_title" = "لا توجد إشعارات بعد";
+"inbox.empty_subtitle" = "ستظهر هنا تذكيرات الدروس وتنبيهات الرسائل والجلسات المباشرة.";
+"inbox.kind_lesson_reminder_title" = "حان وقت التعلّم";
+"inbox.kind_streak_title" = "لا تكسر تتابعك!";
+"inbox.kind_quiz_result_title" = "تم تصحيح الاختبار";
+"inbox.kind_live_session_title" = "جلسة مباشرة على وشك البدء";
+"inbox.kind_new_message_title" = "رسالة جديدة";
+"inbox.kind_new_course_title" = "دورة جديدة";
+"inbox.kind_promotion_title" = "عرض خاص";
+"inbox.kind_unknown_title" = "إشعار";
+"inbox.kind_new_lesson_title" = "درس جديد";
+"inbox.kind_course_updated_title" = "تم تحديث الدورة";
+"inbox.kind_revision_title" = "مواد المراجعة";
+"inbox.kind_enrollment_approved_title" = "تمت الموافقة على التسجيل";
+"inbox.kind_new_quiz_title" = "اختبار جديد";
+"inbox.kind_session_starting_title" = "الجلسة تبدأ الآن";
+"inbox.kind_session_scheduled_title" = "تمت جدولة جلسة";
+"inbox.kind_session_cancelled_title" = "تم إلغاء الجلسة";
+"inbox.kind_session_rescheduled_title" = "تمت إعادة جدولة الجلسة";
+"inbox.kind_instructor_reply_title" = "رد المدرّس";
+"inbox.kind_announcement_title" = "إعلان";
+"inbox.announcement_from_fmt" = "من %@";
+"inbox.kind_study_room_message_title" = "رسالة في غرفة الدراسة";
+"inbox.kind_study_room_joined_title" = "انضم شخص إلى غرفتك";
+"inbox.kind_study_room_ended_title" = "انتهت غرفة الدراسة";
+"inbox.kind_study_room_waitlist_request_title" = "طلب انضمام";
+"inbox.kind_study_room_waitlist_approved_title" = "تمت الموافقة على الطلب";
+"inbox.kind_study_room_waitlist_rejected_title" = "تم رفض الطلب";
+"inbox.kind_study_room_removed_title" = "تمت إزالتك من الغرفة";
+"inbox.kind_study_room_promoted_title" = "أصبحت مشرفًا الآن";
+"inbox.kind_study_room_became_host_title" = "أصبحت المضيف الآن";
+"inbox.tab_all" = "الكل";
+"inbox.tab_unread" = "غير المقروء";
+"inbox.tab_messages" = "الرسائل";
+"inbox.tab_courses" = "الدورات";
+"inbox.tab_sessions" = "الجلسات";
+"inbox.tab_quizzes" = "الاختبارات";
+"inbox.tab_study_rooms" = "غرف الدراسة";
+"inbox.action_join" = "انضمام";
+"inbox.caught_up_title" = "أنت على اطّلاع بكل شيء";
+"inbox.caught_up_subtitle" = "لا توجد إشعارات جديدة الآن. سنُعلمك عند حدوث شيء في دوراتك أو جلساتك.";
+"inbox.filter_empty_title" = "لا يوجد شيء هنا بعد";
+"inbox.delete" = "حذف";
+"inbox.clear_all" = "مسح الكل";
+
+/* Study Rooms (V47) */
+"study_rooms.together_title" = "ادرس مع غيرك";
+"study_rooms.together_subtitle" = "انضم إلى زملائك في غرفة الدراسة الخاصة بالدورة";
+"study_rooms.rooms_live_fmt" = "%d غرف مباشرة الآن";
+"study_rooms.one_room_live" = "غرفة واحدة مباشرة الآن";
+"study_rooms.list_title" = "غرف الدراسة";
+"study_rooms.empty_title" = "لا توجد غرف مباشرة";
+"study_rooms.empty_subtitle" = "كن أول من يبدأ غرفة دراسة لهذه الدورة.";
+"study_rooms.create_cta" = "غرفة جديدة";
+"study_rooms.join_by_code_cta" = "الانضمام برمز";
+"study_rooms.participants_fmt" = "%1$d / %2$d مشارك";
+
+/* Study Rooms — Create / Join entry */
+"study_rooms.create_tab" = "إنشاء غرفة";
+"study_rooms.join_tab" = "انضم لغرفة";
+"study_rooms.cover_label" = "الغلاف";
+"study_rooms.room_name_label" = "اسم الغرفة";
+"study_rooms.room_name_placeholder" = "useEffect والـ Custom Hooks";
+"study_rooms.what_study_label" = "ماذا ستدرس؟";
+"study_rooms.what_study_placeholder" = "مراجعة dependencies الخاصة بـ useEffect وبناء 3 hooks مخصصة معًا.";
+"study_rooms.privacy_label" = "الخصوصية";
+"study_rooms.privacy_public" = "عام";
+"study_rooms.privacy_private" = "خاص";
+"study_rooms.privacy_help_public" = "يمكن لأي طالب في هذه الدورة الانضمام";
+"study_rooms.privacy_help_private" = "فقط من لديهم الرمز يمكنهم الانضمام";
+"study_rooms.create_button" = "إنشاء";
+"study_rooms.code_field_label" = "رمز الانضمام";
+"study_rooms.code_field_placeholder" = "أدخل الرمز المكوّن من 6 أرقام";
+"study_rooms.join_by_code_btn" = "انضم برمز";
+"study_rooms.browse_public" = "غرف عامة في هذه الدورة";
+
+/* Study Rooms — Success */
+"study_rooms.ready_title_prefix" = "الغرفة";
+"study_rooms.ready_title_suffix" = "جاهزة";
+"study_rooms.ready_subtitle_public_fmt" = "%@ مفتوحة الآن. سنعلم أصدقاءك في %@.";
+"study_rooms.ready_subtitle_private_fmt" = "%@ مفتوحة الآن.";
+"study_rooms.enter_room" = "ادخل الغرفة";
+"study_rooms.share" = "مشاركة";
+
+/* Study Rooms — Invite sheet */
+"study_rooms.invite_sheet_title" = "ادعُ للدراسة";
+"study_rooms.invite_room_link_label" = "رابط الغرفة";
+"study_rooms.invite_copy" = "نسخ";
+"study_rooms.invite_copied" = "تم النسخ";
+"study_rooms.invite_code_label" = "رمز الانضمام";
+
+/* Study Rooms — In-room chat */
+"study_rooms.header_just_you" = "أنت فقط · في انتظار البقية";
+"study_rooms.header_studying_fmt" = "%d يدرسون";
+"study_rooms.pinned_prefix" = "تدرس";
+"study_rooms.empty_alone" = "الغرفة كلها لك";
+"study_rooms.empty_alone_subtitle" = "لا يوجد أحد هنا بعد. ادعُ زملاءك أو اكتب أول رسالة لبدء الجلسة.";
+"study_rooms.empty_with_others_title" = "لا توجد رسائل بعد";
+"study_rooms.empty_with_others_subtitle" = "كن أول من يبدأ المحادثة — مجموعتك هنا وتنتظر بدء النقاش.";
+"study_rooms.empty_ended_title" = "لا توجد رسائل في هذه الغرفة";
+"study_rooms.empty_ended_subtitle" = "انتهت هذه الغرفة، لذا المحادثة للقراءة فقط.";
+"study_rooms.invite_classmates" = "ادعُ الزملاء";
+"study_rooms.say_hi" = "ألقِ التحية";
+"study_rooms.say_hi_message" = "السلام عليكم!";
+"study_rooms.composer_placeholder" = "اكتب رسالة في الغرفة…";
+"study_rooms.member_joined_fmt" = "انضم %@ إلى الغرفة";
+"study_rooms.member_left_fmt" = "غادر %@ الغرفة";
+"study_rooms.host_changed_fmt" = "%@ أصبح المضيف";
+"study_rooms.room_closed" = "تم إغلاق الغرفة";
+"study_rooms.link_pending_host_approval" = "طلبك للانضمام بانتظار موافقة المضيف.";
+"study_rooms.link_enrollment_required" = "يجب التسجيل في الدورة قبل الانضمام إلى غرفة المذاكرة.";
+
+/* Messages tab — Chats / Rooms switcher + sub-filters + status pills + empty states */
+"messages.switcher_chats" = "المحادثات";
+"messages.switcher_rooms" = "الغرف";
+"messages.rooms_filter_all" = "الكل";
+"messages.rooms_filter_running" = "نشطة";
+"messages.rooms_filter_ended" = "منتهية";
+"messages.room_status_live" = "مباشر";
+"messages.room_status_ended" = "منتهية";
+"messages.host_badge_short" = "مضيف";
+"messages.co_host_badge_short" = "مضيف مشارك";
+"messages.no_chats_title" = "لا توجد رسائل بعد";
+"messages.no_chats_subtitle" = "ستظهر هنا محادثاتك مع المدرسين بمجرد تسجيلك في دورة.";
+"messages.no_chats_cta" = "تصفح الدورات";
+"messages.no_rooms_title" = "لا توجد غرف بعد";
+"messages.no_rooms_subtitle" = "انضم إلى غرفة دراسة من دوراتك للدردشة مع زملائك مباشرة.";
+"messages.no_rooms_cta" = "تصفح غرف الدراسة";
+"messages.no_ended_rooms_title" = "لا توجد غرف منتهية";
+"messages.no_ended_rooms_subtitle" = "عند انتهاء أي غرفة، سيظهر سجل المحادثة هنا.";
+
+/* Study Rooms — "You're the last one here" confirmation sheet */
+"study_rooms.last_one_title" = "أنت آخر من تبقى هنا";
+"study_rooms.last_one_subtitle" = "غادر جميع الأعضاء الآخرين هذه الغرفة.";
+"study_rooms.last_one_detail" = "إذا غادرت الآن، ستُغلق الغرفة نهائيًا وسيُحفظ سجل المحادثة كأرشيف للقراءة فقط.";
+"study_rooms.last_one_stay" = "ابقَ في الغرفة";
+"study_rooms.last_one_leave_and_close" = "غادر وأغلق الغرفة";
+
+/* Study Rooms — closed-room composer banner */
+"study_rooms.closed_banner_title" = "انتهت هذه الغرفة";
+"study_rooms.closed_banner_subtitle" = "لا يزال بإمكانك قراءة الرسائل، لكن لم يعد بإمكان أحد الكتابة.";
+"study_rooms.room_ended_exit" = "العودة للدورة";
+
+/* Study Rooms — removed-member read-only composer banner */
+"study_rooms.removed_banner_title" = "لم تعد في هذه الغرفة";
+"study_rooms.removed_banner_subtitle" = "قام أحد المضيفين بإزالتك. لا يزال بإمكانك قراءة الرسائل السابقة لكن لا يمكنك إرسال رسائل جديدة.";
+
+/* Study Rooms — left-room read-only composer banner */
+"study_rooms.left_banner_title" = "لقد غادرت هذه الغرفة";
+"study_rooms.left_banner_subtitle" = "لا يزال بإمكانك قراءة الرسائل السابقة لكن لا يمكنك إرسال رسائل جديدة.";
+
+/* Study Rooms — Private create form + room code chip */
+"study_rooms.code_field_helper" = "أي شخص لديه هذا الرمز يمكنه الدخول للغرفة.";
+"study_rooms.private_banner_title" = "مخفي · يتطلب رمزًا للانضمام";
+"study_rooms.private_banner_subtitle" = "لن تظهر في أي مكان. شارك الرمز مع من تختار.";
+"study_rooms.room_code_chip" = "رمز الغرفة";
+
+/* Study Rooms — header / events */
+"study_rooms.invite_action" = "ادعُ";
+"study_rooms.room_members_fmt" = "%d أعضاء";
+"study_rooms.room_one_member" = "عضو واحد";
+"study_rooms.today" = "اليوم";
+"study_rooms.yesterday" = "أمس";
+"study_rooms.joined_suffix" = "انضم";
+"study_rooms.left_suffix" = "غادر";
+"study_rooms.is_now_host_suffix" = "أصبح المضيف";
+"study_rooms.system_actor_you" = "أنت";
+"study_rooms.combined_left_and_other_host_fmt" = "%1$@ غادر · %2$@ أصبح المضيف";
+"study_rooms.host_fallback" = "المضيف";
+
+/* Study Rooms — Join tab list */
+"study_rooms.enter_code_title" = "أدخل رمز الغرفة";
+"study_rooms.paste_code" = "لصق الرمز";
+"study_rooms.or_join_public" = "أو انضم لغرفة عامة";
+"study_rooms.search_placeholder" = "البحث في الغرف";
+"study_rooms.rooms_header_fmt" = "%1$d غرف · %2$@";
+"study_rooms.rooms_header_one" = "غرفة واحدة · %@";
+"study_rooms.hosted_by_fmt" = "بقيادة %@";
+"study_rooms.join_action" = "انضم";
+"study_rooms.open_action" = "افتح";
+"study_rooms.no_rooms_title" = "لا توجد غرف بعد";
+"study_rooms.no_rooms_subtitle" = "كن أول من يبدأ غرفة دراسة لهذه الدورة.";
+"study_rooms.no_match_title" = "لم يتم العثور على غرفة";
+"study_rooms.no_match_subtitle_fmt" = "تعذر العثور على غرفة عامة تطابق \"%@\". تحقق من الإملاء أو جرب موضوعًا آخر.";
+"study_rooms.create_instead_fmt" = "أنشئ \"%@\" بدلًا من ذلك";
+
+/* Study Rooms — Joining loading screen */
+"study_rooms.joining_title" = "جارٍ الانضمام للغرفة…";
+"study_rooms.cancel" = "إلغاء";
+
+/* Study Rooms — relative time */
+"study_rooms.ago_now" = "الآن";
+"study_rooms.ago_min_fmt" = "%d د";
+"study_rooms.ago_hour_fmt" = "%d س";
+"study_rooms.ago_day_fmt" = "%d ي";
+
+/* Study Rooms — Settings + All Members + Waitlist + Documents */
+"study_rooms.settings_title" = "إعدادات الغرفة";
+"study_rooms.done" = "تم";
+"study_rooms.subtitle_created_you" = "أنشأتها أنت";
+"study_rooms.subtitle_created_by_fmt" = "أنشأها %@";
+"study_rooms.members_section" = "الأعضاء";
+"study_rooms.view_all_members" = "عرض كل الأعضاء";
+"study_rooms.view_waitlist" = "عرض قائمة الانتظار";
+"study_rooms.invite_to_room" = "ادعُ للغرفة";
+"study_rooms.general_section" = "عام";
+"study_rooms.shared_content" = "المحتوى المشترك";
+"study_rooms.documents_and_files" = "المستندات والملفات";
+"study_rooms.leave_room" = "مغادرة الغرفة";
+
+"study_rooms.all_members_title" = "كل الأعضاء";
+"study_rooms.host_section" = "المضيف";
+"study_rooms.host_you" = "أنت";
+"study_rooms.host_created_room" = "المضيف · أنشأ الغرفة";
+"study_rooms.co_host_role_label" = "مضيف مساعد";
+"study_rooms.members_header_fmt" = "الأعضاء · %d";
+"study_rooms.actions_for_fmt" = "إجراءات على %@";
+"study_rooms.make_co_host" = "تعيين كمضيف مساعد";
+"study_rooms.demote_co_host" = "إعادته عضوًا";
+"study_rooms.remove_from_room" = "إزالة من الغرفة";
+"study_rooms.action_cancel" = "إلغاء";
+
+"study_rooms.waitlist_title" = "قائمة الانتظار";
+"study_rooms.waitlist_host_view" = "عرض المضيف";
+"study_rooms.waiting_people_fmt" = "في الانتظار · %d أشخاص";
+"study_rooms.approve_all" = "قبول الكل";
+"study_rooms.just_arrived" = "وصل للتو";
+"study_rooms.min_wait_fmt" = "%d د انتظار";
+"study_rooms.hr_wait_fmt" = "%d س انتظار";
+"study_rooms.waitlist_empty" = "لا توجد طلبات معلقة";
+
+"study_rooms.documents_title" = "المستندات";
+"study_rooms.documents_search_placeholder" = "البحث في المستندات";
+"study_rooms.documents_count_fmt" = "%d مستندات";
+"study_rooms.documents_one_fmt" = "مستند واحد";
+"study_rooms.documents_found_fmt" = "%d نتيجة";
+"study_rooms.documents_no_results_title" = "لم يتم العثور على مستندات";
+"study_rooms.documents_no_results_subtitle_fmt" = "لا توجد ملفات تطابق \"%@\". جرّب اسمًا آخر.";
+"study_rooms.documents_filter" = "PDF · PPT · Word فقط";
+"study_rooms.documents_empty" = "لا توجد مستندات بعد";
+"study_rooms.uploader_you" = "أنت";
+
+"study_rooms.pending_title" = "في انتظار المضيف";
+"study_rooms.pending_subtitle_fmt" = "طلب انضمامك إلى \"%@\" قيد مراجعة المضيف. سنعلمك بالرد.";
+"study_rooms.pending_notify_me" = "حسنًا";
+"study_rooms.pending_back" = "عودة للغرف";
+
+/* Study Rooms — Leave flow + host badges + new-host banner */
+"study_rooms.leave_sheet_title" = "هل تريد مغادرة الغرفة؟";
+"study_rooms.leave_sheet_subtitle_member" = "ستغادر الغرفة وتتوقف عن استقبال رسائلها. يمكنك العودة لاحقًا عبر الرمز أو الرابط.";
+"study_rooms.leave_sheet_subtitle_host_fmt" = "أنت مضيف %@. مرّر الغرفة لشخص آخر أو غادر وسنختار مضيفًا جديدًا تلقائيًا.";
+"study_rooms.pass_host_and_leave" = "مرّر الاستضافة وغادر";
+"study_rooms.pass_host_subtitle_fmt" = "تستمر الغرفة مع %@ كمضيف";
+"study_rooms.pass_host_subtitle_auto" = "اختر من سيدير الغرفة";
+"study_rooms.just_leave" = "غادر فقط";
+"study_rooms.just_leave_subtitle" = "اختيار تلقائي للمضيف من المساعدين";
+"study_rooms.just_leave_subtitle_no_co_host" = "اختيار تلقائي لأقدم عضو";
+"study_rooms.stay_in_room" = "البقاء في الغرفة";
+
+"study_rooms.leave_confirm_title" = "هل تريد مغادرة الغرفة؟";
+"study_rooms.leave_confirm_detail" = "سوف يتم حفظ المحادثة والملاحظات في سجلك";
+"study_rooms.leave_now_cta" = "غادر الغرفة الآن";
+
+"study_rooms.pass_host_title" = "مغادرة الغرفة";
+"study_rooms.pass_host_banner_fmt" = "اختر من سيدير %@ بعد مغادرتك. سيتمكن من إدارة الأعضاء وتعديل الغرفة وتثبيت الرسائل.";
+"study_rooms.pass_host_section_label" = "المضيف الجديد";
+"study_rooms.co_host_badge" = "مضيف مساعد";
+"study_rooms.make_host_and_leave_fmt" = "اجعل %@ مضيفًا وغادر";
+
+"study_rooms.youre_host_badge" = "أنت المضيف";
+"study_rooms.host_role_badge" = "المضيف";
+"study_rooms.instructor_role_badge" = "المعلّم";
+"study_rooms.anon_student_fmt" = "الطالب %d";
+"study_rooms.became_host_banner_title" = "أنت الآن المضيف";
+"study_rooms.became_host_banner_fmt" = "غادر %@ وجعلك مضيف %@.";
+"study_rooms.combined_left_and_host_fmt" = "غادر %@ · أنت الآن المضيف";
+
+"study_rooms.documents_empty_title" = "لا توجد مستندات بعد";
+"study_rooms.documents_empty_subtitle" = "شارك ملف PDF أو PowerPoint أو Word وسيظهر هنا للجميع في الغرفة.";
+"study_rooms.documents_empty_cta" = "أضف أول مستند";
+"study_rooms.documents_empty_closed_title" = "لا توجد مستندات في هذه الغرفة";
+"study_rooms.documents_empty_closed_subtitle" = "انتهت هذه الغرفة، لذا لا يمكن إضافة ملفات.";
+
+/* Quiz — section quiz flow */
+"quiz.nav_title" = "اختبار";
+"quiz.section_quiz" = "اختبار القسم";
+"quiz.mcq" = "اختيار";
+"quiz.questions" = "الأسئلة";
+"quiz.pass_mark" = "درجة النجاح";
+"quiz.best_score" = "أعلى درجة";
+"quiz.start" = "ابدأ الاختبار";
+"quiz.retake" = "أعد الاختبار";
+"quiz.review_lesson_first" = "راجع الدرس أولاً";
+"quiz.review_past_grade" = "راجع الدرجة السابقة";
+"quiz.review_past_grades" = "راجع الدرجات السابقة";
+"quiz.past_grades_title" = "الدرجات السابقة";
+"quiz.no_past_attempts" = "لا توجد محاولات سابقة بعد";
+"quiz.passed_badge" = "ناجح";
+"quiz.failed_badge" = "راسب";
+"quiz.attempt_number" = "المحاولة %d";
+"quiz.tap_to_select_single" = "اضغط لاختيار إجابة واحدة";
+"quiz.tap_to_select_multiple" = "اضغط لاختيار أكثر من إجابة";
+"quiz.submit_answer" = "إرسال الإجابة";
+"quiz.skip" = "تخطّي";
+"quiz.prev" = "السابق ›";
+"quiz.next" = "التالي";
+"quiz.finish" = "إنهاء";
+"quiz.last_question_nudge" = "السؤال الأخير · أنت جاهز لمشاهدة نتيجتك";
+"quiz.finishing_title" = "نُنهي اختبارك…";
+"quiz.quiz_complete" = "اكتمل الاختبار";
+"quiz.well_done" = "أحسنت";
+"quiz.well_done_so_far" = "أحسنت حتى الآن";
+"quiz.you_passed" = "لقد نجحت";
+"quiz.not_this_time" = "ليست هذه المرة";
+"quiz.you_didnt_pass" = "لم تنجح";
+"quiz.flawless" = "ممتاز";
+"quiz.perfect_score" = "درجة كاملة · على رأس القائمة";
+"quiz.correct" = "صحيح";
+"quiz.wrong" = "خاطئ";
+"quiz.question_breakdown" = "تفاصيل الأسئلة";
+"quiz.review_answers" = "راجع الإجابات";
+"quiz.exit" = "خروج";
+"quiz.filter_all" = "الكل";
+"quiz.filter_correct" = "صحيح";
+"quiz.filter_wrong" = "خاطئ";
+"quiz.tap_to_review" = "اضغط على أي سؤال لمراجعة تفاصيله";
+"quiz.review_only" = "مراجعة فقط";
+"quiz.your_answer" = "إجابتك";
+"quiz.you_missed_this" = "فاتك هذا";
+"quiz.correct_answer" = "الإجابة الصحيحة";
+"quiz.confirm_finish_title" = "إنهاء مع وجود أسئلة بدون إجابة؟";
+"quiz.confirm_finish_cta" = "إنهاء على أي حال";
+"quiz.cancel" = "إلغاء";
+"quiz.question_n_of_n" = "%d من %d";
+"quiz.selected_of_total" = "%d من %d مختارة";
+"quiz.finishing_subtitle" = "نُقيّم %d أسئلة ونُجهّز نتيجتك";
+"quiz.score_out_of" = "%d / %d نقطة";
+"quiz.unanswered_warning" = "لديك %d أسئلة بدون إجابة. ستُحتسب خاطئة.";
+"quiz.filter_count" = "%@ · %d";
+
+/* Review-before-submit screen */
+"quiz.answered" = "تمت الإجابة";
+"quiz.all_complete" = "اكتمل الكل";
+"quiz.ready_to_submit" = "جاهز للإرسال؟";
+"quiz.unanswered_title" = "%d أسئلة بدون إجابة";
+"quiz.unanswered_subtitle" = "هناك أسئلة بدون إجابة.\nيمكنك العودة، أو الإرسال كما هو.";
+"quiz.all_answered_subtitle" = "تمت الإجابة على كل الأسئلة الـ %d. بمجرد الإرسال، لا يمكنك تغيير إجاباتك.";
+"quiz.jump_back_to" = "العودة إلى";
+"quiz.question_label" = "السؤال %d";
+"quiz.looking_good_title" = "كل شيء ممتاز";
+"quiz.looking_good_body" = "أكملت كل الأسئلة. اضغط إرسال الاختبار لرؤية نتيجتك.";
+"quiz.all_answered" = "تمت الإجابة على الكل";
+"quiz.n_answered" = "%d مُجابة";
+"quiz.n_skipped" = "%d متخطّاة";
+"quiz.submit_quiz" = "إرسال الاختبار";
+"quiz.submit_anyway" = "إرسال على أي حال";
+"quiz.go_back" = "رجوع";
+
+/* Ask Droob AI */
+"ai_droob.title" = "اسأل دروب AI";
+"ai_droob.subtitle" = "يمكنني مساعدتك في الرياضيات والفيزياء والكيمياء والمزيد!";
+"ai_droob.placeholder" = "اكتب سؤالك هنا...";
+"ai_droob.scan_problem" = "امسح مسألة";
+"ai_droob.solving_math" = "حل مسألة رياضيات";
+"ai_droob.physics_explain" = "شرح فيزياء";
+"ai_droob.review_lesson" = "مراجعة درس";
+"ai_droob.ask_anything" = "اسأل أي سؤال";
+"ai_droob.thinking" = "جاري التفكير...";
+"ai_droob.no_text_found" = "لم يتم العثور على نص في الصورة. جرب صورة أوضح.";
+"ai_droob.scanned_text" = "النص الممسوح:";
+"ai_droob.settings" = "إعدادات الذكاء الاصطناعي";
+"ai_droob.no_key" = "لم يتم تكوين مفتاح API. اذهب إلى الإعدادات > الذكاء الاصطناعي لإضافة واحد.";
+
+/* ─────────────────────────────────────────────────────────────
+   Arabic-only pass — keys that replaced hardcoded English literals.
+   The English side lives in en.lproj and is kept, not deleted, so
+   AppLocaleDefault.englishHidden = false restores the bilingual app.
+   ───────────────────────────────────────────────────────────── */
+
+/* Settings */
+"settings.subtitles" = "الترجمة";
+"settings.developer_section" = "المطوّر";
+"settings.test_detection" = "اختبار الكشف";
+"general.share" = "مشاركة";
+
+/* Lesson complete */
+"lesson_complete.title" = "أحسنت، أكملت الدرس";
+"lesson_complete.xp_earned" = "⁨+%d⁩ نقطة خبرة";
+"lesson_complete.next_lesson" = "الدرس التالي";
+"lesson_complete.back_to_course" = "العودة إلى الدورة";
+"lesson_complete.progress_label" = "مكتمل";
+
+/* Login chrome */
+"turnstile.verifying" = "نتأكد أنك لست روبوت…";
+"playback.certificate_error" = "تعذّر تحميل شهادة الحماية. حاول مرة أخرى.";
+
+/* Catalog empty states */
+"catalog.empty_title" = "لا توجد دورات بعد";
+"catalog.empty_body" = "ستظهر الدورات الجديدة هنا فور توفّرها.";
+"catalog.no_match" = "لا توجد دورات تطابق \"%@\"";
+
+/* Registration + password validation */
+"auth.err_first_name" = "الرجاء إدخال اسمك الأول.";
+"auth.err_email" = "الرجاء إدخال بريدك الإلكتروني.";
+"auth.err_password_rule" = "يجب أن تتكوّن كلمة المرور من 8 أحرف على الأقل مع رقم أو رمز.";
+"auth.err_email_taken" = "هذا البريد الإلكتروني مسجّل بالفعل. الرجاء تسجيل الدخول.";
+"auth.err_password_short" = "يجب أن تتكوّن كلمة المرور من 8 أحرف على الأقل.";
+"auth.err_password_no_digit" = "يجب أن تحتوي كلمة المرور على رقم أو رمز.";
+"auth.err_password_mismatch" = "كلمتا المرور غير متطابقتين.";
+
+/* Password reset */
+"reset.done_title" = "تم تحديث كلمة المرور";
+"reset.done_body" = "تمت إعادة تعيين كلمة المرور. يمكنك الآن تسجيل الدخول بكلمة المرور الجديدة.";
+"reset.title" = "إنشاء كلمة مرور جديدة";
+"reset.subtitle" = "اختر كلمة مرور قوية لم تستخدمها في دروب من قبل.";
+"reset.hint" = "استخدم 8 أحرف على الأقل مع رقم ورمز.";
+"reset.strength" = "قوة كلمة المرور";
+"reset.update_button" = "تحديث كلمة المرور";
+"reset.updating" = "جارٍ التحديث…";
+
+/* Two-factor */
+"totp.title_line1" = "التحقق بخطوتين ";
+"totp.title_line2" = "مطلوب";
+"totp.subtitle" = "أدخل الرمز المكوّن من 6 أرقام من تطبيق المصادقة.";
+"totp.verify_sign_in" = "تحقّق وسجّل الدخول";
+"totp.use_recovery" = "استخدم رمز استرداد بدلاً من ذلك";
+"two_fa.enable_line1" = "تفعيل ";
+"two_fa.title" = "التحقق بخطوتين";
+"two_fa.enroll_subtitle" = "امسح الرمز بتطبيق المصادقة، ثم أدخل الرمز المكوّن من 6 أرقام الذي يظهر.";
+"two_fa.qr_failed" = "تعذّر عرض رمز QR";
+"two_fa.manual_secret" = "لا يمكنك المسح؟ أدخل هذا المفتاح يدوياً:";
+"two_fa.code_field" = "رمز من 6 أرقام";
+"two_fa.verify_enable" = "تحقّق وفعّل";
+"two_fa.disable_line1" = "تعطيل ";
+"two_fa.disable_subtitle" = "أدخل رمزاً من 6 أرقام من تطبيق المصادقة، أو أحد رموز الاسترداد.";
+"two_fa.disable_action" = "تعطيل التحقق بخطوتين";
+"recovery.save_line1" = "احفظ ";
+"recovery.line2" = "رموز الاسترداد";
+"recovery.subtitle" = "استخدم أياً منها مرة واحدة إذا فقدت الوصول إلى تطبيق المصادقة.";
+"recovery.warning" = "تظهر هذه الرموز مرة واحدة فقط. احفظها في مكان آمن — مدير كلمات المرور خيار جيد.";
+"recovery.copy_all" = "نسخ الكل";
+"recovery.copied" = "تم النسخ";
+
+/* Post-signup / returning-user covers */
+"welcome.new_account_badge" = "حساب جديد";
+"welcome.journey_line1" = "رحلتك\n";
+"welcome.journey_line2" = "تبدأ من هنا.";
+"welcome.greeting" = "أهلاً بك يا %@";
+"welcome.ready_body" = "حسابك في دروب جاهز. استكشف مئات الدورات وابدأ دربك الأول اليوم.";
+"welcome.new_badge" = "جديد";
+"welcome.waiting_header" = "ما الذي ينتظرك";
+"welcome.categories" = "تصميم · برمجة · أعمال · لغات · والمزيد";
+"welcome.live_qa_title" = "أسئلة مباشرة مع المدرّبين";
+"welcome.live_qa_body" = "اسأل ما تشاء واحصل على إجابات حقيقية";
+"welcome.track_title" = "تابع تقدّمك";
+"welcome.track_body" = "سلاسل الإنجاز والمحطات وإحصاءات التعلّم";
+"welcome.meet_instructors" = "تعرّف على مدرّبيك";
+"welcome.expert_instructors_count" = "%d مدرّب خبير";
+"welcome.expert_instructors" = "مدرّبون خبراء";
+"welcome.back_line" = "أهلاً بعودتك،";
+"welcome.back_body" = "أنت مسجّل الدخول إلى حسابك في دروب. جاهز لمواصلة رحلتك التعليمية؟";
+"welcome.go_to_dashboard" = "الذهاب إلى لوحتي";
+"welcome.stat_courses" = "الدورات";
+"welcome.stat_streak" = "أيام متتالية";
+"welcome.stat_progress" = "التقدّم";
+"welcome.continue_last_course" = "متابعة آخر دورة";
+
+/* Study rooms */
+"study_room.empty_line1" = "الغرفة";
+"study_room.empty_line2" = "كلها لك";
+"study_room.shared_notes" = "ملاحظات مشتركة";
+
+/* Notification inbox + local push */
+"notif.instructor" = "المدرّب";
+"notif.score" = "النتيجة: %d%%";
+"notif.new_quiz" = "يتوفّر اختبار جديد";
+"notif.live_session" = "جلسة مباشرة";
+"notif.starts_in_minutes" = "%1$@ · تبدأ خلال %2$d دقيقة";
+"notif.session_live" = "جلستك مباشرة الآن";
+"notif.courses_in_progress" = "لديك %d دورات قيد التقدّم";
+"notif.pick_up_where_left" = "أكمل من حيث توقفت";
+"notif.keep_streak_days" = "حافظ على سلسلتك المستمرة منذ %d أيام";
+"notif.keep_streak" = "حافظ على سلسلتك";
+"push.live_session_title" = "جلسة مباشرة تبدأ قريباً";
+"push.live_session_body" = "%@ تبدأ خلال 5 دقائق.";
+
+/* Security — device sessions */
+"security.active_now" = "نشط الآن";
+"security.active_ago" = "نشط %@";
+
+/* Messages — relative timestamps */
+"messages.now" = "الآن";
+"messages.minutes_ago" = "%d د";
+"messages.hours_ago" = "%d س";
+
+/* Presence-guard debug panel (visible on TestFlight) */
+"guard.watermark" = "العلامة المائية";
+"guard.side_dim" = "تعتيم الأطراف (شكلي)";
+"guard.tilt_dim" = "تعتيم الإمالة ثلاثي الأبعاد (جيروسكوب)";
+"guard.presence" = "حارس الحضور (الوجوه)";
+"guard.phone_rec" = "كشف الهاتف والتسجيل";
+"guard.block_recording" = "منع تسجيل الشاشة";
+"guard.layers_title" = "طبقات الخصوصية";
+"guard.layers_hint" = "شغّل كل طبقة أو أوقفها لاختبارها بمفردها. تحتاج طبقتا الكاميرا والإمالة إلى جهاز حقيقي (لا مستشعرات في المحاكي).";
+"guard.sample_video" = "فيديو درس تجريبي";
+"guard.harness" = "منصة اختبار حارس الحضور";
+"guard.reset_consent" = "إعادة ضبط الموافقة";
+"guard.simulate" = "محاكاة (تعمل على المحاكي)";
+"totp.use_authenticator" = "استخدم رمز تطبيق المصادقة بدلاً من ذلك";
+"guard.section_overlay" = "طبقات العرض";
+"guard.section_camera" = "طبقات الكاميرا (جهاز حقيقي)";
+"guard.section_app_wide" = "على مستوى التطبيق";
+"onb.demo_instructor_name" = "د. ليلى حسن";
+"onb.demo_instructor_initials" = "ل ح";
+"onb.demo_session_title" = "شرح معمّق: إتقان التخطيط التلقائي";
+"onb.demo_month" = "أبريل";
+
+/* Networking errors — DroobError */
+"err.network" = "تعذّر الوصول إلى الخادم. تحقّق من اتصالك بالإنترنت وحاول مرة أخرى.";
+"err.request_failed" = "فشل تنفيذ الطلب. يرجى المحاولة مرة أخرى.";
+"err.bad_response" = "وصل ردّ غير متوقع من الخادم. يرجى المحاولة مرة أخرى.";
+"err.invalid_url" = "عنوان غير صالح";
+"err.login_again" = "يرجى تسجيل الدخول مرة أخرى";
+"err.access_denied" = "الوصول مرفوض";
+"err.not_found" = "المورد غير موجود";
+"err.conflict" = "يتعارض هذا مع بيانات محفوظة مسبقاً. يرجى المراجعة والمحاولة مرة أخرى.";
+"err.server" = "حدث خطأ لدينا. يرجى المحاولة بعد قليل.";
+"err.unknown" = "حدث خطأ غير معروف";
+
+/* Create New Password — field labels and strength readout */
+"reset.strength_weak" = "ضعيفة";
+"reset.strength_fair" = "مقبولة";
+"reset.strength_good" = "جيدة";
+"reset.strength_strong" = "قوية";
+"reset.section_new_password" = "كلمة المرور الجديدة";
+"reset.field_password" = "كلمة المرور";
+"reset.field_confirm" = "التأكيد";

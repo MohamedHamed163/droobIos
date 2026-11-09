@@ -1,0 +1,60 @@
+diff --git a/src/main/java/sa/droob/api/student/StudentCatalogController.java b/src/main/java/sa/droob/api/student/StudentCatalogController.java
+index d56eae5..e159697 100644
+--- a/src/main/java/sa/droob/api/student/StudentCatalogController.java
++++ b/src/main/java/sa/droob/api/student/StudentCatalogController.java
+@@ -75,9 +75,14 @@ public class StudentCatalogController {
+         CourseSortOrder parsedSort = parseSort(sort);
+         Pageable pageable = PageRequest.of(
+                 page, Math.min(size, 100), parsedSort.sort());
++        // Guest (no token) browsing is permitted on this endpoint — App Store
++        // Guideline 5.1.1(v). A null principal flows through as a null userId;
++        // the service treats it as "not enrolled" (every course shows as Free
++        // / not-enrolled) without leaking any per-user state.
+         return responses.ok(request,
+                 studentService.listPublishedCourses(
+-                        principal.getId(), category, parsedLevel, pageable));
++                        principal != null ? principal.getId() : null,
++                        category, parsedLevel, pageable));
+     }
+ 
+     /**
+@@ -135,7 +140,11 @@ public class StudentCatalogController {
+             HttpServletRequest request,
+             @AuthenticationPrincipal InstructorPrincipal principal,
+             @PathVariable UUID courseId) {
+-        return responses.ok(request, studentService.getCourseDetail(principal.getId(), courseId));
++        // Guest (no token) preview is permitted — App Store Guideline 5.1.1(v).
++        // Null principal → null userId → "not enrolled" detail (no progress,
++        // no pending-request state). Enrolling itself stays authenticated.
++        return responses.ok(request, studentService.getCourseDetail(
++                principal != null ? principal.getId() : null, courseId));
+     }
+ 
+     @PostMapping("/courses/{courseId}/subscribe")
+diff --git a/src/main/java/sa/droob/security/SecurityConfig.java b/src/main/java/sa/droob/security/SecurityConfig.java
+index f655b26..2f90b10 100644
+--- a/src/main/java/sa/droob/security/SecurityConfig.java
++++ b/src/main/java/sa/droob/security/SecurityConfig.java
+@@ -100,6 +100,22 @@ public class SecurityConfig {
+                                         .hasRole("ADMIN")
+                                         .requestMatchers("/v1/instructor/**", "/v1/tus/**")
+                                         .hasRole("INSTRUCTOR")
++                                        // Pre-login course browsing — App Store
++                                        // Guideline 5.1.1(v): the catalog list
++                                        // and a single course's detail are
++                                        // readable WITHOUT an account so a
++                                        // visitor can preview before signing
++                                        // up. The controller passes a null
++                                        // userId for anonymous callers and the
++                                        // service treats it as "not enrolled".
++                                        // `/courses/*` is single-segment, so
++                                        // nested routes (…/reviews, …/questions,
++                                        // …/subscribe) and every non-GET verb
++                                        // remain STUDENT-only below.
++                                        .requestMatchers(HttpMethod.GET,
++                                                "/v1/student/courses",
++                                                "/v1/student/courses/*")
++                                        .permitAll()
+                                         .requestMatchers("/v1/student/**")
+                                         .hasRole("STUDENT")
+                                         .requestMatchers("/v1/**")

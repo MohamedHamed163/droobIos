@@ -1,0 +1,16 @@
+/* System permission prompts.
+   These are presented by iOS, not by the app, so nothing in L10n can reach
+   them — they are resolved from the bundle against the active language. The
+   app had no InfoPlist.strings at all and developmentRegion is `en`, so an
+   Arabic phone still got the English sentence in the system alert.
+   The English originals stay in en.lproj (and in Info.plist itself), so
+   nothing was deleted. */
+
+"NSFaceIDUsageDescription" = "يستخدم دروب بصمة الوجه لتسجيل دخولك دون كتابة كلمة المرور.";
+
+"NSMicrophoneUsageDescription" = "يستخدم دروب الميكروفون لتسجيل الملاحظات الصوتية في محادثاتك مع المدرّبين.";
+
+/* Also names the worksheet scan: that is now the most common reason this
+   prompt appears, and a prompt that describes only the viewer guard reads as
+   if the app is asking for something it does not need. */
+"NSCameraUsageDescription" = "يستخدم دروب الكاميرا لأمرين: تصوير ورقة أسئلة لتحلّها معك في «اسأل دروب»، والتأكد أثناء تشغيل فيديو محمي من أن مشاهداً واحداً مشتركاً هو من يشاهده للحدّ من التسجيل والمشاركة. تتم المعالجة على جهازك، ولا يُحفظ أو يُرفع أي مقطع.";

@@ -1,0 +1,1434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0730D186F134CE47EC016D28 /* PresenceStateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F3F83BDCAEDDDEF5ED8289 /* PresenceStateMachineTests.swift */; };
+		10AB273F83A4720AE0E37B20 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D979274B42DE31BA77D8EC66 /* FirebaseMessaging */; };
+		1C91B0A3DBF47B0D08981DB5 /* ViewerPresenceGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA59B6E3FF8F4CFFA1E221 /* ViewerPresenceGuard.swift */; };
+		22828D6C332BDDC4476E844A /* PresenceGuardConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A791AE1CD47D085D9BC159 /* PresenceGuardConfig.swift */; };
+		33571721239662D81D9DAB42 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A3802E4D927E4F16CE836D /* PushNotifications.swift */; };
+		5C964D54964C96725FAEA20A /* PresenceConsentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E687319E6BD84A3F404DB3 /* PresenceConsentStore.swift */; };
+		60BB305A1C715C12AF606D6B /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 3942B47ED7CE8DAC1F179D5A /* PrivacyInfo.xcprivacy */; };
+		7282C74158364A985C4B1F64 /* PresenceGuardTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9EEF64E3F3E64C5AED5F09 /* PresenceGuardTestView.swift */; };
+		819DA715A600DD0A667A102C /* PrivacyTiltMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662291439A37753787511213 /* PrivacyTiltMonitor.swift */; };
+		85FA7A24D724DD542F45B6BA /* FairPlayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449627977AFE4B7F4CAF5AAF /* FairPlayConfig.swift */; };
+		A116E315767F9093837CC94E /* NotificationsSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B2BBE559E4DBBDD023B1AE /* NotificationsSocket.swift */; };
+		AA000001 /* DroobStudentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000001 /* DroobStudentApp.swift */; };
+		AA000002 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000002 /* RootView.swift */; };
+		AA000003 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000003 /* APIClient.swift */; };
+		AA0000F2 /* RemoteAppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000F2 /* RemoteAppConfig.swift */; };
+		AA000004 /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000004 /* AuthInterceptor.swift */; };
+		AA000005 /* ProblemDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000005 /* ProblemDecoder.swift */; };
+		AA000006 /* SSEParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000006 /* SSEParser.swift */; };
+		AA000007 /* TokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000007 /* TokenStore.swift */; };
+		AA000F0B /* SessionEndNotice.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000F0B /* SessionEndNotice.swift */; };
+		AA000008 /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000008 /* AuthSession.swift */; };
+		AA000009 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000009 /* L10n.swift */; };
+		AA0000A1 /* LocalizationOverrides.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000A1 /* LocalizationOverrides.swift */; };
+		AA000010 /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000010 /* BrandColors.swift */; };
+		AA000011 /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000011 /* Typography.swift */; };
+		AA000012 /* DroobButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000012 /* DroobButton.swift */; };
+		AA000013 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000013 /* LoginView.swift */; };
+		AA000014 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000014 /* LoginViewModel.swift */; };
+		AA000015 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000015 /* RegisterView.swift */; };
+		AA000016 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000016 /* RegisterViewModel.swift */; };
+		AA000017 /* CatalogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000017 /* CatalogListView.swift */; };
+		AA000018 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000018 /* CatalogViewModel.swift */; };
+		AA000019 /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000019 /* CourseDetailView.swift */; };
+		AA000020 /* CourseDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000020 /* CourseDetailViewModel.swift */; };
+		AA000023 /* MyCoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000023 /* MyCoursesView.swift */; };
+		AA000024 /* MyCoursesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000024 /* MyCoursesViewModel.swift */; };
+		AA000025 /* LessonListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000025 /* LessonListView.swift */; };
+		AA000026 /* LessonPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000026 /* LessonPlayerView.swift */; };
+		AA000027 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000027 /* ChatView.swift */; };
+		AA000028 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000028 /* ChatViewModel.swift */; };
+		AA000029 /* SourcesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000029 /* SourcesView.swift */; };
+		AA000030 /* FeedbackButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000030 /* FeedbackButtons.swift */; };
+		AA000031 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000031 /* ProfileView.swift */; };
+		AA000032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF000032 /* Assets.xcassets */; };
+		AA000033 /* en in Resources */ = {isa = PBXBuildFile; fileRef = AF000033 /* en */; };
+		AA0000FA /* en in Resources */ = {isa = PBXBuildFile; fileRef = AF0000FA /* en */; };
+		AA0000FB /* ar in Resources */ = {isa = PBXBuildFile; fileRef = AF0000FB /* ar */; };
+		AA000034 /* ar in Resources */ = {isa = PBXBuildFile; fileRef = AF000034 /* ar */; };
+		AA000035 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000035 /* APIClientTests.swift */; };
+		AA000036 /* SSEParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000036 /* SSEParserTests.swift */; };
+		AA000037 /* CatalogViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000037 /* CatalogViewModelTests.swift */; };
+		AA000042 /* LessonDocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000042 /* LessonDocumentsView.swift */; };
+		AA000043 /* MathMarkdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000043 /* MathMarkdownView.swift */; };
+		AA000777 /* MathTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000777 /* MathTextView.swift */; };
+		AA000044 /* math in Resources */ = {isa = PBXBuildFile; fileRef = AF000044 /* math */; };
+		AA000050 /* CaptureProtection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000050 /* CaptureProtection.swift */; };
+		AA000051 /* AuthShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000051 /* AuthShared.swift */; };
+		AA000060 /* LessonPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000060 /* LessonPlayerViewModel.swift */; };
+		AA000061 /* LessonCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000061 /* LessonCompleteView.swift */; };
+		AA000062 /* CurriculumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000062 /* CurriculumView.swift */; };
+		AA000070 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000070 /* QuizViewModel.swift */; };
+		AA000071 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000071 /* QuizView.swift */; };
+		AA000072 /* MessagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000072 /* MessagingViewModel.swift */; };
+		AA000073 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000073 /* MessagesView.swift */; };
+		AA000080 /* SettingsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000080 /* SettingsModels.swift */; };
+		AA000081 /* SettingsCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000081 /* SettingsCommon.swift */; };
+		AA000082 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000082 /* NotificationsViewModel.swift */; };
+		AA000083 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000083 /* NotificationsView.swift */; };
+		AA000084 /* SecurityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000084 /* SecurityViewModel.swift */; };
+		AA000085 /* SecurityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000085 /* SecurityView.swift */; };
+		AA000086 /* TwoFactorEnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000086 /* TwoFactorEnrollmentView.swift */; };
+		AA000087 /* RecoveryCodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000087 /* RecoveryCodesView.swift */; };
+		AA000088 /* TwoFactorDisableSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000088 /* TwoFactorDisableSheet.swift */; };
+		AA000089 /* TotpChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000089 /* TotpChallengeView.swift */; };
+		AA00008A /* InboxModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00008A /* InboxModels.swift */; };
+		AA00008B /* NotificationsInboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00008B /* NotificationsInboxViewModel.swift */; };
+		AA00008C /* NotificationsInboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00008C /* NotificationsInboxView.swift */; };
+		AA00008D /* VerifyEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00008D /* VerifyEmailView.swift */; };
+		AA00008E /* AuthFigmaComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00008E /* AuthFigmaComponents.swift */; };
+		AA00008F /* LegalScreens.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00008F /* LegalScreens.swift */; };
+		AA000090 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000090 /* HomeView.swift */; };
+		AA0000E1 /* WelcomeAccountCreatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E1 /* WelcomeAccountCreatedView.swift */; };
+		AA0000E2 /* WelcomeBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E2 /* WelcomeBackView.swift */; };
+		AA0000E3 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E3 /* ChangePasswordView.swift */; };
+		AA0000E4 /* EnrollmentRequestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E4 /* EnrollmentRequestModels.swift */; };
+		AA0000E5 /* EnrollmentRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E5 /* EnrollmentRequestService.swift */; };
+		AA0000E6 /* RequestEnrollmentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E6 /* RequestEnrollmentSheet.swift */; };
+		AA0000E7 /* InstructorBrowseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E7 /* InstructorBrowseViewModel.swift */; };
+		AA0000E8 /* InstructorReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E8 /* InstructorReviewsViewModel.swift */; };
+		AA0000E9 /* RateInstructorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0000E9 /* RateInstructorSheet.swift */; };
+		AA000110 /* LessonNoteModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000110 /* LessonNoteModels.swift */; };
+		AA000111 /* LessonVideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000111 /* LessonVideoPlayer.swift */; };
+		AA000112 /* LessonPDFReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000112 /* LessonPDFReaderView.swift */; };
+		AA000113 /* LessonNotesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000113 /* LessonNotesViews.swift */; };
+		AA000114 /* MyNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000114 /* MyNotesView.swift */; };
+		AA000115 /* MyNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000115 /* MyNotesViewModel.swift */; };
+		AA000116 /* PlaybackPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000116 /* PlaybackPreferences.swift */; };
+		AA000117 /* PlaybackSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000117 /* PlaybackSettingsView.swift */; };
+		AA000200 /* CoursesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000200 /* CoursesTabView.swift */; };
+		AA000201 /* CourseDetailSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000201 /* CourseDetailSheetView.swift */; };
+		AA000220 /* CoursesFilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000220 /* CoursesFilterSheet.swift */; };
+		AA000221 /* CoursesSortSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000221 /* CoursesSortSheet.swift */; };
+		AA000222 /* AllReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000222 /* AllReviewsView.swift */; };
+		AA000223 /* CourseDetailSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000223 /* CourseDetailSections.swift */; };
+		AA000224 /* QuestionsPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000224 /* QuestionsPlaceholderView.swift */; };
+		AA000225 /* RateCourseSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000225 /* RateCourseSheet.swift */; };
+		AA000226 /* QuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000226 /* QuestionsViewModel.swift */; };
+		AA000227 /* InstructorProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000227 /* InstructorProfileViewModel.swift */; };
+		AA000228 /* InstructorProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000228 /* InstructorProfileView.swift */; };
+		AA000229 /* InstructorChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000229 /* InstructorChatView.swift */; };
+		AA00022A /* ChatAttachmentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00022A /* ChatAttachmentSheet.swift */; };
+		AA00022B /* ChatAttachmentUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00022B /* ChatAttachmentUploader.swift */; };
+		AA00022C /* VoiceNoteRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00022C /* VoiceNoteRecorder.swift */; };
+		AA00022D /* VoiceNotePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00022D /* VoiceNotePlayer.swift */; };
+		AA0002A1 /* DocumentNoteViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0002A1 /* DocumentNoteViews.swift */; };
+		AA000300 /* StudyRoomModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000300 /* StudyRoomModels.swift */; };
+		AA000301 /* StudyRoomsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000301 /* StudyRoomsAPI.swift */; };
+		AA000302 /* StudyTogetherCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000302 /* StudyTogetherCard.swift */; };
+		AA000303 /* StudyRoomsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000303 /* StudyRoomsListView.swift */; };
+		AA000304 /* CreateOrJoinRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000304 /* CreateOrJoinRoomView.swift */; };
+		AA000305 /* RoomReadyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000305 /* RoomReadyView.swift */; };
+		AA000306 /* InviteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000306 /* InviteSheet.swift */; };
+		AA000307 /* StudyRoomsSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000307 /* StudyRoomsSocket.swift */; };
+		AA000308 /* StudyRoomChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000308 /* StudyRoomChatViewModel.swift */; };
+		AA000309 /* StudyRoomChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000309 /* StudyRoomChatView.swift */; };
+		AA000310 /* JoinCodeFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000310 /* JoinCodeFormat.swift */; };
+		AA000311 /* StudyRoomComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000311 /* StudyRoomComponents.swift */; };
+		AA000312 /* JoinCodeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000312 /* JoinCodeInput.swift */; };
+		AA000313 /* AvatarStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000313 /* AvatarStack.swift */; };
+		AA000314 /* JoiningRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000314 /* JoiningRoomView.swift */; };
+		AA000315 /* StudyRoomRowCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000315 /* StudyRoomRowCard.swift */; };
+		AA000316 /* RoomSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000316 /* RoomSettingsView.swift */; };
+		AA000317 /* AllMembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000317 /* AllMembersView.swift */; };
+		AA000318 /* WaitlistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000318 /* WaitlistView.swift */; };
+		AA000319 /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000319 /* DocumentsView.swift */; };
+		AA00031A /* PendingJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00031A /* PendingJoinView.swift */; };
+		AA00031B /* LeaveRoomFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF00031B /* LeaveRoomFlow.swift */; };
+		AA000901 /* ProfileSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000901 /* ProfileSettingsViewModel.swift */; };
+		AA000902 /* EditProfileSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000902 /* EditProfileSheets.swift */; };
+		AA000903 /* HelpSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000903 /* HelpSupportView.swift */; };
+		AA000904 /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000904 /* LanguageView.swift */; };
+		AA000905 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF000905 /* SettingsView.swift */; };
+		AA000F01 /* Fraunces_72pt-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F01 /* Fraunces_72pt-Italic.ttf */; };
+		AA000F02 /* Fraunces_72pt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F02 /* Fraunces_72pt-Regular.ttf */; };
+		AA000F03 /* Fraunces_72pt-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F03 /* Fraunces_72pt-SemiBoldItalic.ttf */; };
+		AA000F04 /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F04 /* DMSans-Regular.ttf */; };
+		AA000F05 /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F05 /* DMSans-Medium.ttf */; };
+		AA000F06 /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F06 /* DMSans-Bold.ttf */; };
+		AA000F07 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F07 /* Inter-Regular.ttf */; };
+		AA000F08 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F08 /* Inter-Medium.ttf */; };
+		AA000F09 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F09 /* Inter-SemiBold.ttf */; };
+		AA000F0A /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF000F0A /* Inter-Bold.ttf */; };
+		B0B282589FB05800CEA626A8 /* CameraConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937F2E955F167829F957079B /* CameraConsentView.swift */; };
+		B2BD7603BEAB9F59DFCE8555 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = E27BD97F1F28E7A4414CBAA0 /* FirebaseCore */; };
+		B30316FFAE581455FA73C9CC /* FairPlayContentKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0E0F07EE17CECEC02BFC2D /* FairPlayContentKeyManager.swift */; };
+		B95AF8ACA4F3938D1CB218D4 /* PresenceDetectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E93FBAA1A7E84E2FACF7CC5 /* PresenceDetectors.swift */; };
+		BB000001 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB000002 /* GoogleService-Info.plist */; };
+		BB000013 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = BB000011 /* GoogleSignIn */; };
+		BB000014 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BB000012 /* GoogleSignInSwift */; };
+		BB000020 /* GoogleSignInAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000021 /* GoogleSignInAuth.swift */; };
+		BB000022 /* AppleSignInAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000023 /* AppleSignInAuth.swift */; };
+		BB000024 /* TurnstileSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000025 /* TurnstileSheet.swift */; };
+		BB6A797E35A2422411C1B30F /* PresenceStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49AD6FBFB89407CC8CF5E3 /* PresenceStateMachine.swift */; };
+		BC000040 /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000040 /* BiometricAuthService.swift */; };
+		BC000041 /* DeviceKeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000041 /* DeviceKeyStore.swift */; };
+		BC000042 /* BiometricLoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000042 /* BiometricLoginCoordinator.swift */; };
+		BC000043 /* BiometricLoginCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000043 /* BiometricLoginCoordinatorTests.swift */; };
+		BC000044 /* DeviceKeyStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000044 /* DeviceKeyStoreTests.swift */; };
+		BC000045 /* BiometricAuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB000045 /* BiometricAuthServiceTests.swift */; };
+		CD024C7F9C2C7C581ECE1A5F /* PresenceGuardOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F067643B0393903BDE85FB0D /* PresenceGuardOverlay.swift */; };
+		EF09401041451FCCCF2A42D9 /* FullScreenGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A034A75EA23BC37C622DDAEE /* FullScreenGuard.swift */; };
+		F9BA109309A4EF18C4215BB7 /* FaceEnrollmentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316F99DA39A956D116063095 /* FaceEnrollmentStore.swift */; };
+		FCBBD020A2281BCFA1F6F9F7 /* DeviceIntegrity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACDCA0D74E60022988E374E /* DeviceIntegrity.swift */; };
+		312F7D88950A40C38F0819F7 /* AskDroobAIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2111AE954A4FD299855E8E /* AskDroobAIView.swift */; };
+		235D3383DC2D4F43863DD8FA /* AskDroobAIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCAA15F3E6C492888C09DC0 /* AskDroobAIViewModel.swift */; };
+		74B7BD39CE3743C6AF115038 /* AIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A41B943A214CA3981AB4E5 /* AIProvider.swift */; };
+		473F2A040AA245FBA21DF1B8 /* AIProviderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC62FAD3F5D4103B588AEF8 /* AIProviderManager.swift */; };
+		917C0CCEB2BD493389229ACE /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79F0353A90249DDA399C54E /* OCRService.swift */; };
+		3A7C1D0E9F4B41A2B8C50012 /* SolutionPDFExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C1D0E9F4B41A2B8C50011 /* SolutionPDFExporter.swift */; };
+		3836CA9CE1204A91BE59FAD9 /* FreeAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFAA08FAFE7455ABD69C8D2 /* FreeAIService.swift */; };
+		A1B2C3D4E5F60718293A4B01 /* AskDroobLibraryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B02 /* AskDroobLibraryStore.swift */; };
+		A1B2C3D4E5F60718293A4B03 /* AskDroobLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60718293A4B04 /* AskDroobLibraryView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA100001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AABBCCDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA200001;
+			remoteInfo = DroobStudent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E93FBAA1A7E84E2FACF7CC5 /* PresenceDetectors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresenceDetectors.swift; sourceTree = "<group>"; };
+		2F49AD6FBFB89407CC8CF5E3 /* PresenceStateMachine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresenceStateMachine.swift; sourceTree = "<group>"; };
+		316F99DA39A956D116063095 /* FaceEnrollmentStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FaceEnrollmentStore.swift; sourceTree = "<group>"; };
+		3942B47ED7CE8DAC1F179D5A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		449627977AFE4B7F4CAF5AAF /* FairPlayConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FairPlayConfig.swift; sourceTree = "<group>"; };
+		5ACDCA0D74E60022988E374E /* DeviceIntegrity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceIntegrity.swift; sourceTree = "<group>"; };
+		662291439A37753787511213 /* PrivacyTiltMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrivacyTiltMonitor.swift; sourceTree = "<group>"; };
+		74E687319E6BD84A3F404DB3 /* PresenceConsentStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresenceConsentStore.swift; sourceTree = "<group>"; };
+		7DDA59B6E3FF8F4CFFA1E221 /* ViewerPresenceGuard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ViewerPresenceGuard.swift; sourceTree = "<group>"; };
+		937F2E955F167829F957079B /* CameraConsentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraConsentView.swift; sourceTree = "<group>"; };
+		94F3F83BDCAEDDDEF5ED8289 /* PresenceStateMachineTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresenceStateMachineTests.swift; sourceTree = "<group>"; };
+		98A3802E4D927E4F16CE836D /* PushNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		A034A75EA23BC37C622DDAEE /* FullScreenGuard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FullScreenGuard.swift; sourceTree = "<group>"; };
+		AF000001 /* DroobStudentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroobStudentApp.swift; sourceTree = "<group>"; };
+		AF000002 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		AF000003 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		AF0000F2 /* RemoteAppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAppConfig.swift; sourceTree = "<group>"; };
+		AF000004 /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
+		AF000005 /* ProblemDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemDecoder.swift; sourceTree = "<group>"; };
+		AF000006 /* SSEParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEParser.swift; sourceTree = "<group>"; };
+		AF000007 /* TokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStore.swift; sourceTree = "<group>"; };
+		AF000F0B /* SessionEndNotice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionEndNotice.swift; sourceTree = "<group>"; };
+		AF000008 /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
+		AF000009 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		AF0000A1 /* LocalizationOverrides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationOverrides.swift; sourceTree = "<group>"; };
+		AF000010 /* BrandColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
+		AF000011 /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		AF000012 /* DroobButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroobButton.swift; sourceTree = "<group>"; };
+		AF000013 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AF000014 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AF000015 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		AF000016 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		AF000017 /* CatalogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogListView.swift; sourceTree = "<group>"; };
+		AF000018 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		AF000019 /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
+		AF000020 /* CourseDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewModel.swift; sourceTree = "<group>"; };
+		AF000023 /* MyCoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesView.swift; sourceTree = "<group>"; };
+		AF000024 /* MyCoursesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewModel.swift; sourceTree = "<group>"; };
+		AF000025 /* LessonListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonListView.swift; sourceTree = "<group>"; };
+		AF000026 /* LessonPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerView.swift; sourceTree = "<group>"; };
+		AF000027 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		AF000028 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		AF000029 /* SourcesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesView.swift; sourceTree = "<group>"; };
+		AF000030 /* FeedbackButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackButtons.swift; sourceTree = "<group>"; };
+		AF000031 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		AF000032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF000033 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AF000034 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AF0000FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF0000FB /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AF000035 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		AF000036 /* SSEParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSEParserTests.swift; sourceTree = "<group>"; };
+		AF000037 /* CatalogViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModelTests.swift; sourceTree = "<group>"; };
+		AF000038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF000039 /* DroobStudent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroobStudent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF000040 /* DroobStudentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroobStudentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF000042 /* LessonDocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDocumentsView.swift; sourceTree = "<group>"; };
+		AF000043 /* MathMarkdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMarkdownView.swift; sourceTree = "<group>"; };
+		AF000777 /* MathTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTextView.swift; sourceTree = "<group>"; };
+		AF000044 /* math */ = {isa = PBXFileReference; lastKnownFileType = folder; name = math; path = DroobStudent/Resources/math; sourceTree = SOURCE_ROOT; };
+		AF000050 /* CaptureProtection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureProtection.swift; sourceTree = "<group>"; };
+		AF000051 /* AuthShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthShared.swift; sourceTree = "<group>"; };
+		AF000060 /* LessonPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPlayerViewModel.swift; sourceTree = "<group>"; };
+		AF000061 /* LessonCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCompleteView.swift; sourceTree = "<group>"; };
+		AF000062 /* CurriculumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumView.swift; sourceTree = "<group>"; };
+		AF000070 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		AF000071 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		AF000072 /* MessagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewModel.swift; sourceTree = "<group>"; };
+		AF000073 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
+		AF000080 /* SettingsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModels.swift; sourceTree = "<group>"; };
+		AF000081 /* SettingsCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCommon.swift; sourceTree = "<group>"; };
+		AF000082 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		AF000083 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		AF000084 /* SecurityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewModel.swift; sourceTree = "<group>"; };
+		AF000085 /* SecurityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityView.swift; sourceTree = "<group>"; };
+		AF000086 /* TwoFactorEnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorEnrollmentView.swift; sourceTree = "<group>"; };
+		AF000087 /* RecoveryCodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryCodesView.swift; sourceTree = "<group>"; };
+		AF000088 /* TwoFactorDisableSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFactorDisableSheet.swift; sourceTree = "<group>"; };
+		AF000089 /* TotpChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotpChallengeView.swift; sourceTree = "<group>"; };
+		AF00008A /* InboxModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxModels.swift; sourceTree = "<group>"; };
+		AF00008B /* NotificationsInboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInboxViewModel.swift; sourceTree = "<group>"; };
+		AF00008C /* NotificationsInboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsInboxView.swift; sourceTree = "<group>"; };
+		AF00008D /* VerifyEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailView.swift; sourceTree = "<group>"; };
+		AF00008E /* AuthFigmaComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFigmaComponents.swift; sourceTree = "<group>"; };
+		AF00008F /* LegalScreens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalScreens.swift; sourceTree = "<group>"; };
+		AF000090 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AF0000E1 /* WelcomeAccountCreatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAccountCreatedView.swift; sourceTree = "<group>"; };
+		AF0000E2 /* WelcomeBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackView.swift; sourceTree = "<group>"; };
+		AF0000E3 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		AF0000E4 /* EnrollmentRequestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentRequestModels.swift; sourceTree = "<group>"; };
+		AF0000E5 /* EnrollmentRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentRequestService.swift; sourceTree = "<group>"; };
+		AF0000E6 /* RequestEnrollmentSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEnrollmentSheet.swift; sourceTree = "<group>"; };
+		AF0000E7 /* InstructorBrowseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorBrowseViewModel.swift; sourceTree = "<group>"; };
+		AF0000E8 /* InstructorReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorReviewsViewModel.swift; sourceTree = "<group>"; };
+		AF0000E9 /* RateInstructorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateInstructorSheet.swift; sourceTree = "<group>"; };
+		AF000110 /* LessonNoteModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonNoteModels.swift; sourceTree = "<group>"; };
+		AF000111 /* LessonVideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonVideoPlayer.swift; sourceTree = "<group>"; };
+		AF000112 /* LessonPDFReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonPDFReaderView.swift; sourceTree = "<group>"; };
+		AF000113 /* LessonNotesViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonNotesViews.swift; sourceTree = "<group>"; };
+		AF000114 /* MyNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotesView.swift; sourceTree = "<group>"; };
+		AF000115 /* MyNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNotesViewModel.swift; sourceTree = "<group>"; };
+		AF000116 /* PlaybackPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackPreferences.swift; sourceTree = "<group>"; };
+		AF000117 /* PlaybackSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSettingsView.swift; sourceTree = "<group>"; };
+		AF000200 /* CoursesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTabView.swift; sourceTree = "<group>"; };
+		AF000201 /* CourseDetailSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailSheetView.swift; sourceTree = "<group>"; };
+		AF000220 /* CoursesFilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesFilterSheet.swift; sourceTree = "<group>"; };
+		AF000221 /* CoursesSortSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesSortSheet.swift; sourceTree = "<group>"; };
+		AF000222 /* AllReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReviewsView.swift; sourceTree = "<group>"; };
+		AF000223 /* CourseDetailSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailSections.swift; sourceTree = "<group>"; };
+		AF000224 /* QuestionsPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsPlaceholderView.swift; sourceTree = "<group>"; };
+		AF000225 /* RateCourseSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCourseSheet.swift; sourceTree = "<group>"; };
+		AF000226 /* QuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewModel.swift; sourceTree = "<group>"; };
+		AF000227 /* InstructorProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorProfileViewModel.swift; sourceTree = "<group>"; };
+		AF000228 /* InstructorProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorProfileView.swift; sourceTree = "<group>"; };
+		AF000229 /* InstructorChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructorChatView.swift; sourceTree = "<group>"; };
+		AF00022A /* ChatAttachmentSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAttachmentSheet.swift; sourceTree = "<group>"; };
+		AF00022B /* ChatAttachmentUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAttachmentUploader.swift; sourceTree = "<group>"; };
+		AF00022C /* VoiceNoteRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNoteRecorder.swift; sourceTree = "<group>"; };
+		AF00022D /* VoiceNotePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceNotePlayer.swift; sourceTree = "<group>"; };
+		AF0002A1 /* DocumentNoteViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentNoteViews.swift; sourceTree = "<group>"; };
+		AF000300 /* StudyRoomModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomModels.swift; sourceTree = "<group>"; };
+		AF000301 /* StudyRoomsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomsAPI.swift; sourceTree = "<group>"; };
+		AF000302 /* StudyTogetherCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyTogetherCard.swift; sourceTree = "<group>"; };
+		AF000303 /* StudyRoomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomsListView.swift; sourceTree = "<group>"; };
+		AF000304 /* CreateOrJoinRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrJoinRoomView.swift; sourceTree = "<group>"; };
+		AF000305 /* RoomReadyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomReadyView.swift; sourceTree = "<group>"; };
+		AF000306 /* InviteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteSheet.swift; sourceTree = "<group>"; };
+		AF000307 /* StudyRoomsSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomsSocket.swift; sourceTree = "<group>"; };
+		AF000308 /* StudyRoomChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomChatViewModel.swift; sourceTree = "<group>"; };
+		AF000309 /* StudyRoomChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomChatView.swift; sourceTree = "<group>"; };
+		AF000310 /* JoinCodeFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCodeFormat.swift; sourceTree = "<group>"; };
+		AF000311 /* StudyRoomComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomComponents.swift; sourceTree = "<group>"; };
+		AF000312 /* JoinCodeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCodeInput.swift; sourceTree = "<group>"; };
+		AF000313 /* AvatarStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStack.swift; sourceTree = "<group>"; };
+		AF000314 /* JoiningRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoiningRoomView.swift; sourceTree = "<group>"; };
+		AF000315 /* StudyRoomRowCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoomRowCard.swift; sourceTree = "<group>"; };
+		AF000316 /* RoomSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSettingsView.swift; sourceTree = "<group>"; };
+		AF000317 /* AllMembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMembersView.swift; sourceTree = "<group>"; };
+		AF000318 /* WaitlistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitlistView.swift; sourceTree = "<group>"; };
+		AF000319 /* DocumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsView.swift; sourceTree = "<group>"; };
+		AF00031A /* PendingJoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingJoinView.swift; sourceTree = "<group>"; };
+		AF00031B /* LeaveRoomFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaveRoomFlow.swift; sourceTree = "<group>"; };
+		AF000901 /* ProfileSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewModel.swift; sourceTree = "<group>"; };
+		AF000902 /* EditProfileSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSheets.swift; sourceTree = "<group>"; };
+		AF000903 /* HelpSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSupportView.swift; sourceTree = "<group>"; };
+		AF000904 /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
+		AF000905 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AF000F01 /* Fraunces_72pt-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/Fraunces_72pt-Italic.ttf"; sourceTree = "<group>"; };
+		AF000F02 /* Fraunces_72pt-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/Fraunces_72pt-Regular.ttf"; sourceTree = "<group>"; };
+		AF000F03 /* Fraunces_72pt-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/Fraunces_72pt-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		AF000F04 /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		AF000F05 /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		AF000F06 /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		AF000F07 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/Inter-Regular.ttf"; sourceTree = "<group>"; };
+		AF000F08 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/Inter-Medium.ttf"; sourceTree = "<group>"; };
+		AF000F09 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		AF000F0A /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		B7B2BBE559E4DBBDD023B1AE /* NotificationsSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationsSocket.swift; sourceTree = "<group>"; };
+		BA9EEF64E3F3E64C5AED5F09 /* PresenceGuardTestView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresenceGuardTestView.swift; sourceTree = "<group>"; };
+		BB000002 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB000021 /* GoogleSignInAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAuth.swift; sourceTree = "<group>"; };
+		BB000023 /* AppleSignInAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInAuth.swift; sourceTree = "<group>"; };
+		BB000025 /* TurnstileSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnstileSheet.swift; sourceTree = "<group>"; };
+		BB000030 /* DroobStudent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DroobStudent.entitlements; sourceTree = "<group>"; };
+		BB000040 /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
+		BB000041 /* DeviceKeyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceKeyStore.swift; sourceTree = "<group>"; };
+		BB000042 /* BiometricLoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLoginCoordinator.swift; sourceTree = "<group>"; };
+		BB000043 /* BiometricLoginCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLoginCoordinatorTests.swift; sourceTree = "<group>"; };
+		BB000044 /* DeviceKeyStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceKeyStoreTests.swift; sourceTree = "<group>"; };
+		BB000045 /* BiometricAuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthServiceTests.swift; sourceTree = "<group>"; };
+		C7A791AE1CD47D085D9BC159 /* PresenceGuardConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresenceGuardConfig.swift; sourceTree = "<group>"; };
+		F067643B0393903BDE85FB0D /* PresenceGuardOverlay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PresenceGuardOverlay.swift; sourceTree = "<group>"; };
+		FF0E0F07EE17CECEC02BFC2D /* FairPlayContentKeyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FairPlayContentKeyManager.swift; sourceTree = "<group>"; };
+		4C2111AE954A4FD299855E8E /* AskDroobAIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskDroobAIView.swift; sourceTree = "<group>"; };
+		DDCAA15F3E6C492888C09DC0 /* AskDroobAIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskDroobAIViewModel.swift; sourceTree = "<group>"; };
+		F8A41B943A214CA3981AB4E5 /* AIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProvider.swift; sourceTree = "<group>"; };
+		6EC62FAD3F5D4103B588AEF8 /* AIProviderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIProviderManager.swift; sourceTree = "<group>"; };
+		C79F0353A90249DDA399C54E /* OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRService.swift; sourceTree = "<group>"; };
+		3A7C1D0E9F4B41A2B8C50011 /* SolutionPDFExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionPDFExporter.swift; sourceTree = "<group>"; };
+		DFFAA08FAFE7455ABD69C8D2 /* FreeAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeAIService.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F60718293A4B02 /* AskDroobLibraryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskDroobLibraryStore.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F60718293A4B04 /* AskDroobLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskDroobLibraryView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA300001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB000013 /* GoogleSignIn in Frameworks */,
+				BB000014 /* GoogleSignInSwift in Frameworks */,
+				B2BD7603BEAB9F59DFCE8555 /* FirebaseCore in Frameworks */,
+				10AB273F83A4720AE0E37B20 /* FirebaseMessaging in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA300002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		01E875762F96B87D00609464 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AF000044 /* math */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		20031D0F46CC52BECDE0BAA0 /* ViewerPresenceGuard */ = {
+			isa = PBXGroup;
+			children = (
+				8E96C4346665C5FA1661E9DF /* Views */,
+				C7A791AE1CD47D085D9BC159 /* PresenceGuardConfig.swift */,
+				74E687319E6BD84A3F404DB3 /* PresenceConsentStore.swift */,
+				2F49AD6FBFB89407CC8CF5E3 /* PresenceStateMachine.swift */,
+				2E93FBAA1A7E84E2FACF7CC5 /* PresenceDetectors.swift */,
+				316F99DA39A956D116063095 /* FaceEnrollmentStore.swift */,
+				7DDA59B6E3FF8F4CFFA1E221 /* ViewerPresenceGuard.swift */,
+				662291439A37753787511213 /* PrivacyTiltMonitor.swift */,
+			);
+			name = ViewerPresenceGuard;
+			path = ViewerPresenceGuard;
+			sourceTree = "<group>";
+		};
+		580E9CFB73E66D141BFF1CF3 /* FairPlay */ = {
+			isa = PBXGroup;
+			children = (
+				449627977AFE4B7F4CAF5AAF /* FairPlayConfig.swift */,
+				FF0E0F07EE17CECEC02BFC2D /* FairPlayContentKeyManager.swift */,
+			);
+			name = FairPlay;
+			path = FairPlay;
+			sourceTree = "<group>";
+		};
+		8E96C4346665C5FA1661E9DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F067643B0393903BDE85FB0D /* PresenceGuardOverlay.swift */,
+				937F2E955F167829F957079B /* CameraConsentView.swift */,
+				BA9EEF64E3F3E64C5AED5F09 /* PresenceGuardTestView.swift */,
+			);
+			name = Views;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AABBCCDE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF000039 /* DroobStudent.app */,
+				AF000040 /* DroobStudentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AABBCCDF = {
+			isa = PBXGroup;
+			children = (
+				AABBCCE0 /* DroobStudent */,
+				AABBCCEF /* DroobStudentTests */,
+				AABBCCDE /* Products */,
+				01E875762F96B87D00609464 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		AABBCCE0 /* DroobStudent */ = {
+			isa = PBXGroup;
+			children = (
+				AABBCCE1 /* App */,
+				AABBCCE2 /* Core */,
+				AABBCCEB /* Features */,
+				AABBCCEE /* Resources */,
+				AF000038 /* Info.plist */,
+				BB000030 /* DroobStudent.entitlements */,
+				3942B47ED7CE8DAC1F179D5A /* PrivacyInfo.xcprivacy */,
+			);
+			path = DroobStudent;
+			sourceTree = "<group>";
+		};
+		AABBCCE1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AF000001 /* DroobStudentApp.swift */,
+				AF000002 /* RootView.swift */,
+				AF000050 /* CaptureProtection.swift */,
+				5ACDCA0D74E60022988E374E /* DeviceIntegrity.swift */,
+				A034A75EA23BC37C622DDAEE /* FullScreenGuard.swift */,
+				98A3802E4D927E4F16CE836D /* PushNotifications.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AABBCCE2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AABBCCE3 /* Networking */,
+				AABBCCE4 /* Auth */,
+				AABBCCE5 /* Localization */,
+				AABBCCE6 /* DesignSystem */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		AABBCCE3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				AF000003 /* APIClient.swift */,
+				AF0000F2 /* RemoteAppConfig.swift */,
+				AF000004 /* AuthInterceptor.swift */,
+				AF000005 /* ProblemDecoder.swift */,
+				AF000006 /* SSEParser.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		AABBCCE4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AF000007 /* TokenStore.swift */,
+				AF000F0B /* SessionEndNotice.swift */,
+				AF000008 /* AuthSession.swift */,
+				BB000021 /* GoogleSignInAuth.swift */,
+				BB000023 /* AppleSignInAuth.swift */,
+				BB000025 /* TurnstileSheet.swift */,
+				BB000040 /* BiometricAuthService.swift */,
+				BB000041 /* DeviceKeyStore.swift */,
+				BB000042 /* BiometricLoginCoordinator.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AABBCCE5 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				AF000009 /* L10n.swift */,
+				AF0000A1 /* LocalizationOverrides.swift */,
+				AABBCCE9 /* Localizable.strings */,
+				AABBCCEA /* InfoPlist.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		AABBCCE6 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				AF000010 /* BrandColors.swift */,
+				AF000011 /* Typography.swift */,
+				AF000012 /* DroobButton.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		AABBCCE7 /* Enrollment */ = {
+			isa = PBXGroup;
+			children = (
+				AF0000E4 /* EnrollmentRequestModels.swift */,
+				AF0000E5 /* EnrollmentRequestService.swift */,
+				AF0000E6 /* RequestEnrollmentSheet.swift */,
+			);
+			path = Enrollment;
+			sourceTree = "<group>";
+		};
+		AABBCCEB /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				E9988564A1A640C3BEAA275C /* AskDroobAI */,
+				AABBCCEC /* Auth */,
+				AABBCCFE /* Home */,
+				AABBCCED /* Catalog */,
+				AABBCCE7 /* Enrollment */,
+				AABBCCF1 /* MyCourses */,
+				AABBCCF2 /* Lesson */,
+				AABBCCF9 /* Quiz */,
+				AABBCCF3 /* AiTutor */,
+				AABBCCF4 /* Profile */,
+				AABBCCFA /* Messages */,
+				AABBCCFC /* Settings */,
+				AABBCCFD /* StudyRooms */,
+				AABBCD77 /* Shared */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		AABBCCEC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AF000013 /* LoginView.swift */,
+				AF000014 /* LoginViewModel.swift */,
+				AF000015 /* RegisterView.swift */,
+				AF000016 /* RegisterViewModel.swift */,
+				AF000051 /* AuthShared.swift */,
+				AF000089 /* TotpChallengeView.swift */,
+				AF00008D /* VerifyEmailView.swift */,
+				AF0000E1 /* WelcomeAccountCreatedView.swift */,
+				AF0000E2 /* WelcomeBackView.swift */,
+				AF0000E3 /* ChangePasswordView.swift */,
+				AF00008E /* AuthFigmaComponents.swift */,
+				AF00008F /* LegalScreens.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		AABBCCED /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				AF000017 /* CatalogListView.swift */,
+				AF000018 /* CatalogViewModel.swift */,
+				AF000019 /* CourseDetailView.swift */,
+				AF000020 /* CourseDetailViewModel.swift */,
+				AF000200 /* CoursesTabView.swift */,
+				AF000220 /* CoursesFilterSheet.swift */,
+				AF000221 /* CoursesSortSheet.swift */,
+				AF000222 /* AllReviewsView.swift */,
+				AF000223 /* CourseDetailSections.swift */,
+				AF000224 /* QuestionsPlaceholderView.swift */,
+				AF000225 /* RateCourseSheet.swift */,
+				AF000226 /* QuestionsViewModel.swift */,
+				AF000227 /* InstructorProfileViewModel.swift */,
+				AF0000E7 /* InstructorBrowseViewModel.swift */,
+				AF0000E8 /* InstructorReviewsViewModel.swift */,
+				AF0000E9 /* RateInstructorSheet.swift */,
+				AF000228 /* InstructorProfileView.swift */,
+				AF000229 /* InstructorChatView.swift */,
+				AF00022A /* ChatAttachmentSheet.swift */,
+				AF00022B /* ChatAttachmentUploader.swift */,
+				AF00022C /* VoiceNoteRecorder.swift */,
+				AF00022D /* VoiceNotePlayer.swift */,
+				AF000201 /* CourseDetailSheetView.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		AABBCCEE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF000032 /* Assets.xcassets */,
+				BB000002 /* GoogleService-Info.plist */,
+				AF000F01 /* Fraunces_72pt-Italic.ttf */,
+				AF000F02 /* Fraunces_72pt-Regular.ttf */,
+				AF000F03 /* Fraunces_72pt-SemiBoldItalic.ttf */,
+				AF000F04 /* DMSans-Regular.ttf */,
+				AF000F05 /* DMSans-Medium.ttf */,
+				AF000F06 /* DMSans-Bold.ttf */,
+				AF000F07 /* Inter-Regular.ttf */,
+				AF000F08 /* Inter-Medium.ttf */,
+				AF000F09 /* Inter-SemiBold.ttf */,
+				AF000F0A /* Inter-Bold.ttf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AABBCCEF /* DroobStudentTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF000035 /* APIClientTests.swift */,
+				AF000036 /* SSEParserTests.swift */,
+				AF000037 /* CatalogViewModelTests.swift */,
+				BB000043 /* BiometricLoginCoordinatorTests.swift */,
+				BB000044 /* DeviceKeyStoreTests.swift */,
+				BB000045 /* BiometricAuthServiceTests.swift */,
+				94F3F83BDCAEDDDEF5ED8289 /* PresenceStateMachineTests.swift */,
+			);
+			path = DroobStudentTests;
+			sourceTree = "<group>";
+		};
+		AABBCCF1 /* MyCourses */ = {
+			isa = PBXGroup;
+			children = (
+				AF000023 /* MyCoursesView.swift */,
+				AF000024 /* MyCoursesViewModel.swift */,
+			);
+			path = MyCourses;
+			sourceTree = "<group>";
+		};
+		AABBCCF2 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				AF000025 /* LessonListView.swift */,
+				AF000026 /* LessonPlayerView.swift */,
+				AF000042 /* LessonDocumentsView.swift */,
+				AF000060 /* LessonPlayerViewModel.swift */,
+				AF000061 /* LessonCompleteView.swift */,
+				AF000062 /* CurriculumView.swift */,
+				AF000110 /* LessonNoteModels.swift */,
+				AF000111 /* LessonVideoPlayer.swift */,
+				AF000112 /* LessonPDFReaderView.swift */,
+				AF000113 /* LessonNotesViews.swift */,
+				AF0002A1 /* DocumentNoteViews.swift */,
+				AF000114 /* MyNotesView.swift */,
+				AF000115 /* MyNotesViewModel.swift */,
+				AF000116 /* PlaybackPreferences.swift */,
+				AF000117 /* PlaybackSettingsView.swift */,
+				20031D0F46CC52BECDE0BAA0 /* ViewerPresenceGuard */,
+				580E9CFB73E66D141BFF1CF3 /* FairPlay */,
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
+		AABBCCF3 /* AiTutor */ = {
+			isa = PBXGroup;
+			children = (
+				AF000027 /* ChatView.swift */,
+				AF000028 /* ChatViewModel.swift */,
+				AF000029 /* SourcesView.swift */,
+				AF000030 /* FeedbackButtons.swift */,
+				AF000043 /* MathMarkdownView.swift */,
+			);
+			path = AiTutor;
+			sourceTree = "<group>";
+		};
+		AABBCCF4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AF000031 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AABBCD77 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				AF000777 /* MathTextView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AABBCCF9 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				AF000070 /* QuizViewModel.swift */,
+				AF000071 /* QuizView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		AABBCCFA /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				AF000072 /* MessagingViewModel.swift */,
+				AF000073 /* MessagesView.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		AABBCCFC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AF000080 /* SettingsModels.swift */,
+				AF000081 /* SettingsCommon.swift */,
+				AF000082 /* NotificationsViewModel.swift */,
+				AF000083 /* NotificationsView.swift */,
+				AF000084 /* SecurityViewModel.swift */,
+				AF000085 /* SecurityView.swift */,
+				AF000086 /* TwoFactorEnrollmentView.swift */,
+				AF000087 /* RecoveryCodesView.swift */,
+				AF000088 /* TwoFactorDisableSheet.swift */,
+				AF00008A /* InboxModels.swift */,
+				AF00008B /* NotificationsInboxViewModel.swift */,
+				AF00008C /* NotificationsInboxView.swift */,
+				AF000905 /* SettingsView.swift */,
+				AF000901 /* ProfileSettingsViewModel.swift */,
+				AF000902 /* EditProfileSheets.swift */,
+				AF000903 /* HelpSupportView.swift */,
+				AF000904 /* LanguageView.swift */,
+				B7B2BBE559E4DBBDD023B1AE /* NotificationsSocket.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		AABBCCFD /* StudyRooms */ = {
+			isa = PBXGroup;
+			children = (
+				AF000300 /* StudyRoomModels.swift */,
+				AF000301 /* StudyRoomsAPI.swift */,
+				AF000302 /* StudyTogetherCard.swift */,
+				AF000303 /* StudyRoomsListView.swift */,
+				AF000304 /* CreateOrJoinRoomView.swift */,
+				AF000305 /* RoomReadyView.swift */,
+				AF000306 /* InviteSheet.swift */,
+				AF000307 /* StudyRoomsSocket.swift */,
+				AF000308 /* StudyRoomChatViewModel.swift */,
+				AF000309 /* StudyRoomChatView.swift */,
+				AF000310 /* JoinCodeFormat.swift */,
+				AF000311 /* StudyRoomComponents.swift */,
+				AF000312 /* JoinCodeInput.swift */,
+				AF000313 /* AvatarStack.swift */,
+				AF000314 /* JoiningRoomView.swift */,
+				AF000315 /* StudyRoomRowCard.swift */,
+				AF000316 /* RoomSettingsView.swift */,
+				AF000317 /* AllMembersView.swift */,
+				AF000318 /* WaitlistView.swift */,
+				AF000319 /* DocumentsView.swift */,
+				AF00031A /* PendingJoinView.swift */,
+				AF00031B /* LeaveRoomFlow.swift */,
+			);
+			path = StudyRooms;
+			sourceTree = "<group>";
+		};
+		AABBCCFE /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AF000090 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E9988564A1A640C3BEAA275C /* AskDroobAI */ = {
+			isa = PBXGroup;
+			children = (
+				4C2111AE954A4FD299855E8E /* AskDroobAIView.swift */,
+				DDCAA15F3E6C492888C09DC0 /* AskDroobAIViewModel.swift */,
+				F8A41B943A214CA3981AB4E5 /* AIProvider.swift */,
+				6EC62FAD3F5D4103B588AEF8 /* AIProviderManager.swift */,
+				C79F0353A90249DDA399C54E /* OCRService.swift */,
+				3A7C1D0E9F4B41A2B8C50011 /* SolutionPDFExporter.swift */,
+				DFFAA08FAFE7455ABD69C8D2 /* FreeAIService.swift */,
+				A1B2C3D4E5F60718293A4B02 /* AskDroobLibraryStore.swift */,
+				A1B2C3D4E5F60718293A4B04 /* AskDroobLibraryView.swift */,
+			);
+			path = AskDroobAI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA200001 /* DroobStudent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA500001 /* Build configuration list for PBXNativeTarget "DroobStudent" */;
+			buildPhases = (
+				AA400001 /* Sources */,
+				AA300001 /* Frameworks */,
+				AA400002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DroobStudent;
+			packageProductDependencies = (
+				BB000011 /* GoogleSignIn */,
+				BB000012 /* GoogleSignInSwift */,
+				E27BD97F1F28E7A4414CBAA0 /* FirebaseCore */,
+				D979274B42DE31BA77D8EC66 /* FirebaseMessaging */,
+			);
+			productName = DroobStudent;
+			productReference = AF000039 /* DroobStudent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA200002 /* DroobStudentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA500002 /* Build configuration list for PBXNativeTarget "DroobStudentTests" */;
+			buildPhases = (
+				AA400003 /* Sources */,
+				AA300002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA600001 /* PBXTargetDependency */,
+			);
+			name = DroobStudentTests;
+			productName = DroobStudentTests;
+			productReference = AF000040 /* DroobStudentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AABBCCDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AA200001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					AA200002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AA200001;
+					};
+				};
+			};
+			buildConfigurationList = AA500000 /* Build configuration list for PBXProject "DroobStudent" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ar,
+				Base,
+			);
+			mainGroup = AABBCCDF;
+			packageReferences = (
+				BB000010 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				13CD4CF770DF3D626E1F5293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = AABBCCDE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA200001 /* DroobStudent */,
+				AA200002 /* DroobStudentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA400002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000032 /* Assets.xcassets in Resources */,
+				AA000044 /* math in Resources */,
+				AA000033 /* en in Resources */,
+				AA000034 /* ar in Resources */,
+				AA0000FA /* en in Resources */,
+				AA0000FB /* ar in Resources */,
+				BB000001 /* GoogleService-Info.plist in Resources */,
+				AA000F01 /* Fraunces_72pt-Italic.ttf in Resources */,
+				AA000F02 /* Fraunces_72pt-Regular.ttf in Resources */,
+				AA000F03 /* Fraunces_72pt-SemiBoldItalic.ttf in Resources */,
+				AA000F04 /* DMSans-Regular.ttf in Resources */,
+				AA000F05 /* DMSans-Medium.ttf in Resources */,
+				AA000F06 /* DMSans-Bold.ttf in Resources */,
+				AA000F07 /* Inter-Regular.ttf in Resources */,
+				AA000F08 /* Inter-Medium.ttf in Resources */,
+				AA000F09 /* Inter-SemiBold.ttf in Resources */,
+				AA000F0A /* Inter-Bold.ttf in Resources */,
+				60BB305A1C715C12AF606D6B /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA400001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000001 /* DroobStudentApp.swift in Sources */,
+				AA000002 /* RootView.swift in Sources */,
+				AA000050 /* CaptureProtection.swift in Sources */,
+				AA000003 /* APIClient.swift in Sources */,
+				AA0000F2 /* RemoteAppConfig.swift in Sources */,
+				AA000004 /* AuthInterceptor.swift in Sources */,
+				AA000005 /* ProblemDecoder.swift in Sources */,
+				AA000006 /* SSEParser.swift in Sources */,
+				AA000007 /* TokenStore.swift in Sources */,
+				AA000F0B /* SessionEndNotice.swift in Sources */,
+				AA000008 /* AuthSession.swift in Sources */,
+				BC000040 /* BiometricAuthService.swift in Sources */,
+				BC000041 /* DeviceKeyStore.swift in Sources */,
+				BC000042 /* BiometricLoginCoordinator.swift in Sources */,
+				AA000009 /* L10n.swift in Sources */,
+				AA0000A1 /* LocalizationOverrides.swift in Sources */,
+				AA000010 /* BrandColors.swift in Sources */,
+				AA000011 /* Typography.swift in Sources */,
+				AA000012 /* DroobButton.swift in Sources */,
+				AA000013 /* LoginView.swift in Sources */,
+				AA000014 /* LoginViewModel.swift in Sources */,
+				AA000015 /* RegisterView.swift in Sources */,
+				AA000016 /* RegisterViewModel.swift in Sources */,
+				AA000051 /* AuthShared.swift in Sources */,
+				BB000020 /* GoogleSignInAuth.swift in Sources */,
+				BB000022 /* AppleSignInAuth.swift in Sources */,
+				BB000024 /* TurnstileSheet.swift in Sources */,
+				AA000017 /* CatalogListView.swift in Sources */,
+				AA000018 /* CatalogViewModel.swift in Sources */,
+				AA000019 /* CourseDetailView.swift in Sources */,
+				AA000020 /* CourseDetailViewModel.swift in Sources */,
+				AA000200 /* CoursesTabView.swift in Sources */,
+				AA000220 /* CoursesFilterSheet.swift in Sources */,
+				AA000221 /* CoursesSortSheet.swift in Sources */,
+				AA000222 /* AllReviewsView.swift in Sources */,
+				AA000223 /* CourseDetailSections.swift in Sources */,
+				AA000224 /* QuestionsPlaceholderView.swift in Sources */,
+				AA000225 /* RateCourseSheet.swift in Sources */,
+				AA000226 /* QuestionsViewModel.swift in Sources */,
+				AA000227 /* InstructorProfileViewModel.swift in Sources */,
+				AA0000E7 /* InstructorBrowseViewModel.swift in Sources */,
+				AA0000E8 /* InstructorReviewsViewModel.swift in Sources */,
+				AA0000E9 /* RateInstructorSheet.swift in Sources */,
+				AA000228 /* InstructorProfileView.swift in Sources */,
+				AA000229 /* InstructorChatView.swift in Sources */,
+				AA00022A /* ChatAttachmentSheet.swift in Sources */,
+				AA00022B /* ChatAttachmentUploader.swift in Sources */,
+				AA00022C /* VoiceNoteRecorder.swift in Sources */,
+				AA00022D /* VoiceNotePlayer.swift in Sources */,
+				AA000201 /* CourseDetailSheetView.swift in Sources */,
+				AA0000E4 /* EnrollmentRequestModels.swift in Sources */,
+				AA0000E5 /* EnrollmentRequestService.swift in Sources */,
+				AA0000E6 /* RequestEnrollmentSheet.swift in Sources */,
+				AA000023 /* MyCoursesView.swift in Sources */,
+				AA000024 /* MyCoursesViewModel.swift in Sources */,
+				AA000025 /* LessonListView.swift in Sources */,
+				AA000026 /* LessonPlayerView.swift in Sources */,
+				AA000042 /* LessonDocumentsView.swift in Sources */,
+				AA000060 /* LessonPlayerViewModel.swift in Sources */,
+				AA000061 /* LessonCompleteView.swift in Sources */,
+				AA000062 /* CurriculumView.swift in Sources */,
+				AA000110 /* LessonNoteModels.swift in Sources */,
+				AA000111 /* LessonVideoPlayer.swift in Sources */,
+				AA000112 /* LessonPDFReaderView.swift in Sources */,
+				AA000113 /* LessonNotesViews.swift in Sources */,
+				AA0002A1 /* DocumentNoteViews.swift in Sources */,
+				AA000114 /* MyNotesView.swift in Sources */,
+				AA000115 /* MyNotesViewModel.swift in Sources */,
+				AA000116 /* PlaybackPreferences.swift in Sources */,
+				AA000117 /* PlaybackSettingsView.swift in Sources */,
+				AA000070 /* QuizViewModel.swift in Sources */,
+				AA000071 /* QuizView.swift in Sources */,
+				AA000072 /* MessagingViewModel.swift in Sources */,
+				AA000073 /* MessagesView.swift in Sources */,
+				AA000080 /* SettingsModels.swift in Sources */,
+				AA000081 /* SettingsCommon.swift in Sources */,
+				AA000082 /* NotificationsViewModel.swift in Sources */,
+				AA000083 /* NotificationsView.swift in Sources */,
+				AA000084 /* SecurityViewModel.swift in Sources */,
+				AA000905 /* SettingsView.swift in Sources */,
+				AA000901 /* ProfileSettingsViewModel.swift in Sources */,
+				AA000902 /* EditProfileSheets.swift in Sources */,
+				AA000903 /* HelpSupportView.swift in Sources */,
+				AA000904 /* LanguageView.swift in Sources */,
+				AA000085 /* SecurityView.swift in Sources */,
+				AA000086 /* TwoFactorEnrollmentView.swift in Sources */,
+				AA000087 /* RecoveryCodesView.swift in Sources */,
+				AA000088 /* TwoFactorDisableSheet.swift in Sources */,
+				AA000089 /* TotpChallengeView.swift in Sources */,
+				AA00008D /* VerifyEmailView.swift in Sources */,
+				AA0000E1 /* WelcomeAccountCreatedView.swift in Sources */,
+				AA0000E2 /* WelcomeBackView.swift in Sources */,
+				AA0000E3 /* ChangePasswordView.swift in Sources */,
+				AA00008E /* AuthFigmaComponents.swift in Sources */,
+				AA00008F /* LegalScreens.swift in Sources */,
+				AA000090 /* HomeView.swift in Sources */,
+				AA00008A /* InboxModels.swift in Sources */,
+				AA00008B /* NotificationsInboxViewModel.swift in Sources */,
+				AA00008C /* NotificationsInboxView.swift in Sources */,
+				AA000027 /* ChatView.swift in Sources */,
+				AA000028 /* ChatViewModel.swift in Sources */,
+				AA000029 /* SourcesView.swift in Sources */,
+				AA000030 /* FeedbackButtons.swift in Sources */,
+				AA000043 /* MathMarkdownView.swift in Sources */,
+				AA000777 /* MathTextView.swift in Sources */,
+				AA000031 /* ProfileView.swift in Sources */,
+				AA000300 /* StudyRoomModels.swift in Sources */,
+				AA000301 /* StudyRoomsAPI.swift in Sources */,
+				AA000302 /* StudyTogetherCard.swift in Sources */,
+				AA000303 /* StudyRoomsListView.swift in Sources */,
+				AA000304 /* CreateOrJoinRoomView.swift in Sources */,
+				AA000305 /* RoomReadyView.swift in Sources */,
+				AA000306 /* InviteSheet.swift in Sources */,
+				AA000307 /* StudyRoomsSocket.swift in Sources */,
+				AA000308 /* StudyRoomChatViewModel.swift in Sources */,
+				AA000309 /* StudyRoomChatView.swift in Sources */,
+				AA000310 /* JoinCodeFormat.swift in Sources */,
+				AA000311 /* StudyRoomComponents.swift in Sources */,
+				AA000312 /* JoinCodeInput.swift in Sources */,
+				AA000313 /* AvatarStack.swift in Sources */,
+				AA000314 /* JoiningRoomView.swift in Sources */,
+				AA000315 /* StudyRoomRowCard.swift in Sources */,
+				AA000316 /* RoomSettingsView.swift in Sources */,
+				AA000317 /* AllMembersView.swift in Sources */,
+				AA000318 /* WaitlistView.swift in Sources */,
+				AA000319 /* DocumentsView.swift in Sources */,
+				AA00031A /* PendingJoinView.swift in Sources */,
+				AA00031B /* LeaveRoomFlow.swift in Sources */,
+				22828D6C332BDDC4476E844A /* PresenceGuardConfig.swift in Sources */,
+				5C964D54964C96725FAEA20A /* PresenceConsentStore.swift in Sources */,
+				BB6A797E35A2422411C1B30F /* PresenceStateMachine.swift in Sources */,
+				B95AF8ACA4F3938D1CB218D4 /* PresenceDetectors.swift in Sources */,
+				F9BA109309A4EF18C4215BB7 /* FaceEnrollmentStore.swift in Sources */,
+				1C91B0A3DBF47B0D08981DB5 /* ViewerPresenceGuard.swift in Sources */,
+				CD024C7F9C2C7C581ECE1A5F /* PresenceGuardOverlay.swift in Sources */,
+				B0B282589FB05800CEA626A8 /* CameraConsentView.swift in Sources */,
+				7282C74158364A985C4B1F64 /* PresenceGuardTestView.swift in Sources */,
+				FCBBD020A2281BCFA1F6F9F7 /* DeviceIntegrity.swift in Sources */,
+				85FA7A24D724DD542F45B6BA /* FairPlayConfig.swift in Sources */,
+				B30316FFAE581455FA73C9CC /* FairPlayContentKeyManager.swift in Sources */,
+				EF09401041451FCCCF2A42D9 /* FullScreenGuard.swift in Sources */,
+				819DA715A600DD0A667A102C /* PrivacyTiltMonitor.swift in Sources */,
+				A116E315767F9093837CC94E /* NotificationsSocket.swift in Sources */,
+				33571721239662D81D9DAB42 /* PushNotifications.swift in Sources */,
+				312F7D88950A40C38F0819F7 /* AskDroobAIView.swift in Sources */,
+				235D3383DC2D4F43863DD8FA /* AskDroobAIViewModel.swift in Sources */,
+				473F2A040AA245FBA21DF1B8 /* AIProviderManager.swift in Sources */,
+				917C0CCEB2BD493389229ACE /* OCRService.swift in Sources */,
+				3A7C1D0E9F4B41A2B8C50012 /* SolutionPDFExporter.swift in Sources */,
+				A1B2C3D4E5F60718293A4B01 /* AskDroobLibraryStore.swift in Sources */,
+				A1B2C3D4E5F60718293A4B03 /* AskDroobLibraryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA400003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000035 /* APIClientTests.swift in Sources */,
+				AA000036 /* SSEParserTests.swift in Sources */,
+				AA000037 /* CatalogViewModelTests.swift in Sources */,
+				BC000043 /* BiometricLoginCoordinatorTests.swift in Sources */,
+				BC000044 /* DeviceKeyStoreTests.swift in Sources */,
+				BC000045 /* BiometricAuthServiceTests.swift in Sources */,
+				0730D186F134CE47EC016D28 /* PresenceStateMachineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA600001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA200001 /* DroobStudent */;
+			targetProxy = AA100001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AABBCCE9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF000033 /* en */,
+				AF000034 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		AABBCCEA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AF0000FA /* en */,
+				AF0000FB /* ar */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA700001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA700002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_CYCLE = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA700003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DroobStudent/DroobStudent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 82;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 97DNR5Y3Y5;
+				DROOB_API_BASE_URL = "https://api.droob-sa.net";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DroobStudent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.droob.studentapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA700004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DroobStudent/DroobStudent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 82;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 97DNR5Y3Y5;
+				DROOB_API_BASE_URL = "https://api.droob-sa.net";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DroobStudent/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.droob.studentapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA700005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 82;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.droob.studentapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroobStudent.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DroobStudent";
+			};
+			name = Debug;
+		};
+		AA700006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 82;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.droob.studentapp.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroobStudent.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DroobStudent";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA500000 /* Build configuration list for PBXProject "DroobStudent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA700001 /* Debug */,
+				AA700002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA500001 /* Build configuration list for PBXNativeTarget "DroobStudent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA700003 /* Debug */,
+				AA700004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA500002 /* Build configuration list for PBXNativeTarget "DroobStudentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA700005 /* Debug */,
+				AA700006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13CD4CF770DF3D626E1F5293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+		BB000010 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB000011 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB000010 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		BB000012 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB000010 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		D979274B42DE31BA77D8EC66 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13CD4CF770DF3D626E1F5293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		E27BD97F1F28E7A4414CBAA0 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13CD4CF770DF3D626E1F5293 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AABBCCDD /* Project object */;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Droob — Content Protection Overview</title>
+<style>
+  :root{
+    --gold:#C6A96B; --gold-d:#9c814b; --ink:#14110c; --bg:#0f0e0c; --card:#1b1916;
+    --muted:#9b958a; --line:#2c2924; --green:#3ec77d; --amber:#e7a13a; --red:#e8604c;
+    --txt:#f3efe7;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;}
+  .wrap{max-width:1000px;margin:0 auto;padding:40px 22px 80px}
+  h1{font-size:32px;margin:0 0 6px;letter-spacing:-.4px}
+  h2{font-size:22px;margin:42px 0 14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+  h3{font-size:17px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:15px;margin:0 0 8px}
+  .lead{font-size:17px;color:#ded7c9;background:var(--card);border:1px solid var(--line);
+        border-left:4px solid var(--gold);border-radius:12px;padding:16px 18px;margin:18px 0}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14.5px;background:var(--card);
+        border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#221f1b;color:#e9e2d4;font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.4px}
+  tr:last-child td{border-bottom:none}
+  .badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}
+  .b-on{background:rgba(62,199,125,.15);color:var(--green);border:1px solid rgba(62,199,125,.4)}
+  .b-soon{background:rgba(231,161,58,.13);color:var(--amber);border:1px solid rgba(231,161,58,.4)}
+  .b-cos{background:rgba(155,149,138,.13);color:var(--muted);border:1px solid rgba(155,149,138,.4)}
+  .stars{color:var(--gold);letter-spacing:2px;white-space:nowrap}
+  .stars .o{color:#494540}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:14px 0}
+  @media(max-width:720px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+  .card .ben{color:#cfe9d8;font-size:14px;margin:8px 0 0}
+  .card .how{color:var(--muted);font-size:13.5px;margin:8px 0 0}
+  .card .lim{color:#e9c9a0;font-size:13px;margin:8px 0 0}
+  .tag{font-size:12px;color:var(--muted)}
+  .fp{background:linear-gradient(180deg,#221d14,#1b1916);border:1px solid var(--gold-d);
+      border-radius:16px;padding:22px;margin:18px 0}
+  .fp h2{border:none;margin:0 0 8px;color:var(--gold)}
+  .pill{display:inline-block;background:rgba(198,169,107,.14);border:1px solid var(--gold-d);
+        color:var(--gold);border-radius:8px;padding:3px 10px;font-size:12.5px;margin:2px 4px 2px 0}
+  ul{margin:8px 0;padding-left:20px}
+  li{margin:4px 0}
+  .legend{font-size:13px;color:var(--muted);margin:6px 0 0}
+  code{background:#231f1a;border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:13px}
+  .foot{color:var(--muted);font-size:13px;margin-top:46px;border-top:1px solid var(--line);padding-top:16px}
+  .flow{background:#100f0d;border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+        font:13px/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;color:#cdd9cf;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Droob — Content Protection</h1>
+  <p class="sub">How the iOS app protects course videos from sharing, recording, and piracy — and what each layer buys you.</p>
+
+  <div class="lead">
+    <strong>Defense in depth.</strong> No single trick stops piracy on a phone — so the app stacks
+    independent layers. Each one closes a different gap; together they make casual sharing
+    pointless and serious piracy expensive and traceable. <strong>FairPlay DRM</strong> is the only
+    one that protects the video at the hardware level — it's the centerpiece (see below).
+  </div>
+
+  <h2>At a glance</h2>
+  <p class="legend">Strength is relative protection power, not effort. ★★★★★ = OS/hardware-enforced &nbsp;·&nbsp; ★★★ = strong deterrent &nbsp;·&nbsp; ★ = cosmetic.</p>
+  <table>
+    <tr><th>Layer</th><th>Status</th><th>Protects against</th><th>Strength</th></tr>
+    <tr><td><strong>FairPlay DRM</strong> (HDCP + secure decode)</td><td><span class="badge b-soon">Client ready · needs backend</span></td><td>Recording, mirroring, capture cards, cable-out of the <em>video</em></td><td class="stars">★★★★★</td></tr>
+    <tr><td>Screen-capture detection &amp; black-out (+ audio pause)</td><td><span class="badge b-on">Active</span></td><td>Screen recording, AirPlay, QuickTime-over-USB</td><td class="stars">★★★★<span class="o">★</span></td></tr>
+    <tr><td>iPad multitasking lockout</td><td><span class="badge b-on">Active</span></td><td>Split View, Slide Over, iPadOS 26 windows/tabs</td><td class="stars">★★★★<span class="o">★</span></td></tr>
+    <tr><td>External-display block</td><td><span class="badge b-on">Active</span></td><td>HDMI/USB-C to TV / monitor / capture card</td><td class="stars">★★★<span class="o">★★</span></td></tr>
+    <tr><td>Dynamic moving watermark</td><td><span class="badge b-on">Active</span></td><td>Off-axis camera filming; traces any leak to the account</td><td class="stars">★★★<span class="o">★★</span></td></tr>
+    <tr><td>Viewer Presence Guard (face count)</td><td><span class="badge b-on">Active</span></td><td>Nobody watching / multiple viewers / sharing</td><td class="stars">★★★<span class="o">★★</span></td></tr>
+    <tr><td>Camera-required gate</td><td><span class="badge b-on">Active</span></td><td>Watching with the presence guard disabled</td><td class="stars">★★★<span class="o">★★</span></td></tr>
+    <tr><td>Identity match + liveness</td><td><span class="badge b-soon">Scaffolded · needs ML models</span></td><td>A non-owner / a photo or screen spoof watching</td><td class="stars">★★★★<span class="o">★</span></td></tr>
+    <tr><td>Jailbreak / integrity block</td><td><span class="badge b-on">Active</span></td><td>Running where protections can be stripped</td><td class="stars">★★★<span class="o">★★</span></td></tr>
+    <tr><td>Phone / recording-device alert</td><td><span class="badge b-on">Active</span></td><td>A second phone held up to record</td><td class="stars">★★<span class="o">★★★</span></td></tr>
+    <tr><td>Privacy side-dim</td><td><span class="badge b-cos">Cosmetic</span></td><td>Shoulder-surfing (visual deterrent only)</td><td class="stars">★<span class="o">★★★★</span></td></tr>
+  </table>
+
+  <!-- FAIRPLAY -->
+  <div class="fp">
+    <h2>★ FairPlay DRM — the gold standard (most important)</h2>
+    <p class="sub">Apple FairPlay Streaming (FPS) is the same DRM Netflix, Disney+ and Apple TV use. It is the <strong>only</strong> layer that protects the video itself at the OS/hardware level instead of reacting to events.</p>
+    <p><strong>Why it's the strongest — the benefits:</strong></p>
+    <ul>
+      <li><strong>Uncapturable video.</strong> Decryption happens in a <em>secure media path</em>. Screen recording, QuickTime-over-USB, and capture software receive a <strong>black frame</strong> for the video — not by us blanking it, but because the protected frames never leave the secure pipeline.</li>
+      <li><strong>HDCP enforced automatically.</strong> Plug into a TV, monitor, projector, or HDMI capture card that isn't HDCP-compliant → the video goes <strong>black</strong>. This is hardware-level copy protection you can't code around.</li>
+      <li><strong>The keys are entitlement-gated.</strong> The decryption key is only issued by your license server <em>after</em> confirming the user is enrolled in that course. A leaked manifest or stolen file is <strong>useless without a key</strong> — this is what actually stops re-distribution.</li>
+      <li><strong>Per-user, per-asset, revocable.</strong> Keys can expire, be scoped per device, and be refused server-side — you stay in control after delivery.</li>
+      <li><strong>Tamper-resistant.</strong> Unlike app-level tricks, DRM isn't defeated by a jailbreak tweak or a screen-recorder update.</li>
+    </ul>
+    <p><span class="pill">Secure decode path</span><span class="pill">HDCP on external displays</span><span class="pill">Server-issued keys</span><span class="pill">Enrollment-gated</span><span class="pill">Industry standard</span></p>
+    <p class="how"><strong>Status:</strong> the iOS client handshake is fully built (<code>AVContentKeySession</code>). It needs the backend: an Apple FPS certificate, a license server (KSM), and FairPlay-encrypted HLS. Full runbook in <code>FairPlay/SETUP.md</code>.</p>
+    <div class="flow">skd://id → app → GET /certificate → DER cert
+        → makeStreamingContentKeyRequestData(cert,id) → SPC
+        → POST /license (SPC + token) → [enrollment check] → KSM → CKC
+        → AVFoundation decrypts in the SECURE PATH (capture = black)</div>
+  </div>
+
+  <h2>Active on-device layers</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Screen-capture black-out <span class="tag">· UIScreen.isCaptured</span></h3>
+      <p class="ben"><strong>Benefit:</strong> The whole app instantly blanks when the screen is recorded, mirrored (AirPlay), or captured by QuickTime/Xcode over a cable — and the lesson <strong>pauses so audio isn't recorded</strong> either.</p>
+      <p class="how"><strong>How:</strong> iOS reports any "screen cloning" via <code>isCaptured</code>; we cover content + pause playback. A user toggle in Settings → Security can lock/unlock it app-wide.</p>
+      <p class="lim"><strong>Limit:</strong> Protects pixels + audio, but the (decrypted) video frame still technically exists in the buffer — FairPlay closes that.</p>
+    </div>
+
+    <div class="card">
+      <h3>Dynamic moving watermark</h3>
+      <p class="ben"><strong>Benefit:</strong> The viewer's email/ID floats over the video at all times. If anyone films the screen with another camera (the one thing software can't block), the leak is <strong>permanently traceable to that account</strong> — a powerful deterrent.</p>
+      <p class="how"><strong>How:</strong> A semi-transparent label drifts position every few seconds. Zero performance cost, always on, can't be turned off by the viewer.</p>
+      <p class="lim"><strong>Limit:</strong> Deters and traces; doesn't physically stop filming.</p>
+    </div>
+
+    <div class="card">
+      <h3>Viewer Presence Guard <span class="tag">· front camera</span></h3>
+      <p class="ben"><strong>Benefit:</strong> Enforces "one enrolled person, watching." 0 faces → pauses (possible off-camera rig); 2+ faces → "multiple viewers"; a phone in frame → recording alert.</p>
+      <p class="how"><strong>How:</strong> Low-res front-camera frames analyzed a few times a second on a background thread (video never stutters), with debouncing so brief look-aways don't punish.</p>
+      <p class="lim"><strong>Limit:</strong> Needs camera consent; identity/liveness need the optional ML models.</p>
+    </div>
+
+    <div class="card">
+      <h3>Camera-required gate</h3>
+      <p class="ben"><strong>Benefit:</strong> A protected lesson <strong>won't play without camera access</strong> — a viewer can't simply disable the presence guard to dodge monitoring.</p>
+      <p class="how"><strong>How:</strong> If access is denied, the video is covered with an "Enable camera access" prompt (re-asks, or opens Settings).</p>
+      <p class="lim"><strong>Limit:</strong> Requires the explicit camera-consent flow (store-compliant).</p>
+    </div>
+
+    <div class="card">
+      <h3>External-display block</h3>
+      <p class="ben"><strong>Benefit:</strong> Connecting a cable to a TV/monitor/capture card or mirroring → content blanks, blocking "play it on a big screen and record it."</p>
+      <p class="how"><strong>How:</strong> Detects a second connected screen/scene and triggers the same black-out.</p>
+      <p class="lim"><strong>Limit:</strong> Full hardware enforcement on HDMI comes from FairPlay's HDCP.</p>
+    </div>
+
+    <div class="card">
+      <h3>iPad multitasking lockout</h3>
+      <p class="ben"><strong>Benefit:</strong> The app refuses Split View, Slide Over, and the new <strong>iPadOS 26 windowing/tabs</strong> — so the lesson can't be parked beside a screen-recorder or notes app.</p>
+      <p class="how"><strong>How:</strong> <code>UIRequiresFullScreen</code> + single-scene. OS-enforced; nothing to bypass.</p>
+      <p class="lim"><strong>Limit:</strong> iPad only (iPhone has no split anyway).</p>
+    </div>
+
+    <div class="card">
+      <h3>Jailbreak / integrity block</h3>
+      <p class="ben"><strong>Benefit:</strong> On a jailbroken device — where capture protections can be stripped — the app blocks itself entirely.</p>
+      <p class="how"><strong>How:</strong> Conservative checks (sandbox escape, jailbreak artifacts). Release builds only.</p>
+      <p class="lim"><strong>Limit:</strong> Detection is an arms race; raises the bar, not absolute.</p>
+    </div>
+
+    <div class="card">
+      <h3>Privacy side-dim</h3>
+      <p class="ben"><strong>Benefit:</strong> Darkens the left/right edges to discourage shoulder-surfing — a visible "this is private" cue.</p>
+      <p class="how"><strong>How:</strong> A gradient overlay focusing a central strip.</p>
+      <p class="lim"><strong>Limit:</strong> <strong>Cosmetic only</strong> — software can't change a screen's physical viewing angle (that needs a hardware privacy film).</p>
+    </div>
+
+  </div>
+
+  <h2>Threat → which layer handles it</h2>
+  <table>
+    <tr><th>Attack</th><th>Handled by</th></tr>
+    <tr><td>Built-in screen recording</td><td>Capture black-out + audio pause · FairPlay (black video)</td></tr>
+    <tr><td>Recording via Mac + QuickTime/USB cable</td><td>Capture black-out + audio pause · FairPlay</td></tr>
+    <tr><td>AirPlay / screen mirroring</td><td>Capture black-out · FairPlay (HDCP)</td></tr>
+    <tr><td>HDMI/USB-C cable to TV or capture card</td><td>External-display block · <strong>FairPlay HDCP (black)</strong></td></tr>
+    <tr><td>Screenshots</td><td>Capture protection (secure layer)</td></tr>
+    <tr><td>Filming the screen with another phone/camera</td><td><strong>Watermark</strong> (traceable) · presence guard · phone-in-frame alert</td></tr>
+    <tr><td>Sharing one account with many people</td><td>Presence guard (multi-face) · device limit · entitlement-gated DRM keys</td></tr>
+    <tr><td>Re-distributing the downloaded video file</td><td><strong>FairPlay</strong> — file is encrypted, useless without a server-issued key</td></tr>
+    <tr><td>Side-by-side capture on iPad</td><td>Multitasking lockout</td></tr>
+    <tr><td>Stripping protections on a modified OS</td><td>Jailbreak block</td></tr>
+  </table>
+
+  <h2>What no iOS app can do (honest limits)</h2>
+  <ul>
+    <li><strong>Stop a separate camera filming the screen.</strong> Physically impossible to block — countered by the <strong>watermark</strong> (makes the leak traceable) and the presence guard.</li>
+    <li><strong>Change the screen's physical viewing angle</strong> in software — needs a hardware privacy film.</li>
+    <li><strong>Detect a plain charging cable.</strong> There's no API — but it doesn't matter, because any actual <em>capture</em> over that cable <em>is</em> detected.</li>
+    <li><strong>Run on / be installed on Android (Huawei) or as an APK.</strong> Different platform — an iOS app simply cannot; distribution is locked to the App Store / TestFlight per Apple ID.</li>
+  </ul>
+
+  <div class="lead">
+    <strong>Bottom line.</strong> The on-device layers (active today) stop casual recording and sharing and make every leak traceable. <strong>FairPlay (next step)</strong> adds the hardware-grade lock that makes the video itself uncapturable and the files worthless without an enrollment-gated key — turning "good deterrence" into "industry-standard protection."
+  </div>
+
+  <p class="foot">Droob iOS · Content Protection overview · generated for internal review. Implementation: <code>ViewerPresenceGuard/</code>, <code>App/CaptureProtection.swift</code>, <code>App/DeviceIntegrity.swift</code>, <code>FairPlay/</code> (+ <code>FairPlay/SETUP.md</code>).</p>
+
+</div>
+</body>
+</html>

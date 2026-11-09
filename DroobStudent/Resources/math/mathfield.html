@@ -1,0 +1,512 @@
+<!doctype html>
+<!-- Arabic is the DEFAULT here, not something the host switches on.
+     The host only calls setLanguage('ar') after its readiness probe resolves,
+     so an English default painted English tabs, an English "Solve" key and an
+     English "Delete" label for one or more frames on every single open. -->
+<html lang="ar" dir="rtl" data-lang="ar">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Droob math input</title>
+<!-- MathLive injects its own styles into the mathfield's shadow root, so the
+     static markup used for the keycaps gets none of them. This is the
+     stylesheet that carries .ML__frac-line, .ML__vlist and the root rules —
+     without it a fraction renders as two stacked glyphs with no bar. -->
+<link rel="stylesheet" href="mathlive-static.css">
+<script src="mathlive.min.js"></script>
+<style>
+  /* Droob's palette, same tokens the print sheet uses. */
+  :root {
+    --paper:     #FAF7F0;
+    --surface:   #FFFFFF;
+    --ink:       #14120E;
+    --ink-soft:  #4A4235;
+    --ink-faint: #6E6455;
+    --gold:      #C6A96B;
+    --gold-tint: #F3EAD6;
+    --brown:     #7A5D2C;
+    --rule:      #DED3BC;
+    --key:       #FFFFFF;
+    --key-press: #F3EAD6;
+    --tap: 44px;              /* Apple's minimum, and comfortable on Android */
+  }
+
+  /* The host tells us which theme to wear; it does not repaint the page. */
+  html[data-theme="dark"] {
+    --paper:     #14120E;
+    --surface:   #1D1A15;
+    --ink:       #F2EDE2;
+    --ink-soft:  #C4BAA6;
+    --ink-faint: #948970;
+    --gold:      #D9BC88;
+    --gold-tint: #2A2318;
+    --brown:     #C9A971;
+    --rule:      #3A342A;
+    --key:       #241F17;
+    --key-press: #3A3122;
+  }
+
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, sans-serif;
+    /* The keyboard is a fixed grid; the page itself must never scroll
+       sideways on a narrow phone. */
+    overflow-x: hidden;
+  }
+
+  .shell {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    min-height: 100vh;
+  }
+
+  /* ---- the field ---- */
+
+  math-field {
+    display: block;
+    width: 100%;
+    min-height: 68px;
+    padding: 12px 14px;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1.5px solid var(--rule);
+    border-radius: 12px;
+    font-size: 22px;
+    /* Formulas are left-to-right even when the surrounding app is Arabic. */
+    direction: ltr;
+    unicode-bidi: isolate;
+  }
+  math-field:focus-within {
+    border-color: var(--gold);
+    outline: 2px solid color-mix(in srgb, var(--gold) 45%, transparent);
+    outline-offset: 1px;
+  }
+  math-field::part(virtual-keyboard-toggle),
+  math-field::part(menu-toggle) { display: none; }
+
+  .hint {
+    font-size: 12px;
+    color: var(--ink-faint);
+    padding: 0 2px;
+    min-height: 1.2em;
+  }
+  .hint[data-error="1"] { color: #A5442E; }
+
+  /* ---- our own keyboard ---- */
+
+  .tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px; }
+  .tabs::-webkit-scrollbar { display: none; }
+
+  .tab {
+    flex: 0 0 auto;
+    min-height: 34px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    color: var(--ink-soft);
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .tab[aria-selected="true"] {
+    background: var(--gold-tint);
+    border-color: var(--gold);
+    color: var(--brown);
+  }
+
+  .pad--keypad { grid-template-columns: repeat(6, 1fr) !important; }
+
+  .pad {
+    display: grid;
+    width: 100%;
+    /* The document is RTL so the tab strip and hint line sit on the right, but
+       a keypad is not prose: mirroring it would print 7 8 9 as 9 8 7. The pad
+       and every keycap stay left-to-right, matching the field above them. */
+    direction: ltr;
+    /* A grid track is free to be narrower than its content; without this a
+       long keycap like "arcsin" widens the whole page on a small phone. */
+    min-width: 0;
+    /* Phones land on 5–6 columns; a tablet gets more keys per row rather than
+       giant ones, which is what makes this usable on iPad. */
+    grid-template-columns: repeat(auto-fit, minmax(56px, 1fr));
+    gap: 6px;
+  }
+
+  .key {
+    /* Keycaps are formulas. Isolated, or a cap like x^{n} reorders inside an
+       RTL run for exactly the reason the field itself is isolated. */
+    direction: ltr;
+    unicode-bidi: isolate;
+    /* A stacked cap — a fraction, a root with an index — needs more than a
+       text row, or the bar collapses onto the glyphs and reads as "ba". */
+    min-height: 50px;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--rule);
+    background: var(--key);
+    color: var(--ink);
+    font-size: 17px;
+    line-height: normal;
+    display: grid;
+    place-items: center;
+    touch-action: manipulation;
+  }
+  .key:active { background: var(--key-press); border-color: var(--gold); }
+  .key--wide { grid-column: span 2; font-size: 14px; font-weight: 600; }
+  .key { overflow: hidden; min-width: 0; }
+  /* KaTeX ships its own sizing; hold it to the keycap so a tall construction
+     like a matrix cannot stretch the whole row. */
+  .key .ML__latex { font-size: 18px; max-width: 100%; }
+  .key--wide .ML__latex { font-size: 16px; }
+  .key--go {
+    grid-column: span 2;
+    background: var(--brown);
+    border-color: var(--brown);
+    color: var(--paper);
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .key--go[disabled] { opacity: 0.45; }
+
+  @media (min-width: 700px) {
+    .shell { padding: 16px; gap: 14px; max-width: 900px; margin: 0 auto; width: 100%; }
+    math-field { font-size: 26px; min-height: 84px; }
+    .pad { grid-template-columns: repeat(auto-fit, minmax(68px, 1fr)); gap: 8px; }
+    .key { min-height: 60px; font-size: 19px; }
+    .key .ML__latex { font-size: 21px; }
+    .key--wide .ML__latex { font-size: 18px; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .key { transition: background-color .09s ease, border-color .09s ease; }
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+  <math-field id="f" virtual-keyboard-mode="off" math-virtual-keyboard-policy="manual"></math-field>
+  <div class="hint" id="hint"></div>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="pad" id="pad"></div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // Bundled, never fetched. Sounds are switched off rather than shipped:
+  // a maths keypad that clicks is noise in a classroom.
+  if (window.MathfieldElement) {
+    window.MathfieldElement.fontsDirectory = "./fonts";
+    window.MathfieldElement.soundsDirectory = null;
+    // Only fontsDirectory/soundsDirectory were ever set, which left MathLive's
+    // own locale at its English default — the source of every keycap's spoken
+    // label. Best-effort: MathLive falls back to English for a locale it does
+    // not ship, which is why AR_SPEECH below exists as well.
+    try { window.MathfieldElement.locale = "ar"; } catch (e) { /* older build */ }
+  }
+
+  var field = document.getElementById("f");
+  var hint  = document.getElementById("hint");
+  var pad   = document.getElementById("pad");
+  var tabs  = document.getElementById("tabs");
+
+  // Keys are (label, what to insert). `#0` is MathLive's placeholder token —
+  // it puts the caret where the student should type next, which is the whole
+  // reason this beats a plain text box for \int_{a}^{b}.
+  var LAYERS = {
+    basic: {
+      en: "Numbers", ar: "أرقام",
+      keys: [
+        ["7","7"],["8","8"],["9","9"],["\\div","\\div"],["(","("],[")",")"],
+        ["4","4"],["5","5"],["6","6"],["\\times","\\times"],["x","x"],["y","y"],
+        ["1","1"],["2","2"],["3","3"],["-","-"],["z","z"],["n","n"],
+        ["0","0"],[".","."],["=","="],["+","+"],["a","a"],["b","b"],
+        ["\\frac{a}{b}","\\frac{#0}{#0}"],["\\sqrt{x}","\\sqrt{#0}"],
+        ["x^{n}","#0^{#0}"],["x_{n}","#0_{#0}"],
+        ["<","<"],[">",">"]
+      ]
+    },
+    calculus: {
+      en: "Calculus", ar: "تفاضل وتكامل",
+      keys: [
+        ["\\int","\\int #0 \\,d#0"],
+        ["\\int_{a}^{b}","\\int_{#0}^{#0} #0 \\,d#0","w"],
+        ["\\oint","\\oint #0 \\,d#0"],
+        ["\\frac{d}{dx}","\\frac{d}{dx}\\left(#0\\right)"],
+        ["\\frac{\\partial}{\\partial x}","\\frac{\\partial}{\\partial #0}\\left(#0\\right)","w"],
+        ["\\lim","\\lim_{#0 \\to #0} #0"],
+        ["\\sum","\\sum_{#0}^{#0} #0"],
+        ["\\prod","\\prod_{#0}^{#0} #0"],
+        ["\\infty","\\infty"],["\\to","\\to"],
+        ["dx","\\,dx"],["dy","\\,dy"],["dz","\\,dz"],
+        ["f'","'"],["f''","''"],["\\nabla","\\nabla"]
+      ]
+    },
+    trig: {
+      en: "Trig", ar: "مثلثات",
+      keys: [
+        ["\\sin","\\sin\\left(#0\\right)"],["\\cos","\\cos\\left(#0\\right)"],["\\tan","\\tan\\left(#0\\right)"],
+        ["\\csc","\\csc\\left(#0\\right)"],["\\sec","\\sec\\left(#0\\right)"],["\\cot","\\cot\\left(#0\\right)"],
+        ["\\arcsin","\\arcsin\\left(#0\\right)"],["\\arccos","\\arccos\\left(#0\\right)"],["\\arctan","\\arctan\\left(#0\\right)"],
+        ["\\sinh","\\sinh\\left(#0\\right)"],["\\cosh","\\cosh\\left(#0\\right)"],["\\tanh","\\tanh\\left(#0\\right)"],
+        ["\\pi","\\pi"],["\\theta","\\theta"],["\\phi","\\phi"],["^{\\circ}","^{\\circ}"]
+      ]
+    },
+    algebra: {
+      en: "Algebra", ar: "جبر",
+      keys: [
+        ["x^{2}","#0^{2}"],["x^{3}","#0^{3}"],
+        ["\\sqrt{x}","\\sqrt{#0}"],["\\sqrt[3]{x}","\\sqrt[3]{#0}"],["\\sqrt[n]{x}","\\sqrt[#0]{#0}","w"],
+        ["\\ln","\\ln\\left(#0\\right)"],["\\log","\\log\\left(#0\\right)"],["\\log_{a}","\\log_{#0}\\left(#0\\right)","w"],
+        ["e^{x}","e^{#0}"],["\\left|x\\right|","\\left|#0\\right|"],
+        ["\\le","\\le"],["\\ge","\\ge"],["\\ne","\\ne"],["\\approx","\\approx"],
+        ["\\pm","\\pm"],["\\mp","\\mp"],["\\cdot","\\cdot"],["\\%","\\%"]
+      ]
+    },
+    more: {
+      en: "More", ar: "المزيد",
+      keys: [
+        ["\\alpha","\\alpha"],["\\beta","\\beta"],["\\gamma","\\gamma"],["\\Delta","\\Delta"],
+        ["\\lambda","\\lambda"],["\\mu","\\mu"],["\\sigma","\\sigma"],["\\omega","\\omega"],
+        ["\\vec{v}","\\vec{#0}"],["\\hat{u}","\\hat{#0}"],["\\bar{x}","\\bar{#0}"],
+        ["\\in","\\in"],["\\subset","\\subset"],["\\cup","\\cup"],["\\cap","\\cap"],
+        ["\\begin{pmatrix}\\square&\\square\\\\\\square&\\square\\end{pmatrix}",
+         "\\begin{pmatrix} #0 & #0 \\\\ #0 & #0 \\end{pmatrix}","w"],
+        ["\\begin{cases}\\square\\\\\\square\\end{cases}",
+         "\\begin{cases} #0 \\\\ #0 \\end{cases}","w"]
+      ]
+    }
+  };
+
+  var ORDER = ["basic", "calculus", "trig", "algebra", "more"];
+  // Arabic unless the host explicitly asks for English — same default as the
+  // markup above, so the two cannot disagree on the first frame.
+  var lang = (document.documentElement.getAttribute("data-lang") === "en") ? "en" : "ar";
+  var current = "basic";
+
+  function insert(latex) {
+    field.executeCommand(["insert", latex]);
+    field.focus();
+    publish();
+  }
+
+  /** Typeset a keycap, falling back to the raw token if MathLive is missing. */
+  function capMarkup(latex) {
+    try {
+      return window.MathLive.convertLatexToMarkup(latex);
+    } catch (e) {
+      var span = document.createElement("span");
+      span.textContent = latex;
+      return span.innerHTML;
+    }
+  }
+
+  // Arabic names for the keycaps that have a name.
+  //
+  // MathLive.convertLatexToSpeakableText() is the only label source the pad had,
+  // and it emits English ("the integral from a to b of") because MathLive does
+  // not ship an Arabic locale — so all ~90 keys announced in English inside an
+  // Arabic-only app. Keyed on the *display* LaTeX, i.e. LAYERS[..].keys[i][0].
+  // Digits, Latin variables and bare symbols are deliberately absent: MathLive
+  // speaks "7" and "x" the same in any language.
+  var AR_SPEECH = {
+    "\\div": "قسمة", "\\times": "ضرب", "\\cdot": "ضرب",
+    "(": "قوس فتح", ")": "قوس إغلاق", "=": "يساوي", "+": "زائد", "-": "ناقص",
+    ".": "فاصلة عشرية", "<": "أصغر من", ">": "أكبر من",
+    "\\frac{a}{b}": "كسر", "\\sqrt{x}": "جذر تربيعي",
+    "x^{n}": "أس", "x_{n}": "دليل سفلي",
+
+    "\\int": "تكامل", "\\int_{a}^{b}": "تكامل محدّد",
+    "\\oint": "تكامل على مسار مغلق",
+    "\\frac{d}{dx}": "مشتقة بالنسبة إلى x",
+    "\\frac{\\partial}{\\partial x}": "مشتقة جزئية",
+    "\\lim": "نهاية", "\\sum": "مجموع", "\\prod": "جداء",
+    "\\infty": "ما لا نهاية", "\\to": "يؤول إلى",
+    "dx": "تفاضل x", "dy": "تفاضل y", "dz": "تفاضل z",
+    "f'": "المشتقة الأولى", "f''": "المشتقة الثانية", "\\nabla": "نابلا",
+
+    "\\sin": "جيب", "\\cos": "جيب التمام", "\\tan": "ظل",
+    "\\csc": "قاطع التمام", "\\sec": "قاطع", "\\cot": "ظل التمام",
+    "\\arcsin": "الجيب العكسي", "\\arccos": "جيب التمام العكسي",
+    "\\arctan": "الظل العكسي",
+    "\\sinh": "الجيب الزائدي", "\\cosh": "جيب التمام الزائدي",
+    "\\tanh": "الظل الزائدي",
+    "\\pi": "باي", "\\theta": "ثيتا", "\\phi": "فاي", "^{\\circ}": "درجة",
+
+    "x^{2}": "تربيع", "x^{3}": "تكعيب",
+    "\\sqrt[3]{x}": "جذر تكعيبي", "\\sqrt[n]{x}": "جذر نوني",
+    "\\ln": "لوغاريتم طبيعي", "\\log": "لوغاريتم",
+    "\\log_{a}": "لوغاريتم لأساس", "e^{x}": "e مرفوعة لأس",
+    "\\left|x\\right|": "قيمة مطلقة",
+    "\\le": "أصغر من أو يساوي", "\\ge": "أكبر من أو يساوي",
+    "\\ne": "لا يساوي", "\\approx": "يقارب",
+    "\\pm": "زائد أو ناقص", "\\mp": "ناقص أو زائد", "\\%": "بالمئة",
+
+    "\\alpha": "ألفا", "\\beta": "بيتا", "\\gamma": "جاما",
+    "\\Delta": "دلتا كبيرة", "\\lambda": "لامدا", "\\mu": "ميو",
+    "\\sigma": "سيجما", "\\omega": "أوميجا",
+    "\\vec{v}": "متجه", "\\hat{u}": "متجه وحدة", "\\bar{x}": "المتوسط",
+    "\\in": "ينتمي إلى", "\\subset": "مجموعة جزئية من",
+    "\\cup": "اتحاد", "\\cap": "تقاطع"
+  };
+  AR_SPEECH["\\begin{pmatrix}\\square&\\square\\\\\\square&\\square\\end{pmatrix}"] = "مصفوفة";
+  AR_SPEECH["\\begin{cases}\\square\\\\\\square\\end{cases}"] = "دالة متشعبة";
+
+  /** What a screen reader should say, which is never the LaTeX source. */
+  function capLabel(latex) {
+    if (lang === "ar" && AR_SPEECH[latex]) return AR_SPEECH[latex];
+    try {
+      var spoken = window.MathLive.convertLatexToSpeakableText(latex);
+      if (spoken && spoken.trim()) return spoken.trim();
+    } catch (e) { /* fall through */ }
+    return latex.replace(/[\\{}]/g, " ").replace(/\s+/g, " ").trim();
+  }
+
+  function drawPad() {
+    pad.textContent = "";
+    pad.className = current === "basic" ? "pad pad--keypad" : "pad";
+    var layer = LAYERS[current];
+    layer.keys.forEach(function (k) {
+      var b = document.createElement("button");
+      b.className = "key" + (k[2] === "w" ? " key--wide" : "");
+      b.type = "button";
+      // The cap is the formula itself, typeset — a key that reads "\\int" is a
+      // key a student has to already understand to press.
+      b.innerHTML = capMarkup(k[0]);
+      b.setAttribute("aria-label", capLabel(k[0]));
+      b.addEventListener("pointerdown", function (e) {
+        // pointerdown, not click: the field must never lose the caret, and a
+        // 300 ms click delay makes a keypad feel broken.
+        e.preventDefault();
+        insert(k[1]);
+      });
+      pad.appendChild(b);
+    });
+
+    var del = document.createElement("button");
+    del.className = "key key--wide";
+    del.type = "button";
+    del.textContent = "⌫";
+    del.setAttribute("aria-label", lang === "ar" ? "حذف" : "Delete");
+    del.addEventListener("pointerdown", function (e) {
+      e.preventDefault();
+      field.executeCommand("deleteBackward");
+      field.focus();
+      publish();
+    });
+    pad.appendChild(del);
+
+    var go = document.createElement("button");
+    go.className = "key key--go";
+    go.id = "go";
+    go.type = "button";
+    go.textContent = lang === "ar" ? "حل" : "Solve";
+    go.addEventListener("pointerdown", function (e) { e.preventDefault(); submit(); });
+    pad.appendChild(go);
+    reflectValidity();
+  }
+
+  function drawTabs() {
+    tabs.textContent = "";
+    ORDER.forEach(function (id) {
+      var t = document.createElement("button");
+      t.className = "tab";
+      t.type = "button";
+      t.setAttribute("role", "tab");
+      t.setAttribute("aria-selected", String(id === current));
+      t.textContent = LAYERS[id][lang];
+      t.addEventListener("pointerdown", function (e) {
+        e.preventDefault();
+        current = id;
+        drawTabs();
+        drawPad();
+        field.focus();
+      });
+      tabs.appendChild(t);
+    });
+  }
+
+  /** An expression still holding an empty placeholder is not ready to send. */
+  function unfilled() {
+    var v = field.getValue("latex");
+    return v.indexOf("\\placeholder") !== -1;
+  }
+
+  function reflectValidity() {
+    var go = document.getElementById("go");
+    if (!go) return;
+    var empty = field.getValue("latex").trim() === "";
+    go.disabled = empty || unfilled();
+    if (unfilled()) {
+      hint.textContent = lang === "ar"
+        ? "أكمل الفراغات في المعادلة أولاً"
+        : "Fill in the empty boxes first";
+      hint.setAttribute("data-error", "1");
+    } else {
+      hint.textContent = "";
+      hint.removeAttribute("data-error");
+    }
+  }
+
+  function publish() {
+    reflectValidity();
+    var latex = field.getValue("latex");
+    post("change", latex);
+  }
+
+  function submit() {
+    if (unfilled()) return;
+    var latex = field.getValue("latex").trim();
+    if (!latex) return;
+    post("submit", latex);
+  }
+
+  /** One bridge, both hosts — whichever exists answers, exactly as print.html does. */
+  function post(kind, latex) {
+    var payload = { kind: kind, latex: latex };
+    try { window.webkit.messageHandlers.droobMath.postMessage(payload); } catch (e) { /* not iOS */ }
+    try { window.DroobMath.onEvent(kind, latex); } catch (e) { /* not Android */ }
+  }
+
+  // ---- host-callable API -------------------------------------------------
+
+  window.droobMath = {
+    setValue: function (latex) { field.setValue(latex || ""); publish(); },
+    getValue: function () { return field.getValue("latex"); },
+    setLanguage: function (code) {
+      lang = code === "en" ? "en" : "ar";
+      var root = document.documentElement;
+      root.setAttribute("data-lang", lang);
+      // `data-lang` alone left <html lang="en" dir="ltr"> in place for the life
+      // of the sheet. `lang` is what VoiceOver reads the keycap labels against,
+      // and `dir` is what right-anchors the tab strip and the hint line inside
+      // an otherwise RTL app. The pad and the field pin themselves back to LTR
+      // in CSS, so formulas are unaffected.
+      root.setAttribute("lang", lang);
+      root.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+      drawTabs(); drawPad();
+    },
+    setTheme: function (mode) {
+      document.documentElement.setAttribute("data-theme", mode === "dark" ? "dark" : "light");
+    },
+    focus: function () { field.focus(); }
+  };
+
+  field.addEventListener("input", publish);
+
+  drawTabs();
+  drawPad();
+  publish();
+
+  document.documentElement.setAttribute("data-ready", "1");
+})();
+</script>
+</body>
+</html>

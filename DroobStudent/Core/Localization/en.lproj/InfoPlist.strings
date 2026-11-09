@@ -1,0 +1,8 @@
+/* English originals, kept so flipping AppLocaleDefault.englishHidden back to
+   false restores the bilingual app here too. */
+
+"NSFaceIDUsageDescription" = "Droob uses Face ID so you can sign in without typing your password.";
+
+"NSMicrophoneUsageDescription" = "Droob uses the microphone to record voice notes in your instructor chats.";
+
+"NSCameraUsageDescription" = "Droob uses the camera for two things: photographing a question sheet so Ask Droob can solve it with you, and confirming while a protected course video is playing that a single enrolled viewer is watching, to deter recording and sharing. Processing happens on your device; no photos or video are saved or uploaded.";

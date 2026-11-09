@@ -1,0 +1,6 @@
+git_url(ENV["MATCH_GIT_URL"])
+storage_mode("git")
+type("appstore")
+app_identifier(["sa.droob.studentapp"])
+username("ahmedfarahat430@gmail.com")
+team_id("97DNR5Y3Y5")
